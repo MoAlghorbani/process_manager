@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service & Process Manager (Go)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --input-bg: rgba(11, 16, 28, 0.95);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --emerald: #10b981;
+      --rose: #f43f5e;
+      --hover-row: rgba(56, 189, 248, 0.03);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 90% 90%, rgba(99, 102, 241, 0.07) 0%, transparent 45%);
+      background-attachment: fixed;
+    }
+    .container { max-width: 1320px; margin: 0 auto; padding: 24px 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand-icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      background: linear-gradient(135deg, #0284c7, #6366f1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.45);
+    }
+    .brand-text h1 { font-size: 22px; font-weight: 800; }
+    .brand-text p { font-size: 13px; color: var(--muted); }
+    .admin-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;
+    }
+    .admin-pill.elevated {
+      background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .admin-pill.standard {
+      background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); cursor: pointer;
+    }
+    .metrics-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 24px;
+    }
+    .metric-card {
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 16px; backdrop-filter: blur(12px);
+    }
+    .metric-card .num { font-size: 26px; font-weight: 800; color: var(--accent); }
+    .metric-card .lbl { font-size: 12px; font-weight: 600; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+    .toolbar {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px;
+      padding: 14px 18px; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;
+    }
+    .btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn {
+      padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit;
+      cursor: pointer; border: 1px solid var(--card-border); background: #1e293b; color: var(--text);
+      display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s ease;
+    }
+    .btn:hover { background: #334155; }
+    .btn-primary { background: var(--accent); color: #090d16; border-color: transparent; }
+    .btn-primary:hover { background: #0284c7; color: #fff; }
+    .btn-emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3); }
+    .btn-emerald:hover { background: var(--emerald); color: #fff; }
+    .btn-rose { background: rgba(244, 63, 94, 0.15); color: #fb7185; border-color: rgba(244, 63, 94, 0.3); }
+    .btn-rose:hover { background: var(--rose); color: #fff; }
+    .presets-bar {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding: 12px 16px;
+      background: rgba(30, 41, 59, 0.5); border: 1px dashed var(--card-border); border-radius: 12px;
+      font-size: 13px; color: var(--muted); flex-wrap: wrap;
+    }
+    .preset-btn {
+      background: #1e293b; color: var(--accent); border: 1px solid var(--card-border);
+      padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .preset-btn:hover { background: var(--accent); color: #090d16; }
+    .table-box {
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; overflow: hidden; backdrop-filter: blur(12px);
+    }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    thead { background: rgba(11, 16, 28, 0.95); border-bottom: 1px solid var(--card-border); }
+    th { padding: 14px 16px; font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+    td { padding: 14px 16px; font-size: 13px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); vertical-align: middle; }
+    tr:hover td { background: var(--hover-row); }
+    .service-name { font-weight: 700; color: #fff; font-size: 14px; }
+    .service-cmd { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .badge {
+      display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase;
+    }
+    .badge-running { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+    .badge-stopped { background: rgba(148, 163, 184, 0.15); color: #94a3b8; }
+    .badge-crashed { background: rgba(244, 63, 94, 0.15); color: #fb7185; }
+    .badge-restarting { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+    .badge-port { background: rgba(56, 189, 248, 0.15); color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+    .badge-venv { background: rgba(147, 51, 234, 0.2); color: #c084fc; border: 1px solid rgba(147, 51, 234, 0.4); font-size: 10px; font-family: 'JetBrains Mono', monospace; }
+    .badge-group { background: rgba(99, 102, 241, 0.18); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.35); font-weight: 700; font-size: 11px; }
+    .group-tabs { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; align-items: center; }
+    .group-tab {
+      padding: 7px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; cursor: pointer;
+      background: var(--card-bg); border: 1px solid var(--card-border); color: var(--muted);
+      display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s ease; user-select: none;
+    }
+    .group-tab:hover { background: #1e293b; color: var(--text); border-color: rgba(255,255,255,0.2); }
+    .group-tab.active {
+      background: rgba(56, 189, 248, 0.15); border-color: var(--accent); color: var(--accent);
+      box-shadow: 0 0 15px -3px rgba(56, 189, 248, 0.2);
+    }
+    .group-count-badge {
+      padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 800;
+      background: rgba(255, 255, 255, 0.08); color: inherit;
+    }
+    .group-tab.active .group-count-badge { background: var(--accent); color: #090d16; }
+    .group-header-row td {
+      background: rgba(14, 20, 36, 0.95) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      padding: 10px 18px !important;
+    }
+    .group-header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .group-title { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 800; color: #fff; }
+    .group-tag {
+      font-size: 11px; padding: 2px 8px; border-radius: 6px; font-weight: 700;
+      background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.35);
+    }
+    .group-controls { display: flex; align-items: center; gap: 6px; }
+    .btn-group-action {
+      padding: 5px 11px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer;
+      border: 1px solid var(--card-border); background: #1e293b; color: var(--text);
+      display: inline-flex; align-items: center; gap: 4px; transition: all 0.2s ease;
+    }
+    .btn-group-action:hover { background: #334155; }
+    .btn-group-action.green:hover { background: var(--emerald); color: #fff; }
+    .btn-group-action.rose:hover { background: var(--rose); color: #fff; }
+    .btn-group-action.blue:hover { background: var(--accent); color: #090d16; }
+    .actions-col { display: flex; gap: 6px; justify-content: flex-end; }
+    .action-btn {
+      padding: 6px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer;
+      border: 1px solid var(--card-border); background: #1e293b; color: var(--text);
+    }
+    .action-btn:hover { background: #334155; }
+    .action-btn.green:hover { background: var(--emerald); color: #fff; }
+    .action-btn.red:hover { background: var(--rose); color: #fff; }
+    .action-btn.blue:hover { background: var(--accent); color: #090d16; }
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(6px);
+      display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: #101626; border: 1px solid var(--card-border); border-radius: 16px;
+      max-width: 620px; width: 100%; padding: 24px;
+    }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .close-btn { background: none; border: none; font-size: 20px; color: var(--muted); cursor: pointer; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; }
+    .form-group input {
+      width: 100%; height: 42px; background: var(--input-bg); border: 1px solid var(--card-border);
+      border-radius: 8px; padding: 0 14px; color: #fff; font-size: 14px; outline: none;
+    }
+    .form-hint { font-size: 11px; color: var(--muted); margin-top: 5px; display: flex; align-items: center; justify-content: space-between; }
+    .suggest-badge {
+      background: rgba(147, 51, 234, 0.25); color: #d8b4fe; border: 1px solid rgba(147, 51, 234, 0.5);
+      padding: 2px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;
+    }
+    .form-check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text); cursor: pointer; }
+    .log-box {
+      background: #090d16; border: 1px solid var(--card-border); border-radius: 10px; padding: 16px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #e2e8f0; height: 450px; overflow-y: auto; white-space: pre-wrap;
+    }
+    #toast {
+      position: fixed; bottom: 24px; right: 24px; padding: 12px 20px; border-radius: 10px;
+      font-size: 13px; font-weight: 600; background: #1e293b; color: white; border: 1px solid var(--card-border);
+      opacity: 0; transform: translateY(10px); transition: all 0.3s ease; pointer-events: none; z-index: 1000;
+    }
+    #toast.show { opacity: 1; transform: translateY(0); }
+    #toast.success { border-color: var(--emerald); color: #6ee7b7; }
+    #toast.error { border-color: var(--rose); color: #fca5a5; }
+    .empty-row { text-align: center; padding: 48px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-icon">⚙️</div>
+        <div class="brand-text">
+          <h1>Process & Service Manager <span style="font-size:12px; background:#0284c7; padding:2px 8px; border-radius:6px; color:#fff;">GO</span></h1>
+          <p>Native background service supervisor, venv manager & automatic restarter</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div id="admin-badge" class="admin-pill standard" onclick="elevateAdmin()">Checking Admin...</div>
+      </div>
+    </header>
+
+    <div class="metrics-grid">
+      <div class="metric-card"><div class="num" id="stat-running">0 / 0</div><div class="lbl">Running Services</div></div>
+      <div class="metric-card"><div class="num" id="stat-engine">GO 1.26</div><div class="lbl">Engine Runtime</div></div>
+      <div class="metric-card"><div class="num" id="stat-mem">0.0 MB</div><div class="lbl">Total Memory</div></div>
+      <div class="metric-card"><div class="num" id="stat-saved">OK</div><div class="lbl">State Saved</div></div>
+    </div>
+
+    <div class="toolbar">
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="openAddModal()">➕ Add New Service</button>
+        <button class="btn btn-emerald" onclick="resurrectAll()">🚀 Resurrect All</button>
+        <button class="btn" onclick="saveState()">💾 Save State</button>
+      </div>
+      <div class="btn-group">
+        <button class="btn" onclick="restartAll()">🔄 Restart All</button>
+        <button class="btn btn-rose" onclick="stopAll()">⏹ Stop All</button>
+        <button class="btn" onclick="fetchStatus()">🔄 Refresh</button>
+      </div>
+    </div>
+
+    <div class="presets-bar">
+      <span>⚡ Quick Presets:</span>
+      <button class="preset-btn" onclick="presetOcrProxy()">+ ocr_proxy (:8890)</button>
+      <button class="preset-btn" onclick="presetPaddle()">+ paddle (.venv :8891)</button>
+      <button class="preset-btn" onclick="presetClassify()">+ classify (.venv :8892)</button>
+    </div>
+
+    <!-- Group Filter Tabs -->
+    <div class="group-tabs" id="group-tabs"></div>
+
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th>Service Name & Command</th>
+            <th>Group</th>
+            <th>Venv</th>
+            <th>Port</th>
+            <th>PID</th>
+            <th>Status</th>
+            <th>Restarts</th>
+            <th>RAM</th>
+            <th>Uptime</th>
+            <th style="text-align: right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="services-tbody"><tr><td colspan="10" class="empty-row">Loading services...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Datalist for autocomplete of group names -->
+  <datalist id="groups-datalist"></datalist>
+
+  <!-- Add Modal -->
+  <div class="modal-overlay" id="add-modal">
+    <div class="modal-box">
+      <div class="modal-header"><h3>Add Long-Running Service</h3><button class="close-btn" onclick="closeAddModal()">&times;</button></div>
+      <form onsubmit="submitAddService(event)">
+        <div class="form-group"><label>Service Name</label><input type="text" id="add-name" required placeholder="e.g. paddle"></div>
+        <div class="form-group">
+          <label>Group Name</label>
+          <input type="text" id="add-group" list="groups-datalist" placeholder="default (e.g. AI SDKs, OCR Stack)">
+        </div>
+        <div class="form-group"><label>Execution Command</label><input type="text" id="add-cmd" required placeholder="e.g. python server.py"></div>
+        <div class="form-group"><label>Working Directory (CWD)</label><input type="text" id="add-cwd" placeholder="e.g. e:\\ocr1\\fake_ai_sdks\\paddle" onchange="checkVenvFor('add')"></div>
+        <div class="form-group">
+          <label>Virtual Environment (venv)</label>
+          <input type="text" id="add-venv" placeholder=".venv (Optional)">
+          <div class="form-hint"><span id="add-suggest-box" style="display:none;"></span></div>
+        </div>
+        <div class="form-group"><label>Port</label><input type="number" id="add-port" placeholder="e.g. 8891"></div>
+        <div class="form-group"><label class="form-check"><input type="checkbox" id="add-autorestart" checked><span>Auto-restart on crash</span></label></div>
+        <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:24px;">
+          <button type="button" class="btn" onclick="closeAddModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Start & Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal-box">
+      <div class="modal-header"><h3>Edit Service</h3><button class="close-btn" onclick="closeEditModal()">&times;</button></div>
+      <form onsubmit="submitEditService(event)">
+        <input type="hidden" id="edit-old-name">
+        <div class="form-group"><label>Service Name</label><input type="text" id="edit-name" required></div>
+        <div class="form-group">
+          <label>Group Name</label>
+          <input type="text" id="edit-group" list="groups-datalist" placeholder="default">
+        </div>
+        <div class="form-group"><label>Execution Command</label><input type="text" id="edit-cmd" required></div>
+        <div class="form-group"><label>Working Directory (CWD)</label><input type="text" id="edit-cwd" onchange="checkVenvFor('edit')"></div>
+        <div class="form-group">
+          <label>Virtual Environment (venv)</label>
+          <input type="text" id="edit-venv" placeholder=".venv (Optional)">
+          <div class="form-hint"><span id="edit-suggest-box" style="display:none;"></span></div>
+        </div>
+        <div class="form-group"><label>Port</label><input type="number" id="edit-port" placeholder="Port"></div>
+        <div class="form-group"><label class="form-check"><input type="checkbox" id="edit-autorestart"><span>Auto-restart on crash</span></label></div>
+        <div class="form-group"><label class="form-check"><input type="checkbox" id="edit-restart-running" checked><span>Restart service now if running</span></label></div>
+        <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:24px;">
+          <button type="button" class="btn" onclick="closeEditModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Logs Modal -->
+  <div class="modal-overlay" id="logs-modal">
+    <div class="modal-box" style="max-width: 850px;">
+      <div class="modal-header"><h3 id="logs-title">Logs</h3><button class="close-btn" onclick="closeLogsModal()">&times;</button></div>
+      <div class="log-box" id="log-content">Loading...</div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px;">
+        <label class="form-check"><input type="checkbox" id="logs-autoscroll" checked><span>Auto-scroll</span></label>
+        <div class="btn-group">
+          <button class="btn" onclick="refreshCurrentLogs()">🔄 Refresh</button>
+          <button class="btn btn-rose" onclick="clearCurrentLogs()">🗑 Clear</button>
+          <button class="btn" onclick="closeLogsModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script>
+    let activeLogService = null;
+    let logTimer = null;
+    let currentServices = {};
+    let selectedGroup = 'all';
+    let knownGroups = ['default'];
+
+    function showToast(msg, type = 'success') {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.className = `show ${type}`;
+      setTimeout(() => { toast.className = ''; }, 3200);
+    }
+
+    async function fetchStatus() {
+      try {
+        const res = await fetch('/api/status');
+        const data = await res.json();
+        renderDashboard(data);
+      } catch (err) {}
+    }
+
+    function setGroupFilter(grp) {
+      selectedGroup = grp;
+      fetchStatus();
+    }
+
+    function renderDashboard(data) {
+      const adminBadge = document.getElementById('admin-badge');
+      if (data.admin) {
+        adminBadge.className = 'admin-pill elevated';
+        adminBadge.innerHTML = '🛡️ Administrator: Elevated';
+        adminBadge.onclick = null;
+      } else {
+        adminBadge.className = 'admin-pill standard';
+        adminBadge.innerHTML = '⚠️ Standard User (Click to Elevate Admin)';
+        adminBadge.onclick = elevateAdmin;
+      }
+
+      document.getElementById('stat-running').innerText = `${data.running_count} / ${data.total_count}`;
+      document.getElementById('stat-mem').innerText = `${data.total_memory_mb} MB`;
+
+      const tbody = document.getElementById('services-tbody');
+      const items = data.services || [];
+      currentServices = {};
+      items.forEach(s => { currentServices[s.name] = s; });
+
+      // Update known groups and datalist
+      if (data.groups && Array.isArray(data.groups)) {
+        knownGroups = data.groups;
+      }
+      const datalist = document.getElementById('groups-datalist');
+      if (datalist) {
+        datalist.innerHTML = knownGroups.map(g => `<option value="${escapeHtml(g)}">`).join('');
+      }
+
+      // Compute statistics per group
+      const groupStats = {};
+      items.forEach(s => {
+        const grp = s.group || 'default';
+        if (!groupStats[grp]) {
+          groupStats[grp] = { total: 0, running: 0, items: [] };
+        }
+        groupStats[grp].total++;
+        if (s.status === 'running') groupStats[grp].running++;
+        groupStats[grp].items.push(s);
+      });
+
+      // Ensure all knownGroups exist in stats
+      knownGroups.forEach(g => {
+        if (!groupStats[g]) groupStats[g] = { total: 0, running: 0, items: [] };
+      });
+
+      // Render group filter tabs
+      const groupTabsEl = document.getElementById('group-tabs');
+      if (groupTabsEl) {
+        const groupsList = Object.keys(groupStats).sort();
+        let tabsHtml = `
+          <div class="group-tab ${selectedGroup === 'all' ? 'active' : ''}" onclick="setGroupFilter('all')">
+            <span>🌐 All Servers</span>
+            <span class="group-count-badge">${data.running_count} / ${data.total_count}</span>
+          </div>
+        `;
+        groupsList.forEach(grp => {
+          const stat = groupStats[grp];
+          tabsHtml += `
+            <div class="group-tab ${selectedGroup === grp ? 'active' : ''}" onclick="setGroupFilter('${escapeHtml(grp)}')">
+              <span>📁 ${escapeHtml(grp)}</span>
+              <span class="group-count-badge">${stat.running} / ${stat.total}</span>
+            </div>
+          `;
+        });
+        groupTabsEl.innerHTML = tabsHtml;
+      }
+
+      if (items.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="10" class="empty-row">No services registered. Click Add New Service.</td></tr>';
+        return;
+      }
+
+      const groupsList = Object.keys(groupStats).sort();
+      const groupsToShow = (selectedGroup === 'all') ? groupsList : [selectedGroup];
+      let rowsHtml = '';
+      let displayedCount = 0;
+
+      groupsToShow.forEach(grp => {
+        const stat = groupStats[grp];
+        if (!stat || stat.items.length === 0) return;
+        displayedCount += stat.items.length;
+
+        // Keep services stably sorted so they never jump around on auto-refresh
+        stat.items.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+        rowsHtml += `
+          <tr class="group-header-row">
+            <td colspan="10">
+              <div class="group-header-content">
+                <div class="group-title">
+                  <span style="font-size:16px;">📁</span>
+                  <span>${escapeHtml(grp)}</span>
+                  <span class="group-tag">${stat.running} / ${stat.total} RUNNING</span>
+                </div>
+                <div class="group-controls">
+                  <button class="btn-group-action green" title="Start all services in this group" onclick="startGroup('${escapeHtml(grp)}')">▶ Start Group</button>
+                  <button class="btn-group-action rose" title="Stop all services in this group" onclick="stopGroup('${escapeHtml(grp)}')">⏹ Stop Group</button>
+                  <button class="btn-group-action blue" title="Restart all services in this group" onclick="restartGroup('${escapeHtml(grp)}')">🔄 Restart Group</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        `;
+
+        stat.items.forEach(s => {
+          let statusBadge = 'badge-stopped';
+          if (s.status === 'running') statusBadge = 'badge-running';
+          else if (s.status === 'crashed') statusBadge = 'badge-crashed';
+          else if (s.status === 'restarting') statusBadge = 'badge-restarting';
+
+          const portBadge = s.port ? `<span class="badge badge-port">:${s.port}</span>` : '<span style="color:var(--muted)">-</span>';
+          const venvBadge = s.venv ? `<span class="badge badge-venv">${escapeHtml(s.venv)}</span>` : '<span style="color:var(--muted)">-</span>';
+          const groupBadge = `<span class="badge badge-group">📁 ${escapeHtml(s.group || 'default')}</span>`;
+          const pidStr = s.pid ? `<span style="font-family:monospace; font-weight:600;">${s.pid}</span>` : '-';
+          const uptimeStr = s.uptime_seconds ? formatUptime(s.uptime_seconds) : '-';
+
+          rowsHtml += `
+            <tr>
+              <td>
+                <div class="service-name">${escapeHtml(s.name)}</div>
+                <div class="service-cmd">${escapeHtml(s.command)} &nbsp;·&nbsp; <span style="color:rgba(255,255,255,0.4)">${escapeHtml(s.cwd)}</span></div>
+              </td>
+              <td>${groupBadge}</td>
+              <td>${venvBadge}</td>
+              <td>${portBadge}</td>
+              <td>${pidStr}</td>
+              <td><span class="badge ${statusBadge}">${s.status}</span></td>
+              <td>${s.restarts}</td>
+              <td>${s.memory_mb ? s.memory_mb + ' MB' : '-'}</td>
+              <td>${uptimeStr}</td>
+              <td style="text-align: right;">
+                <div class="actions-col">
+                  ${s.status === 'running' 
+                    ? `<button class="action-btn red" title="Stop" onclick="stopService('${escapeHtml(s.name)}')">⏹</button>
+                       <button class="action-btn blue" title="Restart" onclick="restartService('${escapeHtml(s.name)}')">🔄</button>`
+                    : `<button class="action-btn green" title="Start" onclick="startService('${escapeHtml(s.name)}')">▶</button>`
+                  }
+                  <button class="action-btn" title="Edit" onclick="openEditModal('${escapeHtml(s.name)}')">✏️</button>
+                  <button class="action-btn" title="Logs" onclick="openLogsModal('${escapeHtml(s.name)}')">📜</button>
+                  <button class="action-btn red" title="Delete" onclick="deleteService('${escapeHtml(s.name)}')">🗑</button>
+                </div>
+              </td>
+            </tr>
+          `;
+        });
+      });
+
+      if (displayedCount === 0) {
+        tbody.innerHTML = `<tr><td colspan="10" class="empty-row">No services registered in group "${escapeHtml(selectedGroup)}".</td></tr>`;
+      } else {
+        tbody.innerHTML = rowsHtml;
+      }
+    }
+
+    function formatUptime(sec) {
+      if (sec < 60) return `${sec}s`;
+      const m = Math.floor(sec / 60);
+      if (m < 60) return `${m}m ${sec % 60}s`;
+      const h = Math.floor(m / 60);
+      return `${h}h ${m % 60}m`;
+    }
+
+    async function checkVenvFor(prefix) {
+      const cwd = document.getElementById(`${prefix}-cwd`).value.trim();
+      const box = document.getElementById(`${prefix}-suggest-box`);
+      if (!cwd) { box.style.display = 'none'; return; }
+      try {
+        const res = await fetch(`/api/detect_venv?cwd=${encodeURIComponent(cwd)}`);
+        const data = await res.json();
+        if (data.detected) {
+          box.style.display = 'inline-block';
+          box.innerHTML = `✨ Detected: <span class="suggest-badge" onclick="document.getElementById('${prefix}-venv').value = '${escapeHtml(data.detected_name)}'">${escapeHtml(data.detected_name)}</span>`;
+        } else { box.style.display = 'none'; }
+      } catch(e) { box.style.display = 'none'; }
+    }
+
+    function openEditModal(name) {
+      const s = currentServices[name];
+      if (!s) return;
+      document.getElementById('edit-old-name').value = s.name;
+      document.getElementById('edit-name').value = s.name;
+      document.getElementById('edit-group').value = s.group || 'default';
+      document.getElementById('edit-cmd').value = s.command;
+      document.getElementById('edit-cwd').value = s.cwd || '';
+      document.getElementById('edit-venv').value = s.venv || '';
+      document.getElementById('edit-port').value = s.port || '';
+      document.getElementById('edit-autorestart').checked = s.auto_restart !== false;
+      document.getElementById('edit-restart-running').checked = true;
+      document.getElementById('edit-modal').classList.add('active');
+      checkVenvFor('edit');
+    }
+    function closeEditModal() { document.getElementById('edit-modal').classList.remove('active'); }
+
+    async function submitEditService(e) {
+      e.preventDefault();
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const origText = submitBtn ? submitBtn.innerText : 'Save Changes';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.innerText = 'Saving...'; }
+
+      try {
+        const oldName = document.getElementById('edit-old-name').value;
+        const portVal = parseInt(document.getElementById('edit-port').value.trim(), 10);
+        const payload = {
+          old_name: oldName,
+          name: document.getElementById('edit-name').value.trim(),
+          group: document.getElementById('edit-group').value.trim() || "default",
+          command: document.getElementById('edit-cmd').value.trim(),
+          cwd: document.getElementById('edit-cwd').value.trim(),
+          venv: document.getElementById('edit-venv').value.trim() || "",
+          port: isNaN(portVal) ? null : portVal,
+          auto_restart: document.getElementById('edit-autorestart').checked,
+          restart_if_running: document.getElementById('edit-restart-running').checked
+        };
+        const res = await postApi('/api/service/update', payload);
+        if (res && res.success) {
+          showToast(`Updated ${payload.name}`);
+          closeEditModal();
+          fetchStatus();
+        } else {
+          showToast((res && res.error) || 'Failed to update service', 'error');
+        }
+      } catch (err) {
+        showToast(`Error: ${err.message}`, 'error');
+      } finally {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.innerText = origText; }
+      }
+    }
+
+    function openAddModal(data = {}) {
+      document.getElementById('add-name').value = data.name || '';
+      document.getElementById('add-group').value = data.group || 'default';
+      document.getElementById('add-cmd').value = data.cmd || 'python server.py';
+      document.getElementById('add-cwd').value = data.cwd || '';
+      document.getElementById('add-venv').value = data.venv || '';
+      document.getElementById('add-port').value = data.port || '';
+      document.getElementById('add-autorestart').checked = true;
+      document.getElementById('add-modal').classList.add('active');
+      if (data.cwd) checkVenvFor('add');
+    }
+    function closeAddModal() { document.getElementById('add-modal').classList.remove('active'); }
+
+    async function submitAddService(e) {
+      e.preventDefault();
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const origText = submitBtn ? submitBtn.innerText : 'Start & Save';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.innerText = 'Starting...'; }
+
+      try {
+        const portVal = parseInt(document.getElementById('add-port').value.trim(), 10);
+        const payload = {
+          name: document.getElementById('add-name').value.trim(),
+          group: document.getElementById('add-group').value.trim() || "default",
+          command: document.getElementById('add-cmd').value.trim(),
+          cwd: document.getElementById('add-cwd').value.trim(),
+          venv: document.getElementById('add-venv').value.trim() || "",
+          port: isNaN(portVal) ? null : portVal,
+          auto_restart: document.getElementById('add-autorestart').checked
+        };
+        const res = await postApi('/api/service/add', payload);
+        if (res && res.success) {
+          showToast(`Added and started ${payload.name}`);
+          closeAddModal();
+          fetchStatus();
+        } else {
+          showToast((res && res.error) || 'Failed to add service', 'error');
+        }
+      } catch (err) {
+        showToast(`Error: ${err.message}`, 'error');
+      } finally {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.innerText = origText; }
+      }
+    }
+
+    function presetOcrProxy() { openAddModal({ name: 'ocr_proxy', group: 'AI SDKs', cmd: 'python server.py', cwd: 'e:\\ocr1\\fake_ai_sdks\\ocr_proxy', port: 8890, venv: '' }); }
+    function presetPaddle() { openAddModal({ name: 'paddle', group: 'AI SDKs', cmd: 'python server.py', cwd: 'e:\\ocr1\\fake_ai_sdks\\paddle', port: 8891, venv: '.venv' }); }
+    function presetClassify() { openAddModal({ name: 'classify', group: 'AI SDKs', cmd: 'python server.py', cwd: 'e:\\ocr1\\fake_ai_sdks\\classify', port: 8892, venv: '.venv' }); }
+
+    async function startService(name) { const r = await postApi('/api/service/start', { name }); if (r.success) { showToast(`Started ${name}`); fetchStatus(); } }
+    async function stopService(name) { const r = await postApi('/api/service/stop', { name }); if (r.success) { showToast(`Stopped ${name}`); fetchStatus(); } }
+    async function restartService(name) { const r = await postApi('/api/service/restart', { name }); if (r.success) { showToast(`Restarted ${name}`); fetchStatus(); } }
+    async function deleteService(name) { if (!confirm(`Delete ${name}?`)) return; const r = await postApi('/api/service/delete', { name }); if (r.success) { showToast(`Deleted ${name}`); fetchStatus(); } }
+
+    async function startGroup(grp) {
+      showToast(`Starting group "${grp}"...`);
+      const r = await postApi('/api/group/start', { group: grp });
+      if (r.success) {
+        showToast(`Started group "${grp}" (${r.started ? r.started.length : 0} service(s))`);
+        fetchStatus();
+      }
+    }
+    async function stopGroup(grp) {
+      showToast(`Stopping group "${grp}"...`);
+      const r = await postApi('/api/group/stop', { group: grp });
+      if (r.success) {
+        showToast(`Stopped group "${grp}" (${r.stopped ? r.stopped.length : 0} service(s))`);
+        fetchStatus();
+      }
+    }
+    async function restartGroup(grp) {
+      showToast(`Restarting group "${grp}"...`);
+      const r = await postApi('/api/group/restart', { group: grp });
+      if (r.success) {
+        showToast(`Restarted group "${grp}" (${r.restarted ? r.restarted.length : 0} service(s))`);
+        fetchStatus();
+      }
+    }
+
+    async function startAll() { await postApi('/api/start_all', {}); showToast('Started all'); fetchStatus(); }
+    async function stopAll() { await postApi('/api/stop_all', {}); showToast('Stopped all'); fetchStatus(); }
+    async function restartAll() { await postApi('/api/restart_all', {}); showToast('Restarted all'); fetchStatus(); }
+    async function saveState() { await postApi('/api/save', {}); showToast('Saved state to services.json'); }
+    async function resurrectAll() { await postApi('/api/resurrect', {}); showToast('Resurrected all services'); setTimeout(fetchStatus, 1000); }
+    async function elevateAdmin() { if (confirm("Elevate to Windows Administrator?")) { await postApi('/api/elevate', {}); showToast('Elevating...'); } }
+
+    async function openLogsModal(name) {
+      activeLogService = name;
+      document.getElementById('logs-title').innerText = `Logs: ${name}`;
+      document.getElementById('logs-modal').classList.add('active');
+      await refreshCurrentLogs();
+      if (logTimer) clearInterval(logTimer);
+      logTimer = setInterval(refreshCurrentLogs, 2500);
+    }
+    function closeLogsModal() {
+      document.getElementById('logs-modal').classList.remove('active');
+      activeLogService = null;
+      if (logTimer) { clearInterval(logTimer); logTimer = null; }
+    }
+    async function refreshCurrentLogs() {
+      if (!activeLogService) return;
+      try {
+        const res = await fetch('/api/logs?name=' + encodeURIComponent(activeLogService));
+        const data = await res.json();
+        const box = document.getElementById('log-content');
+        box.innerText = data.logs || '(No logs)';
+        if (document.getElementById('logs-autoscroll').checked) box.scrollTop = box.scrollHeight;
+      } catch(e) {}
+    }
+    async function clearCurrentLogs() {
+      if (!activeLogService) return;
+      await postApi('/api/logs/clear', { name: activeLogService });
+      refreshCurrentLogs();
+      showToast('Logs cleared');
+    }
+
+    async function postApi(url, body) {
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        const contentType = res.headers.get('content-type') || '';
+        if (contentType.includes('application/json')) {
+          return await res.json();
+        }
+        const text = await res.text();
+        return { success: res.ok, error: text || res.statusText };
+      } catch (err) {
+        return { success: false, error: err.message };
+      }
+    }
+    function escapeHtml(str) { if (!str) return ''; return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+    fetchStatus();
+    setInterval(fetchStatus, 3000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,2108 @@
+{
+  "config": {
+    "auto_save_enabled": true,
+    "max_items": 300
+  },
+  "items": [
+    {
+      "id": "clip_1792332429015617800",
+      "content": "\\\\192.168.20.222\\Public\\كورس لغة إنجليزية",
+      "timestamp": "2026-10-18T17:07:09.0156178+03:00",
+      "pinned": false,
+      "length": 56
+    },
+    {
+      "id": "clip_1792330427408216000",
+      "content": "8019",
+      "timestamp": "2026-10-18T16:33:47.408216+03:00",
+      "pinned": false,
+      "length": 4
+    },
+    {
+      "id": "clip_1792330365809188400",
+      "content": "[options]\r\ndb_host = localhost\r\ndb_port = 5432\r\ndb_user = odoo17\r\ndb_password = odoo17\r\n\r\naddons_path = odoo/addons,tsd_addons,tsd_addons/oca_accounting\r\n\r\nhttp_interface = 0.0.0.0\r\nhttp_port = 8019\r\n\r\nadmin_passwd = admin\r\nworkers = 4\r\n\r\nserver_wide_modules = base,sofa_base,web",
+      "timestamp": "2026-10-18T16:32:45.8091884+03:00",
+      "pinned": false,
+      "length": 279
+    },
+    {
+      "id": "clip_1792328463147619600",
+      "content": "Automatic checks: policies expiring soon, the same chassis or policy number in two documents.\nCharts per document type on the page.",
+      "timestamp": "2026-10-18T16:01:03.1476196+03:00",
+      "pinned": false,
+      "length": 131
+    },
+    {
+      "id": "clip_1792327889937506200",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file",
+      "timestamp": "2026-10-18T15:51:29.9375062+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792327711537100300",
+      "content": "gh repo clone Sports-Deal/the_sports_deal_erp",
+      "timestamp": "2026-10-18T15:48:31.5371003+03:00",
+      "pinned": false,
+      "length": 45
+    },
+    {
+      "id": "clip_1792327534337076900",
+      "content": "https://github.com/Sports-Deal/the_sports_deal_erp.git",
+      "timestamp": "2026-10-18T15:45:34.3370769+03:00",
+      "pinned": false,
+      "length": 54
+    },
+    {
+      "id": "clip_1792327134774301500",
+      "content": "https://www.youtube.com/watch?v=lYoWuaw5nSk\u0026list=PLPFzKsPt50V8azAzY0Sg2go23AL9nuAAF",
+      "timestamp": "2026-10-18T15:38:54.7743015+03:00",
+      "pinned": false,
+      "length": 83
+    },
+    {
+      "id": "clip_1792325718203806000",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file",
+      "timestamp": "2026-10-18T15:15:18.203806+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792324717792279500",
+      "content": "new-requirement-for-matching.md",
+      "timestamp": "2026-10-18T14:58:37.7922795+03:00",
+      "pinned": false,
+      "length": 31
+    },
+    {
+      "id": "clip_1792311448100841800",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file",
+      "timestamp": "2026-10-18T11:17:28.1008418+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792311071299863600",
+      "content": "Ab@2025!$#",
+      "timestamp": "2026-10-18T11:11:11.2998636+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1792310976499776600",
+      "content": "http://172.16.110.234/",
+      "timestamp": "2026-10-18T11:09:36.4997766+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1792310697300110700",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file",
+      "timestamp": "2026-10-18T11:04:57.3001107+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792310496945370600",
+      "content": "No record of the template. The ocr_definition column stays empty for Document AI, so a row doesn’t show whether it came from Watania or Medgulf. It’s only filled for FlexCapture today (exec.go:178).",
+      "timestamp": "2026-10-18T11:01:36.9453706+03:00",
+      "pinned": false,
+      "length": 202
+    },
+    {
+      "id": "clip_1792248450779100800",
+      "content": "شوت إسبريسو من البن",
+      "timestamp": "2026-10-17T17:47:30.7791008+03:00",
+      "pinned": false,
+      "length": 35
+    },
+    {
+      "id": "clip_1792247085960252800",
+      "content": "172.16.140.41",
+      "timestamp": "2026-10-17T17:24:45.9602528+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1792246759957227400",
+      "content": "git.sofa.io",
+      "timestamp": "2026-10-17T17:19:19.9572274+03:00",
+      "pinned": false,
+      "length": 11
+    },
+    {
+      "id": "clip_1792246758357374600",
+      "content": "https://git.sofa.io/",
+      "timestamp": "2026-10-17T17:19:18.3573746+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1792246621555685400",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file",
+      "timestamp": "2026-10-17T17:17:01.5556854+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792246035536256300",
+      "content": ".call-transcript-modal__text",
+      "timestamp": "2026-10-17T17:07:15.5362563+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1792245683132430200",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-17T17:01:23.1324302+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792245564332638100",
+      "content": "call-transcript-modal__text",
+      "timestamp": "2026-10-17T16:59:24.3326381+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1792245520332733700",
+      "content": "https://git.sofa.io/",
+      "timestamp": "2026-10-17T16:58:40.3327337+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1792245516332484500",
+      "content": "nslookup -q=A ",
+      "timestamp": "2026-10-17T16:58:36.3324845+03:00",
+      "pinned": false,
+      "length": 14
+    },
+    {
+      "id": "clip_1792245491932198400",
+      "content": "https://git.sofa.io/",
+      "timestamp": "2026-10-17T16:58:11.9321984+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1792245319132150400",
+      "content": "https://llm.sofa.ye:9670/",
+      "timestamp": "2026-10-17T16:55:19.1321504+03:00",
+      "pinned": false,
+      "length": 25
+    },
+    {
+      "id": "clip_1792245288731846800",
+      "content": "http://172.16.110.250:9676/api/health",
+      "timestamp": "2026-10-17T16:54:48.7318468+03:00",
+      "pinned": false,
+      "length": 37
+    },
+    {
+      "id": "clip_1792245268735935700",
+      "content": "http://172.16.110.250/",
+      "timestamp": "2026-10-17T16:54:28.7359357+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1792245147532512500",
+      "content": "\r\nMohamedAlghurbani@MOH-ALGHURBANI-PC MINGW64 /e/ocr-fc/client (main)\r\n$ npm install\r\nnpm error code E401\r\nnpm error 401 Unauthorized - GET https://git.sofa.io/api/v4/packages/npm/@design-system%2fyeds-components      \r\nnpm error A complete log of this run can be found in: C:\\Users\\MohamedAlghurbani\\AppData\\Local\\npm-cache\\_logs\\2026-10-17T13_52_09_003Z-debug-0.log",
+      "timestamp": "2026-10-17T16:52:27.5325125+03:00",
+      "pinned": false,
+      "length": 367
+    },
+    {
+      "id": "clip_1792245074731538600",
+      "content": "MohamedAlghurbani@MOH-ALGHURBANI-PC MINGW64 /e/ocr-fc/client (main)\r\n$ npm install\r\nnpm error code DEPTH_ZERO_SELF_SIGNED_CERT\r\nnpm error errno DEPTH_ZERO_SELF_SIGNED_CERT\r\nnpm error request to https://git.sofa.io/api/v4/packages/npm/@design-system%2fyeds-components failed, reason: self-signed certificate\r\nnpm error A complete log of this run can be found in: C:\\Users\\MohamedAlghurbani\\AppData\\Local\\npm-cache\\_logs\\2026-10-17T13_49_40_245Z-debug-0.log",
+      "timestamp": "2026-10-17T16:51:14.7315386+03:00",
+      "pinned": false,
+      "length": 455
+    },
+    {
+      "id": "clip_1792244433930020100",
+      "content": "http://172.16.110.250:9676/",
+      "timestamp": "2026-10-17T16:40:33.9300201+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1792244427129906900",
+      "content": "https://llm.sofa.ye:9670/v1",
+      "timestamp": "2026-10-17T16:40:27.1299069+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1792244222345108500",
+      "content": "api/health",
+      "timestamp": "2026-10-17T16:37:02.3451085+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1792243536733298200",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-17T16:25:36.7332982+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792243532328055100",
+      "content": "https://192.168.20.203:5180/",
+      "timestamp": "2026-10-17T16:25:32.3280551+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1792243104325608900",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-17T16:18:24.3256089+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792243100325174900",
+      "content": "https://192.168.20.203:5180/",
+      "timestamp": "2026-10-17T16:18:20.3251749+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1792243097126326100",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-17T16:18:17.1263261+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792243091125459300",
+      "content": "https://192.168.20.203:5180/",
+      "timestamp": "2026-10-17T16:18:11.1254593+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1792243048325192800",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-17T16:17:28.3251928+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792242841922280300",
+      "content": "pm.exe",
+      "timestamp": "2026-10-17T16:14:01.9222803+03:00",
+      "pinned": false,
+      "length": 6
+    },
+    {
+      "id": "clip_1792242841122327000",
+      "content": "pm",
+      "timestamp": "2026-10-17T16:14:01.122327+03:00",
+      "pinned": false,
+      "length": 2
+    },
+    {
+      "id": "clip_1792242650725035400",
+      "content": "https://www.youtube.com/watch?v=S-h8z0zgX_U",
+      "timestamp": "2026-10-17T16:10:50.7250354+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792242347509948600",
+      "content": "AI transcription completed with an empty transcript",
+      "timestamp": "2026-10-17T16:05:47.5099486+03:00",
+      "pinned": false,
+      "length": 51
+    },
+    {
+      "id": "clip_1792241979109143000",
+      "content": "0zxvopueo5p5knz ",
+      "timestamp": "2026-10-17T15:59:39.109143+03:00",
+      "pinned": false,
+      "length": 16
+    },
+    {
+      "id": "clip_1792240936708275600",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file 2",
+      "timestamp": "2026-10-17T15:42:16.7082756+03:00",
+      "pinned": false,
+      "length": 45
+    },
+    {
+      "id": "clip_1792240756306118200",
+      "content": "for the map modal view, increase the size for it , and the arabic text shows in reverse , fix this ",
+      "timestamp": "2026-10-17T15:39:16.3061182+03:00",
+      "pinned": false,
+      "length": 99
+    },
+    {
+      "id": "clip_1792240727507585500",
+      "content": "0zxvopueo5p5knz ",
+      "timestamp": "2026-10-17T15:38:47.5075855+03:00",
+      "pinned": false,
+      "length": 16
+    },
+    {
+      "id": "clip_1792240722706284900",
+      "content": "for the map modal view, increase the size for it , and the arabic text shows in reverse , fix this ",
+      "timestamp": "2026-10-17T15:38:42.7062849+03:00",
+      "pinned": false,
+      "length": 99
+    },
+    {
+      "id": "clip_1792240719107155300",
+      "content": "0zxvopueo5p5knz ",
+      "timestamp": "2026-10-17T15:38:39.1071553+03:00",
+      "pinned": false,
+      "length": 16
+    },
+    {
+      "id": "clip_1792240609906753500",
+      "content": "https://llm.sofa.ye:9670/v1",
+      "timestamp": "2026-10-17T15:36:49.9067535+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1792238693406266600",
+      "content": "http://172.16.110.250/",
+      "timestamp": "2026-10-17T15:04:53.4067715+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1792237834205398000",
+      "content": "http://172.16.110.250:9676/",
+      "timestamp": "2026-10-17T14:50:34.205398+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1792237808207217500",
+      "content": "http://172.16.110.250:9676",
+      "timestamp": "2026-10-17T14:50:08.2072175+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1792237757005455100",
+      "content": "pnh2mkyfx0tztzz ",
+      "timestamp": "2026-10-17T14:49:17.0054551+03:00",
+      "pinned": false,
+      "length": 16
+    },
+    {
+      "id": "clip_1792236790612153200",
+      "content": "https://x.com/DilumSanjaya",
+      "timestamp": "2026-10-17T14:33:10.6121532+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1792227001680516400",
+      "content": "mejC0vLKeQilrsbjZoRk7HK2wcSKxMymYgNB7ATBBAI",
+      "timestamp": "2026-10-17T11:50:01.6805164+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792226993281171300",
+      "content": "http://172.16.110.250:9676",
+      "timestamp": "2026-10-17T11:49:53.2811713+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1792226453281740100",
+      "content": "https://www.youtube.com/watch?v=Ak7BrB3VAIQ",
+      "timestamp": "2026-10-17T11:40:53.2817401+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792226346640548000",
+      "content": "http://localhost:5173/projects/c0f14a29-5d28-4981-abf5-8d72841a7ca2/workspace?tab=design",
+      "timestamp": "2026-10-17T11:39:06.640548+03:00",
+      "pinned": false,
+      "length": 88
+    },
+    {
+      "id": "clip_1792225826240434700",
+      "content": "@design-system/yeds-components",
+      "timestamp": "2026-10-17T11:30:26.2404347+03:00",
+      "pinned": false,
+      "length": 30
+    },
+    {
+      "id": "clip_1792225601040477300",
+      "content": "عادنا بسم الله",
+      "timestamp": "2026-10-17T11:26:41.0404773+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1792225178640693800",
+      "content": "https://x.com/DilumSanjaya/status/2108241054298415258/video/1",
+      "timestamp": "2026-10-17T11:19:38.6406938+03:00",
+      "pinned": false,
+      "length": 61
+    },
+    {
+      "id": "clip_1792224479808320800",
+      "content": "ok , now we will be refactoring the feature of AI from scratch, this is the new ai service and how it work[AI_SERVICE_API.md](AI_SERVICE_API.md) , and also we will not be using for converting the audio ffmeg any more , it will be converted in the AI server,  the AI server setting should be configurable from the setting, and when adding any thing to the setting , configure the setting seeding for this new thing",
+      "timestamp": "2026-10-17T11:07:59.8083208+03:00",
+      "pinned": false,
+      "length": 413
+    },
+    {
+      "id": "clip_1792224370608471900",
+      "content": "AI_SERVICE_API.md",
+      "timestamp": "2026-10-17T11:06:10.6084719+03:00",
+      "pinned": false,
+      "length": 17
+    },
+    {
+      "id": "clip_1792224363008333600",
+      "content": "SERVICE_API.md",
+      "timestamp": "2026-10-17T11:06:03.0083336+03:00",
+      "pinned": false,
+      "length": 14
+    },
+    {
+      "id": "clip_1792224093408015400",
+      "content": "sk-clb-PxsYeTpQvPPenDIRNJbcnXjv_lBzBT9l41ZCcClDZrU",
+      "timestamp": "2026-10-17T11:01:33.4080154+03:00",
+      "pinned": false,
+      "length": 50
+    },
+    {
+      "id": "clip_1792224092208709900",
+      "content": "11:01 ص",
+      "timestamp": "2026-10-17T11:01:32.2087099+03:00",
+      "pinned": false,
+      "length": 8
+    },
+    {
+      "id": "clip_1792224034208855500",
+      "content": "sk-clb-PxsYeTpQvPPenDIRNJbcnXjv_lBzBT9l41ZCcClDZrU",
+      "timestamp": "2026-10-17T11:00:34.2088555+03:00",
+      "pinned": false,
+      "length": 50
+    },
+    {
+      "id": "clip_1792223173409760100",
+      "content": "https://x.com/DilumSanjaya",
+      "timestamp": "2026-10-17T10:46:13.4097601+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1792223033808299300",
+      "content": "https://192.168.20.203:5180/",
+      "timestamp": "2026-10-17T10:43:53.8082993+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1792218365016061400",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-17T09:26:05.0160614+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792216913786571400",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file",
+      "timestamp": "2026-10-17T09:01:53.7865714+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1792216613786848300",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-17T08:56:53.7868483+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792055924586138200",
+      "content": "GXW4501",
+      "timestamp": "2026-10-15T12:18:44.5861382+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1792055655387350300",
+      "content": "ok , how to configure the e1 with grandstream ucm6308 ?",
+      "timestamp": "2026-10-15T12:14:15.3873503+03:00",
+      "pinned": false,
+      "length": 55
+    },
+    {
+      "id": "clip_1792051080148950200",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-15T10:58:00.1489502+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792049133716820300",
+      "content": "i have the device grandstream ucm 6308, and i want to configure it with our local provider, knowing that iam yemen ,\nwhat are the requirments ?",
+      "timestamp": "2026-10-15T10:25:33.7168203+03:00",
+      "pinned": false,
+      "length": 143
+    },
+    {
+      "id": "clip_1792048982117155300",
+      "content": "https://192.168.20.203:5180/",
+      "timestamp": "2026-10-15T10:23:02.1171553+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1792048256119614700",
+      "content": "72UR",
+      "timestamp": "2026-10-15T10:10:56.1196147+03:00",
+      "pinned": false,
+      "length": 4
+    },
+    {
+      "id": "clip_1792046714938740700",
+      "content": "pdf file",
+      "timestamp": "2026-10-15T09:45:14.9387407+03:00",
+      "pinned": false,
+      "length": 8
+    },
+    {
+      "id": "clip_1792046378937403900",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-15T09:39:38.9374039+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792045708949056300",
+      "content": "E:\\jimg",
+      "timestamp": "2026-10-15T09:28:28.9490563+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1792045355337320300",
+      "content": "http://localhost:5173/projects/404907fb-d8cb-4415-8d89-a8506e2bdf30/workspace?tab=processing",
+      "timestamp": "2026-10-15T09:22:35.3373203+03:00",
+      "pinned": false,
+      "length": 92
+    },
+    {
+      "id": "clip_1792045312538193000",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-15T09:21:52.538193+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1792045300536894600",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-15T09:21:40.5368946+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1792045282537231800",
+      "content": "http://localhost:5173/",
+      "timestamp": "2026-10-15T09:21:22.5372318+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1792045133739937100",
+      "content": "E:\\jimg",
+      "timestamp": "2026-10-15T09:18:53.7399371+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1791893278862749400",
+      "content": "http://localhost:5193/templates/00000000-0000-4000-8000-000000000002/fdf3a964-f5ac-433c-a67a-830b3185ed88",
+      "timestamp": "2026-10-13T15:07:58.8627494+03:00",
+      "pinned": false,
+      "length": 105
+    },
+    {
+      "id": "clip_1791893024462492200",
+      "content": "http://localhost:5173/",
+      "timestamp": "2026-10-13T15:03:44.4624922+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791892034861244500",
+      "content": "https://local-workspace.sofa.ye/",
+      "timestamp": "2026-10-13T14:47:14.8612445+03:00",
+      "pinned": false,
+      "length": 32
+    },
+    {
+      "id": "clip_1791891429660978500",
+      "content": "first , i want to be able to create a template ",
+      "timestamp": "2026-10-13T14:37:09.6609785+03:00",
+      "pinned": false,
+      "length": 47
+    },
+    {
+      "id": "clip_1791891179624035000",
+      "content": "http://192.168.20.203:8001/",
+      "timestamp": "2026-10-13T14:32:59.624035+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791891143220684500",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-13T14:32:23.2206845+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1791891099205223200",
+      "content": "https://192.168.20.203:5180/",
+      "timestamp": "2026-10-13T14:31:39.2052232+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1791890675586734600",
+      "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+      "timestamp": "2026-10-13T14:24:35.5867346+03:00",
+      "pinned": false,
+      "length": 64
+    },
+    {
+      "id": "clip_1791890506387712600",
+      "content": "k1PATS5cx4EKuZPvjUS9SZru9lrxCrg24O6AT_lh7B0",
+      "timestamp": "2026-10-13T14:21:46.3877126+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791880620387522000",
+      "content": "C:\\Users\\abby\\Desktop\\pdf file sample\\midgulf",
+      "timestamp": "2026-10-13T11:37:00.387522+03:00",
+      "pinned": false,
+      "length": 45
+    },
+    {
+      "id": "clip_1791880383581350100",
+      "content": "http://172.16.110.234:8000",
+      "timestamp": "2026-10-13T11:33:03.5813501+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1791879297146341300",
+      "content": "k1PATS5cx4EKuZPvjUS9SZru9lrxCrg24O6AT_lh7B0",
+      "timestamp": "2026-10-13T11:14:57.1463413+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791877952745684900",
+      "content": "local-owner",
+      "timestamp": "2026-10-13T10:52:32.7456849+03:00",
+      "pinned": false,
+      "length": 11
+    },
+    {
+      "id": "clip_1791877946746758400",
+      "content": "6bED-Ox1_Ihpzq1Aw1y6HYueu3RcUCQo",
+      "timestamp": "2026-10-13T10:52:26.7467584+03:00",
+      "pinned": false,
+      "length": 32
+    },
+    {
+      "id": "clip_1791877805554190400",
+      "content": "C:\\Users\\abby\\Desktop\\pdfpdf",
+      "timestamp": "2026-10-13T10:50:05.5541904+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1791877759155682000",
+      "content": "C:\\Users\\abby\\Desktop\\pdf file",
+      "timestamp": "2026-10-13T10:49:19.155682+03:00",
+      "pinned": false,
+      "length": 30
+    },
+    {
+      "id": "clip_1791877639547494800",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-13T10:47:19.5474948+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791877165149310400",
+      "content": "Add job details to every row: job id, file name, Document Definition and processed time. Then each job’s data can be filtered or exported on its own. This is what I’d recommend instead of a separate database per job: a database per job is hard to query, back up and manage.\nDon’t let one unexpected definition block the job: let “Tables by Document Definition” skip a definition with no tables set up, and flag it on the job page instead of failing the whole stage.\nChoose what happens when a file is processed again: keep the old row (today’s behaviour), or update it with the new values.",
+      "timestamp": "2026-10-13T10:39:25.1493104+03:00",
+      "pinned": false,
+      "length": 601
+    },
+    {
+      "id": "clip_1791876947145696200",
+      "content": "6bED-Ox1_Ihpzq1Aw1y6HYueu3RcUCQo",
+      "timestamp": "2026-10-13T10:35:47.1456962+03:00",
+      "pinned": false,
+      "length": 32
+    },
+    {
+      "id": "clip_1791876940746257900",
+      "content": "local-owner",
+      "timestamp": "2026-10-13T10:35:40.7462579+03:00",
+      "pinned": false,
+      "length": 11
+    },
+    {
+      "id": "clip_1791876919961916200",
+      "content": "k1PATS5cx4EKuZPvjUS9SZru9lrxCrg24O6AT_lh7B0",
+      "timestamp": "2026-10-13T10:35:19.9619162+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791875234897172600",
+      "content": "git push --set-upstream origin fc-en",
+      "timestamp": "2026-10-13T10:07:14.8971726+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791875187700258100",
+      "content": "git push --set-upstream origin en-fc",
+      "timestamp": "2026-10-13T10:06:27.7002581+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791873295696741300",
+      "content": "http://172.16.110.250:9676/",
+      "timestamp": "2026-10-13T09:34:55.6967413+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791872247300103400",
+      "content": "C:\\Users\\abby\\Desktop\\pdf file\r\n",
+      "timestamp": "2026-10-13T09:17:27.3001034+03:00",
+      "pinned": false,
+      "length": 32
+    },
+    {
+      "id": "clip_1791870045314442000",
+      "content": "C:\\Users\\abby\\Desktop\\pdf file",
+      "timestamp": "2026-10-13T08:40:45.314442+03:00",
+      "pinned": false,
+      "length": 30
+    },
+    {
+      "id": "clip_1791869695306673800",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-13T08:34:55.3066738+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791816199307806100",
+      "content": "http://localhost:5173/projects/5e24e69f-299f-4b2a-86ea-11fe93587014/workspace",
+      "timestamp": "2026-10-12T17:43:19.3078061+03:00",
+      "pinned": false,
+      "length": 77
+    },
+    {
+      "id": "clip_1791814161867059200",
+      "content": "doc_2468931f177b108fb20a19e24dd4350f",
+      "timestamp": "2026-10-12T17:09:21.8670592+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791814119866753200",
+      "content": "Ys1FdcmlMm4dioR28zNTZiAKVBEClu76exSTfxCeGFM",
+      "timestamp": "2026-10-12T17:08:39.8667532+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791814087466982800",
+      "content": "http://127.0.0.1:8765/",
+      "timestamp": "2026-10-12T17:08:07.4669828+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791814073468029100",
+      "content": "py external-api-client\\server.py",
+      "timestamp": "2026-10-12T17:07:53.4680291+03:00",
+      "pinned": false,
+      "length": 32
+    },
+    {
+      "id": "clip_1791812171029927200",
+      "content": "3",
+      "timestamp": "2026-10-12T16:36:11.0299272+03:00",
+      "pinned": false,
+      "length": 1
+    },
+    {
+      "id": "clip_1791812168647052400",
+      "content": "2",
+      "timestamp": "2026-10-12T16:36:08.6470524+03:00",
+      "pinned": false,
+      "length": 1
+    },
+    {
+      "id": "clip_1791812106223643000",
+      "content": "http://192.168.20.203:8001/",
+      "timestamp": "2026-10-12T16:35:06.223643+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791810793025810200",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-12T16:13:13.0258102+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791809239420865400",
+      "content": "Ab@2025!$#",
+      "timestamp": "2026-10-12T15:47:19.4208654+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1791706158382194700",
+      "content": "http://127.0.0.1:5173/",
+      "timestamp": "2026-10-11T11:09:18.3821947+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791706055982851800",
+      "content": "http://192.168.20.203:5173/",
+      "timestamp": "2026-10-11T11:07:35.9828518+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791705842782456400",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\www\\data-extractor-client-lan-20261011 (1)\\data-extractor-client-20261011\\client",
+      "timestamp": "2026-10-11T11:04:02.7824564+03:00",
+      "pinned": false,
+      "length": 115
+    },
+    {
+      "id": "clip_1791703877185547900",
+      "content": "Choosing a definition: let a FlexCapture stage specify which definition(s) are allowed, send ?definition= to the bridge, and understand the two new error codes. A definition mismatch should count as “not this project”, so the all-projects search moves on.",
+      "timestamp": "2026-10-11T10:31:17.1855479+03:00",
+      "pinned": false,
+      "length": 259
+    },
+    {
+      "id": "clip_1791703645982564900",
+      "content": "Ys1FdcmlMm4dioR28zNTZiAKVBEClu76exSTfxCeGFM",
+      "timestamp": "2026-10-11T10:27:25.9825649+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791703643582316000",
+      "content": "http://192.168.20.203:8001",
+      "timestamp": "2026-10-11T10:27:23.582316+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1791702463582141900",
+      "content": "Cohere Transcribe Arabic\r\n",
+      "timestamp": "2026-10-11T10:07:43.5821419+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1791702135982657400",
+      "content": "Ys1FdcmlMm4dioR28zNTZiAKVBEClu76exSTfxCeGFM",
+      "timestamp": "2026-10-11T10:02:15.9826574+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791702122782506900",
+      "content": "http://192.168.20.203:8001",
+      "timestamp": "2026-10-11T10:02:02.7825069+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1791701542382183900",
+      "content": "Ys1FdcmlMm4dioR28zNTZiAKVBEClu76exSTfxCeGFM",
+      "timestamp": "2026-10-11T09:52:22.3821839+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791701533582312100",
+      "content": "http://192.168.20.203/",
+      "timestamp": "2026-10-11T09:52:13.5823121+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791701428382297300",
+      "content": "http://192.168.20.203:8001/",
+      "timestamp": "2026-10-11T09:50:28.3822973+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791701422382072300",
+      "content": "http://127.0.0.1:8001",
+      "timestamp": "2026-10-11T09:50:22.3820723+03:00",
+      "pinned": false,
+      "length": 21
+    },
+    {
+      "id": "clip_1791701403982371400",
+      "content": "http://192.168.20.203:8001/",
+      "timestamp": "2026-10-11T09:50:03.9823714+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791701337983448800",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\data-extractor-client-20261011\\data-extractor-client-20261011\\client",
+      "timestamp": "2026-10-11T09:48:57.9834488+03:00",
+      "pinned": false,
+      "length": 103
+    },
+    {
+      "id": "clip_1791701127582185000",
+      "content": "http://192.168.20.203:8001/",
+      "timestamp": "2026-10-11T09:45:27.582185+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791701082382434300",
+      "content": "Ys1FdcmlMm4dioR28zNTZiAKVBEClu76exSTfxCeGFM",
+      "timestamp": "2026-10-11T09:44:42.3824343+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791701073582451200",
+      "content": "http://192.168.20.203/",
+      "timestamp": "2026-10-11T09:44:33.5824512+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791700893182154600",
+      "content": "p1_l2",
+      "timestamp": "2026-10-11T09:41:33.1821546+03:00",
+      "pinned": false,
+      "length": 5
+    },
+    {
+      "id": "clip_1791700694382110500",
+      "content": "Ys1FdcmlMm4dioR28zNTZiAKVBEClu76exSTfxCeGFM",
+      "timestamp": "2026-10-11T09:38:14.3821105+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791700434782372300",
+      "content": "http://192.168.20.203:8100/",
+      "timestamp": "2026-10-11T09:33:54.7823723+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791700196782962100",
+      "content": "http://192.168.20.203:8001/",
+      "timestamp": "2026-10-11T09:29:56.7829621+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791699494782365800",
+      "content": "Ys1FdcmlMm4dioR28zNTZiAKVBEClu76exSTfxCeGFM",
+      "timestamp": "2026-10-11T09:18:14.7823658+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791698692782556500",
+      "content": "/api/v1/documents",
+      "timestamp": "2026-10-11T09:04:52.7825565+03:00",
+      "pinned": false,
+      "length": 17
+    },
+    {
+      "id": "clip_1791698447582791900",
+      "content": "192.168.20.203:8001",
+      "timestamp": "2026-10-11T09:00:47.5827919+03:00",
+      "pinned": false,
+      "length": 19
+    },
+    {
+      "id": "clip_1791361892615490100",
+      "content": "Watania+1",
+      "timestamp": "2026-10-07T11:31:32.6154901+03:00",
+      "pinned": false,
+      "length": 9
+    },
+    {
+      "id": "clip_1791361851424116000",
+      "content": "C4C69D68-9CE6-41AA-A29E-F5CE18A2EC64",
+      "timestamp": "2026-10-07T11:30:51.424116+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791361479824098000",
+      "content": "http://localhost:5600/#/home",
+      "timestamp": "2026-10-07T11:24:39.824098+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1791360811824366000",
+      "content": "E:\\house oversight",
+      "timestamp": "2026-10-07T11:13:31.824366+03:00",
+      "pinned": false,
+      "length": 18
+    },
+    {
+      "id": "clip_1791296090994996700",
+      "content": "docker compose -f otel-compose.yml up -d",
+      "timestamp": "2026-10-06T17:14:50.9949967+03:00",
+      "pinned": false,
+      "length": 40
+    },
+    {
+      "id": "clip_1791296035794811900",
+      "content": "cd E:\\ocr1\\server\ndocker compose -f otel-compose.yml up -d",
+      "timestamp": "2026-10-06T17:13:55.7948119+03:00",
+      "pinned": false,
+      "length": 58
+    },
+    {
+      "id": "clip_1791296030194697000",
+      "content": "services:\n  collector:\n    image: otel/opentelemetry-collector:latest\n    command: [\"--config=/etc/otelcol/config.yaml\"]\n    volumes:\n      - ./otel-collector.yaml:/etc/otelcol/config.yaml:ro\n    ports:\n      - \"127.0.0.1:4317:4317\"",
+      "timestamp": "2026-10-06T17:13:50.194697+03:00",
+      "pinned": false,
+      "length": 232
+    },
+    {
+      "id": "clip_1791296024594734100",
+      "content": "otel-compose.yml",
+      "timestamp": "2026-10-06T17:13:44.5947341+03:00",
+      "pinned": false,
+      "length": 16
+    },
+    {
+      "id": "clip_1791296015795725300",
+      "content": "receivers:\n  otlp:\n    protocols:\n      grpc:\n        endpoint: 0.0.0.0:4317\n\nexporters:\n  debug:\n    verbosity: basic\n\nservice:\n  pipelines:\n    traces:\n      receivers: [otlp]\n      exporters: [debug]",
+      "timestamp": "2026-10-06T17:13:35.7957253+03:00",
+      "pinned": false,
+      "length": 202
+    },
+    {
+      "id": "clip_1791296000194660400",
+      "content": "otel-collector.yaml",
+      "timestamp": "2026-10-06T17:13:20.1946604+03:00",
+      "pinned": false,
+      "length": 19
+    },
+    {
+      "id": "clip_1791295980607988200",
+      "content": "receivers:\n  otlp:\n    protocols:\n      grpc:\n        endpoint: 0.0.0.0:4317\n\nexporters:\n  debug:\n    verbosity: basic\n\nservice:\n  pipelines:\n    traces:\n      receivers: [otlp]\n      exporters: [debug]",
+      "timestamp": "2026-10-06T17:13:00.6079882+03:00",
+      "pinned": false,
+      "length": 202
+    },
+    {
+      "id": "clip_1791295979794650200",
+      "content": "otel-collector.yaml",
+      "timestamp": "2026-10-06T17:12:59.7946502+03:00",
+      "pinned": false,
+      "length": 19
+    },
+    {
+      "id": "clip_1791295670593521500",
+      "content": "OpenTelemetry",
+      "timestamp": "2026-10-06T17:07:50.5935215+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1791295242192154700",
+      "content": "D:\\godot\\godot",
+      "timestamp": "2026-10-06T17:00:42.1921547+03:00",
+      "pinned": false,
+      "length": 14
+    },
+    {
+      "id": "clip_1791295171791779300",
+      "content": "{\r\n  \"mcpServers\": {\r\n    \"godot\": {\r\n      \"command\": \"npx\",\r\n      \"args\": [\"@coding-solo/godot-mcp\"],\r\n      \"env\": {\r\n        \"GODOT_PATH\": \"/path/to/godot\",\r\n        \"DEBUG\": \"true\"\r\n      }\r\n    }\r\n  }\r\n}",
+      "timestamp": "2026-10-06T16:59:31.7917793+03:00",
+      "pinned": false,
+      "length": 210
+    },
+    {
+      "id": "clip_1791294533393117700",
+      "content": "C4C69D68-9CE6-41AA-A29E-F5CE18A2EC64",
+      "timestamp": "2026-10-06T16:48:53.3931177+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791294151792343700",
+      "content": "B0446930-8836-4205-9DF5-D6DFB2193D8E",
+      "timestamp": "2026-10-06T16:42:31.7923437+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791294116193566700",
+      "content": "\"B0446930-8836-4205-9DF5-D6DFB2193D8E",
+      "timestamp": "2026-10-06T16:41:56.1935667+03:00",
+      "pinned": false,
+      "length": 37
+    },
+    {
+      "id": "clip_1791292731384721100",
+      "content": "OpenTelemetry",
+      "timestamp": "2026-10-06T16:18:51.3847211+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1791292002997332400",
+      "content": "audit-policy-heading-actions",
+      "timestamp": "2026-10-06T16:06:42.9973324+03:00",
+      "pinned": false,
+      "length": 28
+    },
+    {
+      "id": "clip_1791291963782915100",
+      "content": "audit-policy-heading",
+      "timestamp": "2026-10-06T16:06:03.7829151+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791291075784224300",
+      "content": "midgulf",
+      "timestamp": "2026-10-06T15:51:15.7842243+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1791290973383253500",
+      "content": "pdf_file_test",
+      "timestamp": "2026-10-06T15:49:33.3832535+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1791290215380637200",
+      "content": "http://localhost:8000/",
+      "timestamp": "2026-10-06T15:36:55.3806372+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791288833781558700",
+      "content": "Folder\r\nwe will be working with flexcapture SOAP , so also understand the flexi server inside the folder that i mentioned , and its also ok to make a changes in it when we work",
+      "timestamp": "2026-10-06T15:13:53.7815587+03:00",
+      "pinned": false,
+      "length": 176
+    },
+    {
+      "id": "clip_1791288400189859400",
+      "content": "Poppler",
+      "timestamp": "2026-10-06T15:06:40.1898594+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1791288358577894400",
+      "content": "C:\\Users\\abby\\Desktop\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin",
+      "timestamp": "2026-10-06T15:05:58.5778944+03:00",
+      "pinned": false,
+      "length": 171
+    },
+    {
+      "id": "clip_1791288273792460200",
+      "content": "poppler-25.07.0",
+      "timestamp": "2026-10-06T15:04:33.7924602+03:00",
+      "pinned": false,
+      "length": 15
+    },
+    {
+      "id": "clip_1791288252974063400",
+      "content": "temporal server start-dev\r\n\r\n",
+      "timestamp": "2026-10-06T15:04:12.9740634+03:00",
+      "pinned": false,
+      "length": 29
+    },
+    {
+      "id": "clip_1791288227371048800",
+      "content": "C:\\Users\\MohamedAlghurbani\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\",
+      "timestamp": "2026-10-06T15:03:47.3710488+03:00",
+      "pinned": false,
+      "length": 152
+    },
+    {
+      "id": "clip_1791288191373522400",
+      "content": "temporal server start-dev\r\n\r\n",
+      "timestamp": "2026-10-06T15:03:11.3735224+03:00",
+      "pinned": false,
+      "length": 29
+    },
+    {
+      "id": "clip_1791286965769892300",
+      "content": "JOB_MAX_FILES",
+      "timestamp": "2026-10-06T14:42:45.7698923+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1791276576526835600",
+      "content": "C4C69D68-9CE6-41AA-A29E-F5CE18A2EC64",
+      "timestamp": "2026-10-06T11:49:36.5268356+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791275552351308500",
+      "content": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDvMtNRLKs7aWT1D/aZsT5cSE3269sJ0mXVCIV35HT6Cmji7Slt8wRoODwHikvBP7aSLdsQ6vkkiLqUjk28EH+Qakd79xjOxbBJyjNyLMG2qxms/jSe2to+xAPyYnYfUeKPRjoQN7AkFDQh57hZ4g93JfIh4D9Nqn0HtvPErMcTczY/BDD233qwYzZSDpslrgdiNGkWn/HxoIDsxVXIUeablObCLZw+6D6eGQU7IbYIDjUfXFvH69zPKEzJ6xjREg8PPRdD/mG+bDc8cPkDpzwCRrkEteS8Iv5Qck7Xld0eVjclxrDJ2Mz0PU+xwejdiAvqXofDAsJqcqcqOha0CA5/3eTvnSmhmEafIg8VfObszKX3pahlf6YbwT954vbiwJVHcz3VSQMn695Y7x8nWOoBxo1U4N/7uSBMGBMSIdmHkKJQAxqPyZZiLBa3Lgm6kQDdbVF+fmf+Q1iA4pwBbNawsMXUPMUQ+y/QWswWqT+JL0Pnarnds1UqZV+ASw1/84jnt2L6N4rpPrK2UgqL6UDXvfLhEu3I72J0EXx3eA1GCK/AJ2aDnEXhvsv/35dTHhPB5Z5K8sMhTEo+Mnl4TdfgF+TbY6tmzWsFMtaAlWSs3cTc7xIJdYo/yfKZuwwNyWUzfluO54gXVRHpDsiaQQKFIK6jItU3lNHYHHFzHHCmDw== mohammadefathl@gmail.com\r\n",
+      "timestamp": "2026-10-06T11:32:32.3513085+03:00",
+      "pinned": false,
+      "length": 751
+    },
+    {
+      "id": "clip_1791275405947977000",
+      "content": "ssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"",
+      "timestamp": "2026-10-06T11:30:05.947977+03:00",
+      "pinned": false,
+      "length": 53
+    },
+    {
+      "id": "clip_1791275376745049100",
+      "content": "git@git.sofa.io:others/ocr-project/client/client.git",
+      "timestamp": "2026-10-06T11:29:36.7450491+03:00",
+      "pinned": false,
+      "length": 52
+    },
+    {
+      "id": "clip_1791275343943377700",
+      "content": "https://git.sofa.io/others/ocr-project/client/client/-/merge_requests/8",
+      "timestamp": "2026-10-06T11:29:03.9433777+03:00",
+      "pinned": false,
+      "length": 71
+    },
+    {
+      "id": "clip_1791275272345932000",
+      "content": "http://git.sofa.io/",
+      "timestamp": "2026-10-06T11:27:52.345932+03:00",
+      "pinned": false,
+      "length": 19
+    },
+    {
+      "id": "clip_1791275198743549100",
+      "content": "https://git.sofa.io/others/ocr-project/client/client/-/merge_requests/8",
+      "timestamp": "2026-10-06T11:26:38.7435491+03:00",
+      "pinned": false,
+      "length": 71
+    },
+    {
+      "id": "clip_1791275197943593700",
+      "content": "o",
+      "timestamp": "2026-10-06T11:26:37.9435937+03:00",
+      "pinned": false,
+      "length": 1
+    },
+    {
+      "id": "clip_1791275093943103300",
+      "content": "Ab@2025!$#",
+      "timestamp": "2026-10-06T11:24:53.9431033+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1791273192343120100",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-06T10:53:12.3431201+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791272841696513700",
+      "content": "{\r\n  \"schemaVersion\": \"ocr.v1\",\r\n  \"documentText\": \"FEDERAL BUREAU OF INVESTIGATION\\nTitle: (U) DELTA SERIAL:\\nDate: 11/25/2010\\nDrafted By: Missing\\nCase ID #: 31E-MM-108062\\n(U) EPSTEIN, JEFFREY\\nDetails:\\nUNCLASSIFIED FEDERAL BUREAU OF INVESTIGATION CHS REPORTING\\nDOCUMENT Form Classification: UNCLASSIFIED Source Id:\\nDate:\\n2010-11-26 Case Agent Name:\\nFieldOffice: Jacksonville\\nSquad: 10 Date of Contact: 2uro-11-15 Participants/Witnesses: SA\\nType of Contact: In Person Location Country: UNITED STATES City:\\nJacksonville State: Florida Date of Report 2010-11-26 Substantive Case\\nFile Number: 31E-MM-108062 Source Reporting: Source information received\\nto date on\\nreferred to Miami Division on 11/26/2010 re\\n31E-MM-108062.UNCLASSIFIED\\nEFTA00005716\",\r\n  \"pages\": [\r\n    {\r\n      \"page\": 1,\r\n      \"text\": \"FEDERAL BUREAU OF INVESTIGATION\\nTitle: (U) DELTA SERIAL:\\nDate: 11/25/2010\\nDrafted By: Missing\\nCase ID #: 31E-MM-108062\\n(U) EPSTEIN, JEFFREY\\nDetails:\\nUNCLASSIFIED FEDERAL BUREAU OF INVESTIGATION CHS REPORTING\\nDOCUMENT Form Classification: UNCLASSIFIED Source Id:\\nDate:\\n2010-11-26 Case Agent Name:\\nFieldOffice: Jacksonville\\nSquad: 10 Date of Contact: 2uro-11-15 Participants/Witnesses: SA\\nType of Contact: In Person Location Country: UNITED STATES City:\\nJacksonville State: Florida Date of Report 2010-11-26 Substantive Case\\nFile Number: 31E-MM-108062 Source Reporting: Source information received\\nto date on\\nreferred to Miami Division on 11/26/2010 re\\n31E-MM-108062.UNCLASSIFIED\\nEFTA00005716\"\r\n    }\r\n  ]\r\n}",
+      "timestamp": "2026-10-06T10:47:21.6965137+03:00",
+      "pinned": false,
+      "length": 1544
+    },
+    {
+      "id": "clip_1791272609113333800",
+      "content": "\"In jobs\" count: the card says 1,001 files are in jobs, but 100 of them are in part 11, which hasn't started yet. I can make that count only files whose job has actually started.",
+      "timestamp": "2026-10-06T10:43:29.1133338+03:00",
+      "pinned": false,
+      "length": 178
+    },
+    {
+      "id": "clip_1791272572336903600",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-06T10:42:52.3369036+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791272543937455400",
+      "content": "N7@qL4#vP9!xR2",
+      "timestamp": "2026-10-06T10:42:23.9374554+03:00",
+      "pinned": false,
+      "length": 14
+    },
+    {
+      "id": "clip_1791272436737506200",
+      "content": "http://localhost:5173/projects/c0f14a29-5d28-4981-abf5-8d72841a7ca2/workspace?tab=processing",
+      "timestamp": "2026-10-06T10:40:36.7375062+03:00",
+      "pinned": false,
+      "length": 92
+    },
+    {
+      "id": "clip_1791269029761619500",
+      "content": " RTX 3000",
+      "timestamp": "2026-10-06T09:43:49.7616195+03:00",
+      "pinned": false,
+      "length": 9
+    },
+    {
+      "id": "clip_1791268992160291400",
+      "content": "Dell Precision 7740",
+      "timestamp": "2026-10-06T09:43:12.1602914+03:00",
+      "pinned": false,
+      "length": 19
+    },
+    {
+      "id": "clip_1791268864556734600",
+      "content": "E:\\house oversight",
+      "timestamp": "2026-10-06T09:41:04.5567346+03:00",
+      "pinned": false,
+      "length": 18
+    },
+    {
+      "id": "clip_1791268342149264400",
+      "content": "https://www.youtube.com/watch?v=jVjCTvFeFvA\u0026list=RDjVjCTvFeFvA\u0026start_radio=1",
+      "timestamp": "2026-10-06T09:32:22.1492644+03:00",
+      "pinned": false,
+      "length": 76
+    },
+    {
+      "id": "clip_1791268136149011800",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-06T09:28:56.1490118+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791267631349278800",
+      "content": "RTX A2000/A3000",
+      "timestamp": "2026-10-06T09:20:31.3492788+03:00",
+      "pinned": false,
+      "length": 15
+    },
+    {
+      "id": "clip_1791265342624595500",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-06T08:42:22.6245955+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791230786724294400",
+      "content": "Multi-page PDFs overwrite their own raw OCR output. I found this in my first review: the raw-output file path in workflows/ocr.go has no page number, so for a 16-page PDF only one page's raw result survives. vol4 is almost all multi-page PDFs. The extracted text in the database is fine; it's the stored raw response per page that gets lost.\nRemove or repair cmd/worker. Earlier today it silently failed every job. At minimum, add a test that it registers the same steps as the all-in-one server.\nAutomatic retry after an outage. Pages that failed with \"unavailable\" (49 in today's run) should be retried once the OCR service is back, without anyone pressing Retry.",
+      "timestamp": "2026-10-05T23:06:26.7242944+03:00",
+      "pinned": false,
+      "length": 665
+    },
+    {
+      "id": "clip_1791230782324051600",
+      "content": "7. Throughput and failure dashboard: pages per minute, queue depth, OCR response times, failures by type, and an estimated finish time per import. Everything I measured with scripts today should be on a page.",
+      "timestamp": "2026-10-05T23:06:22.3240516+03:00",
+      "pinned": false,
+      "length": 208
+    },
+    {
+      "id": "clip_1791212490989337000",
+      "content": "E:\\zaid-data\\vol4",
+      "timestamp": "2026-10-05T18:01:30.989337+03:00",
+      "pinned": false,
+      "length": 17
+    },
+    {
+      "id": "clip_1791212477789394700",
+      "content": "E:\\vol4",
+      "timestamp": "2026-10-05T18:01:17.7893947+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1791212339010717200",
+      "content": "E:\\خرجات الحوار",
+      "timestamp": "2026-10-05T17:58:59.0107172+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1791211850985967600",
+      "content": "23556",
+      "timestamp": "2026-10-05T17:50:50.9859676+03:00",
+      "pinned": false,
+      "length": 5
+    },
+    {
+      "id": "clip_1791209683890701400",
+      "content": "pdftoppm -v\r\npdftoppm version 25.07.0\r\nCopyright 2005-2025 The Poppler Developers - http://poppler.freedesktop.org\r\nCopyright 1996-2011, 2022 Glyph \u0026 Cog, LLC\r\n",
+      "timestamp": "2026-10-05T17:14:43.8907014+03:00",
+      "pinned": false,
+      "length": 160
+    },
+    {
+      "id": "clip_1791209677092780400",
+      "content": "xpdf-tools-win-4.06",
+      "timestamp": "2026-10-05T17:14:37.0927804+03:00",
+      "pinned": false,
+      "length": 19
+    },
+    {
+      "id": "clip_1791209626308740500",
+      "content": "pdftoppm -v\r\npdftoppm version 25.07.0\r\nCopyright 2005-2025 The Poppler Developers - http://poppler.freedesktop.org\r\nCopyright 1996-2011, 2022 Glyph \u0026 Cog, LLC",
+      "timestamp": "2026-10-05T17:13:46.3087405+03:00",
+      "pinned": false,
+      "length": 158
+    },
+    {
+      "id": "clip_1791209519093509400",
+      "content": "pdftoppm -v",
+      "timestamp": "2026-10-05T17:11:59.0935094+03:00",
+      "pinned": false,
+      "length": 11
+    },
+    {
+      "id": "clip_1791209382700338000",
+      "content": "winget install --id oschwartz10612.Poppler -e",
+      "timestamp": "2026-10-05T17:09:42.700338+03:00",
+      "pinned": false,
+      "length": 45
+    },
+    {
+      "id": "clip_1791208979100930600",
+      "content": "https://poppler.freedesktop.org/",
+      "timestamp": "2026-10-05T17:02:59.1009306+03:00",
+      "pinned": false,
+      "length": 32
+    },
+    {
+      "id": "clip_1791208907502484800",
+      "content": "Poppler",
+      "timestamp": "2026-10-05T17:01:47.5024848+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1791208806302680100",
+      "content": "pdftoppm -v\r\npdftoppm version 4.06 [www.xpdfreader.com]\r\nCopyright 1996-2025 Glyph \u0026 Cog, LLC",
+      "timestamp": "2026-10-05T17:00:06.3026801+03:00",
+      "pinned": false,
+      "length": 93
+    },
+    {
+      "id": "clip_1791208787904490400",
+      "content": "pdftoppm ",
+      "timestamp": "2026-10-05T16:59:47.9044904+03:00",
+      "pinned": false,
+      "length": 9
+    },
+    {
+      "id": "clip_1791208685104029700",
+      "content": "36",
+      "timestamp": "2026-10-05T16:58:05.1040297+03:00",
+      "pinned": false,
+      "length": 2
+    },
+    {
+      "id": "clip_1791208369905725100",
+      "content": "https://local-workspace.sofa.ye/",
+      "timestamp": "2026-10-05T16:52:49.9057251+03:00",
+      "pinned": false,
+      "length": 32
+    },
+    {
+      "id": "clip_1791208173108017400",
+      "content": "ucm_cdr_recordings",
+      "timestamp": "2026-10-05T16:49:33.1080174+03:00",
+      "pinned": false,
+      "length": 18
+    },
+    {
+      "id": "clip_1791207977904460800",
+      "content": "Fix the misleading \"encrypted\" error in the PDF converter?",
+      "timestamp": "2026-10-05T16:46:17.9044608+03:00",
+      "pinned": false,
+      "length": 58
+    },
+    {
+      "id": "clip_1791207757500907700",
+      "content": "MAX_SELECTABLE_FILES ",
+      "timestamp": "2026-10-05T16:42:37.5009077+03:00",
+      "pinned": false,
+      "length": 21
+    },
+    {
+      "id": "clip_1791207597897907500",
+      "content": "E:\\zaid-data\\vol4",
+      "timestamp": "2026-10-05T16:39:57.8979075+03:00",
+      "pinned": false,
+      "length": 17
+    },
+    {
+      "id": "clip_1791207339858667400",
+      "content": "showing calling devices drawer, shows an overflow for the taps and the bottom bar  with the setting page , fix this ",
+      "timestamp": "2026-10-05T16:35:39.8586674+03:00",
+      "pinned": false,
+      "length": 116
+    },
+    {
+      "id": "clip_1791206762249803600",
+      "content": "E:\\خرجات الحوار",
+      "timestamp": "2026-10-05T16:26:02.2498036+03:00",
+      "pinned": false,
+      "length": 26
+    },
+    {
+      "id": "clip_1791205379879781800",
+      "content": "8891",
+      "timestamp": "2026-10-05T16:02:59.8797818+03:00",
+      "pinned": false,
+      "length": 4
+    },
+    {
+      "id": "clip_1791204471892457000",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-05T15:47:51.892457+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791202195871674100",
+      "content": "mohamed1",
+      "timestamp": "2026-10-05T15:09:55.8716741+03:00",
+      "pinned": false,
+      "length": 8
+    },
+    {
+      "id": "clip_1791199334632969600",
+      "content": "{\"image\": \"data:image/png;base64,...\", \"fields\": [\"name\", \"date\"], \"model\": \"paddleocr\"}",
+      "timestamp": "2026-10-05T14:22:14.6329696+03:00",
+      "pinned": false,
+      "length": 88
+    },
+    {
+      "id": "clip_1791199074240232200",
+      "content": "{\r\n    \"success\": true,\r\n    \"template\": {\r\n        \"name\": \"...\",\r\n        \"date\": \"...\"\r\n    },\r\n    \"latency_ms\": 123.45\r\n}",
+      "timestamp": "2026-10-05T14:17:54.2402322+03:00",
+      "pinned": false,
+      "length": 126
+    },
+    {
+      "id": "clip_1791199072640358500",
+      "content": "    \"ocr_full_text\": \"...\",\r\n",
+      "timestamp": "2026-10-05T14:17:52.6403585+03:00",
+      "pinned": false,
+      "length": 29
+    },
+    {
+      "id": "clip_1791199057439607400",
+      "content": "{\r\n    \"success\": true,\r\n    \"template\": {\r\n        \"name\": \"...\",\r\n        \"date\": \"...\"\r\n    },\r\n    \"ocr_full_text\": \"...\",\r\n    \"latency_ms\": 123.45\r\n}",
+      "timestamp": "2026-10-05T14:17:37.4396074+03:00",
+      "pinned": false,
+      "length": 155
+    },
+    {
+      "id": "clip_1791199042240413900",
+      "content": "{\r\n    \"success\": true,\r\n    \"template\": {\r\n        \"name\": \"...\",\r\n        \"date\": \"...\"\r\n    },\r\n    \"ocr_full_text\": \"...\",\r\n    \"ocr_total_lines\": 2,\r\n    \"latency_ms\": 123.45\r\n}",
+      "timestamp": "2026-10-05T14:17:22.2404139+03:00",
+      "pinned": false,
+      "length": 182
+    },
+    {
+      "id": "clip_1791199040640069400",
+      "content": "    \"document_type\": \"invoice\",\r\n",
+      "timestamp": "2026-10-05T14:17:20.6400694+03:00",
+      "pinned": false,
+      "length": 33
+    },
+    {
+      "id": "clip_1791198993856038000",
+      "content": "{\"success\": true, \"document_type\": \"invoice\", \"template\": {\"name\": \"...\", \"date\": \"...\"}, \"ocr_full_text\": \"...\", \"ocr_total_lines\": 2, \"latency_ms\": 123.45}",
+      "timestamp": "2026-10-05T14:16:33.856038+03:00",
+      "pinned": false,
+      "length": 157
+    },
+    {
+      "id": "clip_1791191028595759000",
+      "content": "i want also to be able to edit some entried ai connection , or database connection",
+      "timestamp": "2026-10-05T12:03:48.595759+03:00",
+      "pinned": false,
+      "length": 82
+    },
+    {
+      "id": "clip_1791191005394728700",
+      "content": "make them shows as tables , for the entered data",
+      "timestamp": "2026-10-05T12:03:25.3947287+03:00",
+      "pinned": false,
+      "length": 48
+    },
+    {
+      "id": "clip_1791191001795521000",
+      "content": "i want also to be able to edit some entried ai connection , or database connection",
+      "timestamp": "2026-10-05T12:03:21.795521+03:00",
+      "pinned": false,
+      "length": 82
+    },
+    {
+      "id": "clip_1791189245328708600",
+      "content": "  border: 1px solid var(--yeds-color-neutral-200, #e5e7eb);\r\n",
+      "timestamp": "2026-10-05T11:34:05.3287086+03:00",
+      "pinned": false,
+      "length": 61
+    },
+    {
+      "id": "clip_1791189236124880700",
+      "content": ".sidebar-logo",
+      "timestamp": "2026-10-05T11:33:56.1248807+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1791187686968491300",
+      "content": "http://localhost:5174/",
+      "timestamp": "2026-10-05T11:08:06.9684913+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791183195263849000",
+      "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+      "timestamp": "2026-10-05T09:53:15.263849+03:00",
+      "pinned": false,
+      "length": 20
+    },
+    {
+      "id": "clip_1791183154462864700",
+      "content": "http://localhost:5173/",
+      "timestamp": "2026-10-05T09:52:34.4628647+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791181466387031200",
+      "content": "http://localhost:4321/components/menu/",
+      "timestamp": "2026-10-05T09:24:26.3870312+03:00",
+      "pinned": false,
+      "length": 38
+    },
+    {
+      "id": "clip_1791181338387186100",
+      "content": "4321",
+      "timestamp": "2026-10-05T09:22:18.3871861+03:00",
+      "pinned": false,
+      "length": 4
+    },
+    {
+      "id": "clip_1791181303593118300",
+      "content": "D:\\yeds-react\\apps\\docs",
+      "timestamp": "2026-10-05T09:21:43.5931183+03:00",
+      "pinned": false,
+      "length": 23
+    },
+    {
+      "id": "clip_1791136883947221800",
+      "content": "https://help.abbyy.com/en-us/flexicapturesdk/12/user_guide/licensing_addmodule/",
+      "timestamp": "2026-10-04T21:01:23.9472218+03:00",
+      "pinned": false,
+      "length": 79
+    },
+    {
+      "id": "clip_1791136709946948100",
+      "content": "Ab@2025!$#",
+      "timestamp": "2026-10-04T20:58:29.9469481+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1791127452523740600",
+      "content": "does ",
+      "timestamp": "2026-10-04T18:24:12.5237406+03:00",
+      "pinned": false,
+      "length": 5
+    },
+    {
+      "id": "clip_1791125135727649800",
+      "content": "[84, 141, 2375, 2347]",
+      "timestamp": "2026-10-04T17:45:35.7276498+03:00",
+      "pinned": false,
+      "length": 21
+    },
+    {
+      "id": "clip_1791123305324985700",
+      "content": "Ab@2025!$#",
+      "timestamp": "2026-10-04T17:15:05.3249857+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1791121406123598600",
+      "content": "select:focus-visible ",
+      "timestamp": "2026-10-04T16:43:26.1235986+03:00",
+      "pinned": false,
+      "length": 21
+    },
+    {
+      "id": "clip_1791121360523549600",
+      "content": "--yeds-color-primary-200",
+      "timestamp": "2026-10-04T16:42:40.5235496+03:00",
+      "pinned": false,
+      "length": 24
+    },
+    {
+      "id": "clip_1791121346523682700",
+      "content": "05603a",
+      "timestamp": "2026-10-04T16:42:26.5236827+03:00",
+      "pinned": false,
+      "length": 6
+    },
+    {
+      "id": "clip_1791121332123823900",
+      "content": "a6f4dc",
+      "timestamp": "2026-10-04T16:42:12.1238239+03:00",
+      "pinned": false,
+      "length": 6
+    },
+    {
+      "id": "clip_1791120824525072800",
+      "content": "enhance the ui for this section",
+      "timestamp": "2026-10-04T16:33:44.5250728+03:00",
+      "pinned": false,
+      "length": 31
+    },
+    {
+      "id": "clip_1791120262123884300",
+      "content": "for the processing pipelines , it shows all of them , i want it to just the one that belong to the organization",
+      "timestamp": "2026-10-04T16:24:22.1238843+03:00",
+      "pinned": false,
+      "length": 111
+    },
+    {
+      "id": "clip_1791120065323432200",
+      "content": "Thmanyah Sans",
+      "timestamp": "2026-10-04T16:21:05.3234322+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1791120027724767700",
+      "content": "option",
+      "timestamp": "2026-10-04T16:20:27.7247677+03:00",
+      "pinned": false,
+      "length": 6
+    },
+    {
+      "id": "clip_1791119232923397800",
+      "content": "m@gmail.com",
+      "timestamp": "2026-10-04T16:07:12.9233978+03:00",
+      "pinned": false,
+      "length": 11
+    },
+    {
+      "id": "clip_1791119214127658200",
+      "content": "http://localhost:5173/t",
+      "timestamp": "2026-10-04T16:06:54.1276582+03:00",
+      "pinned": false,
+      "length": 23
+    },
+    {
+      "id": "clip_1791100442123681500",
+      "content": "http://172.16.110.234:8000/",
+      "timestamp": "2026-10-04T10:54:02.1236815+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791100431323790700",
+      "content": "http://localhost:5173/",
+      "timestamp": "2026-10-04T10:53:51.3237907+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791099790123480100",
+      "content": "http://172.16.110.234:8000/",
+      "timestamp": "2026-10-04T10:43:10.1234801+03:00",
+      "pinned": false,
+      "length": 27
+    },
+    {
+      "id": "clip_1791099691323417600",
+      "content": "B19AE3AC-AC74-4845-A61A-970112B0E3C8",
+      "timestamp": "2026-10-04T10:41:31.3234176+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791098567730106900",
+      "content": "\"B0446930-8836-4205-9DF5-D6DFB2193D8E",
+      "timestamp": "2026-10-04T10:22:47.7301069+03:00",
+      "pinned": false,
+      "length": 37
+    },
+    {
+      "id": "clip_1791098354923702800",
+      "content": "Ab@2025!$#",
+      "timestamp": "2026-10-04T10:19:14.9237028+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1791095200529934500",
+      "content": "B0446930-8836-4205-9DF5-D6DFB2193D8E",
+      "timestamp": "2026-10-04T09:26:40.5299345+03:00",
+      "pinned": false,
+      "length": 36
+    },
+    {
+      "id": "clip_1791095160926175200",
+      "content": "B0446930-8836-4205-9DF5-D6DFB2193D8",
+      "timestamp": "2026-10-04T09:26:00.9261752+03:00",
+      "pinned": false,
+      "length": 35
+    },
+    {
+      "id": "clip_1791095042923718100",
+      "content": "testsaicoabd",
+      "timestamp": "2026-10-04T09:24:02.9237181+03:00",
+      "pinned": false,
+      "length": 12
+    },
+    {
+      "id": "clip_1791094725323911900",
+      "content": "gocache",
+      "timestamp": "2026-10-04T09:18:45.3239119+03:00",
+      "pinned": false,
+      "length": 7
+    },
+    {
+      "id": "clip_1791094640524375100",
+      "content": "http://172.16.110.234/",
+      "timestamp": "2026-10-04T09:17:20.5243751+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791065790124513700",
+      "content": "http://localhost:5173/tenants",
+      "timestamp": "2026-10-04T01:16:30.1245137+03:00",
+      "pinned": false,
+      "length": 29
+    },
+    {
+      "id": "clip_1791061187339535700",
+      "content": "ok , now i want to add a new feature, the feature for tenant \ni want the project to have this tenant structure\ntenant -\u003e organization -\u003e group (the project will be connected to this), \nhow would u recommend implementing this feature ?",
+      "timestamp": "2026-10-03T23:59:47.3395357+03:00",
+      "pinned": false,
+      "length": 234
+    },
+    {
+      "id": "clip_1791060008925592700",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\midgulf",
+      "timestamp": "2026-10-03T23:40:08.9255927+03:00",
+      "pinned": false,
+      "length": 42
+    },
+    {
+      "id": "clip_1791058844523957600",
+      "content": "http://localhost:5173/projects/c0f14a29-5d28-4981-abf5-8d72841a7ca2/workspace",
+      "timestamp": "2026-10-03T23:20:44.5239576+03:00",
+      "pinned": false,
+      "length": 77
+    },
+    {
+      "id": "clip_1791058828923750300",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\midgulf",
+      "timestamp": "2026-10-03T23:20:28.9237503+03:00",
+      "pinned": false,
+      "length": 42
+    },
+    {
+      "id": "clip_1791058806925649900",
+      "content": "1. Extract this ZIP file.\r\n2. Double-click windows-agent.exe.\r\n3. Select the folder to watch.\r\n4. Return to your project page and wait for Connected.\r\n\r\nThis setup expires after 15 minutes. Download a new package if it expires.\r\n",
+      "timestamp": "2026-10-03T23:20:06.9256499+03:00",
+      "pinned": false,
+      "length": 229
+    },
+    {
+      "id": "clip_1791058238925270400",
+      "content": "pavo femto",
+      "timestamp": "2026-10-03T23:10:38.9252704+03:00",
+      "pinned": false,
+      "length": 10
+    },
+    {
+      "id": "clip_1791046097724695100",
+      "content": "/tenants",
+      "timestamp": "2026-10-03T19:48:17.7246951+03:00",
+      "pinned": false,
+      "length": 8
+    },
+    {
+      "id": "clip_1791045447324100000",
+      "content": "http://localhost:5173/",
+      "timestamp": "2026-10-03T19:37:27.3241+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791045436123356000",
+      "content": "the process is complex , ",
+      "timestamp": "2026-10-03T19:37:16.123356+03:00",
+      "pinned": false,
+      "length": 25
+    },
+    {
+      "id": "clip_1791045319723691800",
+      "content": "ocrwa_uDcti5BZjhyI-82ygSd4kRlgBO7qGJ-5G6b1qlgZ0X0",
+      "timestamp": "2026-10-03T19:35:19.7236918+03:00",
+      "pinned": false,
+      "length": 49
+    },
+    {
+      "id": "clip_1791045262524389000",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\midgulf",
+      "timestamp": "2026-10-03T19:34:22.524389+03:00",
+      "pinned": false,
+      "length": 42
+    },
+    {
+      "id": "clip_1791045245325577100",
+      "content": "ocrwa_zDGC53T8gXD_Z_bTpS6qOZG5es_YAMPfz4PfwxMuL3I",
+      "timestamp": "2026-10-03T19:34:05.3255771+03:00",
+      "pinned": false,
+      "length": 49
+    },
+    {
+      "id": "clip_1791045220524743600",
+      "content": "windows-agent.exe -server https://YOUR-SERVER -workspace 0c66a49d-4e26-4b91-8713-a021a9112b0b -root C:\\YOUR\\FOLDER -token-file C:\\PRIVATE\\agent-token.txt",
+      "timestamp": "2026-10-03T19:33:40.5247436+03:00",
+      "pinned": false,
+      "length": 153
+    },
+    {
+      "id": "clip_1791045175725294100",
+      "content": "ocrwa_zDGC53T8gXD_Z_bTpS6qOZG5es_YAMPfz4PfwxMuL3I",
+      "timestamp": "2026-10-03T19:32:55.7252941+03:00",
+      "pinned": false,
+      "length": 49
+    },
+    {
+      "id": "clip_1791045116525048600",
+      "content": "http://localhost:8082",
+      "timestamp": "2026-10-03T19:31:56.5250486+03:00",
+      "pinned": false,
+      "length": 21
+    },
+    {
+      "id": "clip_1791045095723532100",
+      "content": ".\\windows-agent.exe -server https://YOUR-SERVER ",
+      "timestamp": "2026-10-03T19:31:35.7235321+03:00",
+      "pinned": false,
+      "length": 48
+    },
+    {
+      "id": "clip_1791044992924075200",
+      "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\midgulf",
+      "timestamp": "2026-10-03T19:29:52.9249145+03:00",
+      "pinned": false,
+      "length": 42
+    },
+    {
+      "id": "clip_1791037844123574200",
+      "content": "والان بين اغير التعامل مع المجلدات والملفات . ",
+      "timestamp": "2026-10-03T17:30:44.1235742+03:00",
+      "pinned": false,
+      "length": 83
+    },
+    {
+      "id": "clip_1791035657335167200",
+      "content": "lZmpDR5xyfshm4ZEqWdx85encx1YGu9bPhsSLEIbPTw",
+      "timestamp": "2026-10-03T16:54:17.3351672+03:00",
+      "pinned": false,
+      "length": 43
+    },
+    {
+      "id": "clip_1791035652135003600",
+      "content": "Get-Content \"$env:USERPROFILE\\.open-dots\\.auth-token\"",
+      "timestamp": "2026-10-03T16:54:12.1350036+03:00",
+      "pinned": false,
+      "length": 53
+    },
+    {
+      "id": "clip_1791035643728973800",
+      "content": "http://127.0.0.1:3000/",
+      "timestamp": "2026-10-03T16:54:03.7289738+03:00",
+      "pinned": false,
+      "length": 22
+    },
+    {
+      "id": "clip_1791035364123736800",
+      "content": "organization_groups",
+      "timestamp": "2026-10-03T16:49:24.1237368+03:00",
+      "pinned": false,
+      "length": 19
+    },
+    {
+      "id": "clip_1791034898529031700",
+      "content": "supervise.ps1",
+      "timestamp": "2026-10-03T16:41:38.5290317+03:00",
+      "pinned": false,
+      "length": 13
+    },
+    {
+      "id": "clip_1791034843326731300",
+      "content": ".\\supervise.ps1",
+      "timestamp": "2026-10-03T16:40:43.3267313+03:00",
+      "pinned": false,
+      "length": 15
+    }
+  ]
+}

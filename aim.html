@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VALORANT FPS Aim Trainer - The Range</title>
+<style>
+  :root {
+    --val-red: #ff4655;
+    --val-black: #0f1923;
+    --val-dark: #1f2731;
+    --val-slate: #768079;
+    --val-white: #ece8e1;
+    --val-gold: #c5a059;
+    --val-cyan: #00f0ff;
+    --val-green: #00ff88;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #0b1016;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    color: var(--val-white);
+  }
+
+  #viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    cursor: crosshair;
+  }
+
+  /* Pixel-perfect Center Crosshair Overlay */
+  #crosshair-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .crosshair-dot {
+    width: 4px;
+    height: 4px;
+    background: #00f0ff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+
+  .crosshair-cross {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  .crosshair-cross .line {
+    position: absolute;
+    background: #00ff88;
+    box-shadow: 0 0 1px #000;
+  }
+  .crosshair-cross .top {
+    top: 2px;
+    left: 11px;
+    width: 2px;
+    height: 6px;
+  }
+  .crosshair-cross .bottom {
+    bottom: 2px;
+    left: 11px;
+    width: 2px;
+    height: 6px;
+  }
+  .crosshair-cross .left {
+    top: 11px;
+    left: 2px;
+    width: 6px;
+    height: 2px;
+  }
+  .crosshair-cross .right {
+    top: 11px;
+    right: 2px;
+    width: 6px;
+    height: 2px;
+  }
+  .crosshair-cross .center-dot {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    width: 2px;
+    height: 2px;
+    background: #00ff88;
+  }
+
+  /* Top HUD */
+  #hud-top {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    z-index: 30;
+  }
+
+  .hud-card {
+    background: rgba(15, 25, 35, 0.88);
+    border: 1px solid rgba(236, 232, 225, 0.15);
+    border-left: 3px solid var(--val-red);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    pointer-events: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+
+  .stat-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-title {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--val-slate);
+  }
+  .stat-val {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--val-white);
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-val.red { color: var(--val-red); }
+  .stat-val.cyan { color: var(--val-cyan); }
+  .stat-val.green { color: var(--val-green); }
+  .stat-val.gold { color: var(--val-gold); }
+
+  .hud-btn {
+    background: rgba(31, 39, 49, 0.85);
+    border: 1px solid rgba(236, 232, 225, 0.2);
+    color: var(--val-white);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .hud-btn:hover {
+    background: var(--val-red);
+    border-color: var(--val-red);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px rgba(255, 70, 85, 0.5);
+  }
+
+  /* Kill Banner Popup */
+  #kill-banner {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 40;
+  }
+  #kill-banner.show {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  .kill-badge {
+    background: linear-gradient(180deg, rgba(255, 70, 85, 0.95), rgba(180, 20, 35, 0.95));
+    border: 1px solid #ffffff;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 70, 85, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .kill-sub {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--val-gold);
+    margin-top: 4px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  }
+
+  /* Pointer Lock Overlay */
+  #pointer-lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 25, 35, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+  }
+  #pointer-lock-overlay.hidden {
+    display: none;
+  }
+
+  .splash-card {
+    background: #0f1923;
+    border: 1px solid rgba(236, 232, 225, 0.2);
+    border-top: 4px solid var(--val-red);
+    padding: 36px 48px;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 520px;
+    text-align: center;
+  }
+  .splash-title {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+  .splash-sub {
+    font-size: 13px;
+    color: var(--val-slate);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .splash-btn {
+    background: var(--val-red);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(255, 70, 85, 0.6);
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+  }
+  .splash-btn:hover {
+    background: #ff5e6d;
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(255, 70, 85, 0.9);
+  }
+  .control-hints {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    font-size: 11px;
+    color: var(--val-slate);
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 16px;
+  }
+  .control-hints span {
+    color: var(--val-white);
+    font-weight: 700;
+  }
+
+  /* Settings Modal (ESC) */
+  #settings-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0f1923;
+    border: 1px solid rgba(236, 232, 225, 0.2);
+    border-top: 4px solid var(--val-cyan);
+    padding: 28px 36px;
+    border-radius: 6px;
+    box-shadow: 0 12px 50px rgba(0,0,0,0.9);
+    z-index: 110;
+    display: none;
+    min-width: 440px;
+  }
+  #settings-modal.active {
+    display: block;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--val-white);
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .form-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--val-slate);
+  }
+  .sens-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sens-slider {
+    width: 140px;
+    accent-color: var(--val-red);
+  }
+  .sens-num {
+    width: 60px;
+    background: #1f2731;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .select-box {
+    background: #1f2731;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    min-width: 160px;
+  }
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  /* Post Round Scorecard */
+  #round-summary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0f1923;
+    border: 1px solid rgba(236, 232, 225, 0.2);
+    border-top: 4px solid var(--val-gold);
+    padding: 32px 42px;
+    border-radius: 6px;
+    box-shadow: 0 16px 60px rgba(0,0,0,0.95);
+    z-index: 120;
+    display: none;
+    max-width: 480px;
+    text-align: center;
+  }
+  #round-summary.active {
+    display: block;
+  }
+  .rank-emblem {
+    font-size: 48px;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 0 16px rgba(197, 160, 89, 0.6));
+  }
+  .rank-name {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--val-gold);
+    margin-bottom: 20px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    background: rgba(31, 39, 49, 0.7);
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+
+<!-- 3D Canvas -->
+<canvas id="viewport"></canvas>
+
+<!-- Pixel-Perfect Center Crosshair -->
+<div id="crosshair-container">
+  <div id="crosshair-element" class="crosshair-dot"></div>
+</div>
+
+<!-- Top Live HUD -->
+<div id="hud-top">
+  <div class="hud-card">
+    <div class="stat-unit">
+      <div class="stat-title">Drill</div>
+      <div class="stat-val red" id="hudDrillName">Range Bots</div>
+    </div>
+    <div style="width: 1px; height: 26px; background: rgba(255,255,255,0.15);"></div>
+    <div class="stat-unit">
+      <div class="stat-title">Score</div>
+      <div class="stat-val cyan" id="hudScore">0</div>
+    </div>
+    <div class="stat-unit">
+      <div class="stat-title">Accuracy</div>
+      <div class="stat-val green" id="hudAccuracy">100%</div>
+    </div>
+    <div class="stat-unit">
+      <div class="stat-title">Headshot %</div>
+      <div class="stat-val gold" id="hudHeadshotPct">0%</div>
+    </div>
+    <div class="stat-unit">
+      <div class="stat-title">Reaction</div>
+      <div class="stat-val" id="hudReaction">0 ms</div>
+    </div>
+  </div>
+
+  <div class="hud-card" style="border-left-color: var(--val-cyan);">
+    <div class="stat-unit">
+      <div class="stat-title">Time / Target</div>
+      <div class="stat-val" id="hudTimer">60.0s</div>
+    </div>
+    <button class="hud-btn" id="hudSettingsBtn">⚙️ Settings [ESC]</button>
+    <button class="hud-btn" id="hudSwitchDodgeBtn">🛡️ LoL Dodge</button>
+  </div>
+</div>
+
+<!-- Kill Notification Banner -->
+<div id="kill-banner">
+  <div class="kill-badge" id="killBadgeText">🎯 HEADSHOT</div>
+  <div class="kill-sub" id="killSubText">VANDAL ONE-TAP • 28M</div>
+</div>
+
+<!-- Pointer Lock Splash Overlay -->
+<div id="pointer-lock-overlay">
+  <div class="splash-card">
+    <div style="font-size: 36px; margin-bottom: 8px;">🎯</div>
+    <div class="splash-title">VALORANT AIM THE RANGE</div>
+    <div class="splash-sub">Tactical FPS Micro-Flick & Headshot Trainer</div>
+    <button class="splash-btn" id="startAimBtn">CLICK TO LOCK AIM</button>
+    <div class="control-hints">
+      <div><span>Left-Click</span> Fire Vandal</div>
+      <div><span>Mouse</span> 3D Look (103° FOV)</div>
+      <div><span>ESC</span> Settings & Sensitivity</div>
+      <div><span>R</span> Restart Drill</div>
+    </div>
+  </div>
+</div>
+
+<!-- Settings & Sensitivity Modal (ESC) -->
+<div id="settings-modal">
+  <div class="modal-title">
+    <span>VALORANT CONFIG</span>
+    <button class="hud-btn" id="closeSettingsBtn" style="padding: 2px 8px;">✕</button>
+  </div>
+
+  <div class="form-row">
+    <div class="form-label">Training Drill</div>
+    <select id="modalDrillSelect" class="select-box">
+      <option value="range_speed" selected>🎯 The Range (Speed Test)</option>
+      <option value="range_free">♾️ The Range (Elimination 50)</option>
+      <option value="gridshot">⚡ Gridshot (Flick Drill)</option>
+      <option value="strafe">🏃 Strafe & Counter-Aim</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <div class="form-label">Difficulty / Speed</div>
+    <select id="modalDiffSelect" class="select-box">
+      <option value="easy">Easy (1.2s window)</option>
+      <option value="medium" selected>Medium (0.6s window)</option>
+      <option value="hard">Hard (0.28s window)</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <div class="form-label">Valorant Sensitivity</div>
+    <div class="sens-input-group">
+      <input type="range" id="sensSlider" class="sens-slider" min="0.05" max="1.5" step="0.01" value="0.35">
+      <input type="number" id="sensNumber" class="sens-num" min="0.05" max="2.0" step="0.01" value="0.35">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-label">Crosshair Preset</div>
+    <select id="crosshairSelect" class="select-box">
+      <option value="cyan_dot" selected>Cyan Dot (TenZ Pro)</option>
+      <option value="green_cross">Green Classic (1/4/2/2)</option>
+      <option value="white_cross">White Crisp (1/3/1/2)</option>
+      <option value="yellow_dot">Yellow Precision Dot</option>
+    </select>
+  </div>
+
+  <div class="modal-actions">
+    <button class="hud-btn" id="modalRestartBtn">🔄 Restart Drill</button>
+    <button class="splash-btn" id="modalResumeBtn" style="padding: 8px 20px; margin: 0; font-size: 13px;">RESUME [ESC]</button>
+  </div>
+</div>
+
+<!-- Post-Round Scorecard -->
+<div id="round-summary">
+  <div class="rank-emblem" id="summaryRankEmblem">👑</div>
+  <div class="rank-name" id="summaryRankName">RADIANT</div>
+  <div class="summary-grid">
+    <div class="stat-unit">
+      <div class="stat-title">Total Score</div>
+      <div class="stat-val cyan" id="summaryScore">0</div>
+    </div>
+    <div class="stat-unit">
+      <div class="stat-title">Accuracy</div>
+      <div class="stat-val green" id="summaryAccuracy">0%</div>
+    </div>
+    <div class="stat-unit">
+      <div class="stat-title">Headshot %</div>
+      <div class="stat-val gold" id="summaryHeadshotPct">0%</div>
+    </div>
+    <div class="stat-unit">
+      <div class="stat-title">Avg Reaction</div>
+      <div class="stat-val red" id="summaryReaction">0 ms</div>
+    </div>
+  </div>
+  <button class="splash-btn" id="summaryPlayAgainBtn">PLAY AGAIN [SPACE]</button>
+</div>
+
+<!-- Three.js Engine: Local offline embedded bundle with CDN fallback -->
+<script src="/three.min.js"></script>
+<script>
+if (typeof THREE === 'undefined') {
+  document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+}
+</script>
+
+<script>
+(function() {
+  'use strict';
+
+  // --- Audio Synthesis Engine (Zero external audio files) ---
+  class SoundEngine {
+    constructor() {
+      this.ctx = null;
+    }
+    init() {
+      if (!this.ctx) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        this.ctx = new AudioCtx();
+      }
+      if (this.ctx.state === 'suspended') {
+        this.ctx.resume();
+      }
+    }
+    playVandalShot() {
+      if (!this.ctx) return;
+      const t = this.ctx.currentTime;
+      // Mechanical snap / high transient crack
+      const snap = this.ctx.createOscillator();
+      const snapGain = this.ctx.createGain();
+      snap.type = 'sawtooth';
+      snap.frequency.setValueAtTime(450, t);
+      snap.frequency.exponentialRampToValueAtTime(80, t + 0.08);
+      snapGain.gain.setValueAtTime(0.5, t);
+      snapGain.gain.exponentialRampToValueAtTime(0.001, t + 0.08);
+      snap.connect(snapGain);
+      snapGain.connect(this.ctx.destination);
+      snap.start(t);
+      snap.stop(t + 0.08);
+
+      // Low end punch thump
+      const punch = this.ctx.createOscillator();
+      const punchGain = this.ctx.createGain();
+      punch.type = 'sine';
+      punch.frequency.setValueAtTime(160, t);
+      punch.frequency.exponentialRampToValueAtTime(40, t + 0.16);
+      punchGain.gain.setValueAtTime(0.65, t);
+      punchGain.gain.exponentialRampToValueAtTime(0.001, t + 0.16);
+      punch.connect(punchGain);
+      punchGain.connect(this.ctx.destination);
+      punch.start(t);
+      punch.stop(t + 0.16);
+    }
+
+    // Iconic Valorant Headshot "Dink" Sound (~1850Hz + ~3200Hz metallic ringing)
+    playHeadshotDink() {
+      if (!this.ctx) return;
+      const t = this.ctx.currentTime;
+      [1850, 3200, 4800].forEach((freq, idx) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, t);
+        const amp = idx === 0 ? 0.45 : 0.25;
+        gain.gain.setValueAtTime(amp, t);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + 0.25 + idx * 0.05);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(t);
+        osc.stop(t + 0.35);
+      });
+    }
+
+    // Body hit thump
+    playBodyHit() {
+      if (!this.ctx) return;
+      const t = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(320, t);
+      osc.frequency.exponentialRampToValueAtTime(90, t + 0.09);
+      gain.gain.setValueAtTime(0.35, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.09);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(t);
+      osc.stop(t + 0.09);
+    }
+
+    // Kill streak banner chime
+    playKillChime(streak = 1) {
+      if (!this.ctx) return;
+      const t = this.ctx.currentTime;
+      const baseFreq = 523.25 * Math.pow(1.12, Math.min(streak, 6)); // Ascending C5 scale
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(baseFreq, t);
+      gain.gain.setValueAtTime(0.3, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.4);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(t);
+      osc.stop(t + 0.4);
+    }
+  }
+
+  const sound = new SoundEngine();
+
+  // --- Game State & Metrics ---
+  let valorantSens = parseFloat(localStorage.getItem('val_sens') || '0.35');
+  let activeDrill = 'range_speed'; // 'range_speed', 'range_free', 'gridshot', 'strafe'
+  let activeDifficulty = 'medium'; // 'easy', 'medium', 'hard'
+
+  let score = 0;
+  let shotsFired = 0;
+  let shotsHit = 0;
+  let headshots = 0;
+  let killStreak = 0;
+  let roundTimeLeft = 60.0;
+  let isRoundActive = false;
+  let isPaused = false;
+  let roundStartTime = 0;
+  let reactionTimes = [];
+  let currentTargetSpawnTime = 0;
+
+  // --- Three.js Setup ---
+  const canvas = document.getElementById('viewport');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x0e141b);
+  scene.fog = new THREE.FogExp2(0x0e141b, 0.015);
+
+  // Valorant 103° Horizontal FOV Calculation
+  function getVerticalFov(hFovDeg, aspect) {
+    const hFovRad = hFovDeg * (Math.PI / 180);
+    const vFovRad = 2 * Math.atan(Math.tan(hFovRad / 2) / aspect);
+    return vFovRad * (180 / Math.PI);
+  }
+
+  const camera = new THREE.PerspectiveCamera(
+    getVerticalFov(103, window.innerWidth / window.innerHeight),
+    window.innerWidth / window.innerHeight,
+    0.1,
+    200
+  );
+  camera.position.set(0, 1.65, 0); // Eye height = 1.65m standard FPS
+
+  // Camera Yaw & Pitch
+  let yaw = 0;
+  let pitch = 0;
+
+  // --- Lighting ---
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+  scene.add(ambientLight);
+
+  const sunLight = new THREE.DirectionalLight(0xffeedd, 1.1);
+  sunLight.position.set(15, 25, 10);
+  sunLight.castShadow = true;
+  sunLight.shadow.mapSize.width = 2048;
+  sunLight.shadow.mapSize.height = 2048;
+  sunLight.shadow.camera.near = 0.5;
+  sunLight.shadow.camera.far = 80;
+  sunLight.shadow.camera.left = -25;
+  sunLight.shadow.camera.right = 25;
+  sunLight.shadow.camera.top = 25;
+  sunLight.shadow.camera.bottom = -25;
+  scene.add(sunLight);
+
+  // Accent Cyan Rim Light
+  const rimLight = new THREE.PointLight(0x00f0ff, 0.9, 40);
+  rimLight.position.set(-10, 8, -15);
+  scene.add(rimLight);
+
+  // --- Build "The Range" 3D Environment ---
+  function buildTheRange() {
+    // 1. Floor Platform (Shooting Deck)
+    const floorGeo = new THREE.PlaneGeometry(30, 45);
+    const floorMat = new THREE.MeshStandardMaterial({
+      color: 0x1f2731,
+      roughness: 0.8,
+      metalness: 0.2
+    });
+    const floor = new THREE.Mesh(floorGeo, floorMat);
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.set(0, 0, -15);
+    floor.receiveShadow = true;
+    scene.add(floor);
+
+    // Grid Floor Overlay
+    const grid = new THREE.GridHelper(40, 20, 0xff4655, 0x334455);
+    grid.position.set(0, 0.01, -15);
+    scene.add(grid);
+
+    // Distance Marker Lines (5m, 10m, 20m, 30m)
+    const distDistances = [5, 10, 15, 20, 25, 30];
+    distDistances.forEach(d => {
+      const lineGeo = new THREE.PlaneGeometry(16, 0.12);
+      const lineMat = new THREE.MeshBasicMaterial({ color: d % 10 === 0 ? 0xff4655 : 0x00f0ff });
+      const line = new THREE.Mesh(lineGeo, lineMat);
+      line.rotation.x = -Math.PI / 2;
+      line.position.set(0, 0.02, -d);
+      scene.add(line);
+    });
+
+    // 2. Target Wall at end of Range
+    const wallGeo = new THREE.BoxGeometry(28, 12, 1);
+    const wallMat = new THREE.MeshStandardMaterial({
+      color: 0x151e28,
+      roughness: 0.7,
+      metalness: 0.3
+    });
+    const wall = new THREE.Mesh(wallGeo, wallMat);
+    wall.position.set(0, 6, -32);
+    wall.receiveShadow = true;
+    scene.add(wall);
+
+    // Target Wall Accent Frame
+    const frameGeo = new THREE.BoxGeometry(20, 8, 0.1);
+    const frameMat = new THREE.MeshStandardMaterial({
+      color: 0x0f1923,
+      roughness: 0.4,
+      metalness: 0.5
+    });
+    const frame = new THREE.Mesh(frameGeo, frameMat);
+    frame.position.set(0, 5, -31.4);
+    scene.add(frame);
+
+    // Side Architecture Pillars
+    for (let x of [-14, 14]) {
+      const pillarGeo = new THREE.BoxGeometry(1.5, 12, 40);
+      const pillarMat = new THREE.MeshStandardMaterial({ color: 0x1a232f, roughness: 0.9 });
+      const pillar = new THREE.Mesh(pillarGeo, pillarMat);
+      pillar.position.set(x, 6, -15);
+      pillar.receiveShadow = true;
+      scene.add(pillar);
+    }
+  }
+
+  buildTheRange();
+
+  // --- Vandal First-Person 3D Weapon Viewmodel ---
+  const gunGroup = new THREE.Group();
+  let gunRecoilOffset = 0;
+  let gunRecoilRot = 0;
+
+  function buildVandalModel() {
+    const gunBodyMat = new THREE.MeshStandardMaterial({ color: 0x11161d, roughness: 0.35, metalness: 0.8 });
+    const gunAccentMat = new THREE.MeshStandardMaterial({ color: 0xff4655, roughness: 0.2, metalness: 0.6 });
+    const gunCoreMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
+
+    // Main Receiver Body
+    const receiver = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.12, 0.55), gunBodyMat);
+    receiver.position.set(0, 0, 0);
+    gunGroup.add(receiver);
+
+    // Barrel
+    const barrel = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.45, 12), gunBodyMat);
+    barrel.rotation.x = Math.PI / 2;
+    barrel.position.set(0, 0.02, -0.45);
+    gunGroup.add(barrel);
+
+    // Muzzle Brake
+    const muzzle = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.05, 0.08), gunAccentMat);
+    muzzle.position.set(0, 0.02, -0.68);
+    gunGroup.add(muzzle);
+
+    // Glowing Radianite Core Stripe
+    const core = new THREE.Mesh(new THREE.BoxGeometry(0.082, 0.02, 0.25), gunCoreMat);
+    core.position.set(0, 0.03, -0.1);
+    gunGroup.add(core);
+
+    // Magazine
+    const mag = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.2, 0.1), gunBodyMat);
+    mag.rotation.x = -0.3;
+    mag.position.set(0, -0.12, -0.05);
+    gunGroup.add(mag);
+
+    // Position gun in camera space (lower right)
+    gunGroup.position.set(0.24, -0.22, -0.55);
+    camera.add(gunGroup);
+    scene.add(camera);
+  }
+
+  buildVandalModel();
+
+  // Muzzle Flash Sprite
+  const flashLight = new THREE.PointLight(0xffaa44, 0, 8);
+  flashLight.position.set(0.24, -0.2, -1.2);
+  camera.add(flashLight);
+
+  // --- Targets (Range Bots & Gridshot Orbs) ---
+  const targets = [];
+  const targetGroup = new THREE.Group();
+  scene.add(targetGroup);
+
+  // Helper to create a Valorant Dummy Bot
+  function createDummyBot(x, y, z) {
+    const bot = new THREE.Group();
+    bot.position.set(x, y, z);
+    bot.userData = {
+      isBot: true,
+      maxHp: 150,
+      hp: 150,
+      strafeDir: Math.random() > 0.5 ? 1 : -1,
+      baseX: x
+    };
+
+    // Body / Torso Hitbox
+    const torsoGeo = new THREE.CylinderGeometry(0.26, 0.22, 0.85, 12);
+    const torsoMat = new THREE.MeshStandardMaterial({
+      color: 0x223242,
+      roughness: 0.4,
+      metalness: 0.6
+    });
+    const torso = new THREE.Mesh(torsoGeo, torsoMat);
+    torso.position.y = 0.95;
+    torso.castShadow = true;
+    torso.userData = { isBody: true, parentBot: bot };
+    bot.add(torso);
+
+    // Red Center Armor Core
+    const core = new THREE.Mesh(
+      new THREE.BoxGeometry(0.2, 0.25, 0.28),
+      new THREE.MeshBasicMaterial({ color: 0xff4655 })
+    );
+    core.position.set(0, 1.05, 0);
+    bot.add(core);
+
+    // Head Hitbox (CRITICAL 1-TAP HITBOX)
+    const headGeo = new THREE.SphereGeometry(0.18, 16, 16);
+    const headMat = new THREE.MeshStandardMaterial({
+      color: 0x33485d,
+      roughness: 0.3,
+      metalness: 0.7
+    });
+    const head = new THREE.Mesh(headGeo, headMat);
+    head.position.y = 1.65; // EXACT 1.65m head height!
+    head.castShadow = true;
+    head.userData = { isHead: true, parentBot: bot };
+    bot.add(head);
+
+    // Head Visor (Golden / Cyan Glowing Visor)
+    const visor = new THREE.Mesh(
+      new THREE.BoxGeometry(0.22, 0.08, 0.16),
+      new THREE.MeshBasicMaterial({ color: 0x00f0ff })
+    );
+    visor.position.set(0, 1.66, 0.1);
+    bot.add(visor);
+
+    targetGroup.add(bot);
+    targets.push(bot);
+    return bot;
+  }
+
+  // Helper to create Gridshot Glowing Orb Target
+  function createGridshotOrb(x, y, z) {
+    const geo = new THREE.SphereGeometry(0.4, 24, 24);
+    const mat = new THREE.MeshStandardMaterial({
+      color: 0x00f0ff,
+      emissive: 0x00b4cc,
+      emissiveIntensity: 0.6,
+      roughness: 0.2,
+      metalness: 0.8
+    });
+    const orb = new THREE.Mesh(geo, mat);
+    orb.position.set(x, y, z);
+    orb.userData = { isOrb: true, isHead: true }; // Orbs count as precision hits
+    targetGroup.add(orb);
+    targets.push(orb);
+    return orb;
+  }
+
+  // Clear all active targets
+  function clearTargets() {
+    while (targetGroup.children.length > 0) {
+      targetGroup.remove(targetGroup.children[0]);
+    }
+    targets.length = 0;
+  }
+
+  // Spawn targets according to active drill
+  function spawnDrillTargets() {
+    clearTargets();
+    currentTargetSpawnTime = performance.now();
+
+    if (activeDrill === 'range_speed' || activeDrill === 'range_free') {
+      // Spawn 1 bot at varied distance (15m to 28m) and angle
+      const z = -(14 + Math.random() * 14);
+      const x = (Math.random() - 0.5) * 12;
+      createDummyBot(x, 0, z);
+    } else if (activeDrill === 'gridshot') {
+      // 4 floating target orbs on the target wall
+      for (let i = 0; i < 4; i++) {
+        const x = (Math.random() - 0.5) * 12;
+        const y = 1.2 + Math.random() * 4.5;
+        createGridshotOrb(x, y, -30);
+      }
+    } else if (activeDrill === 'strafe') {
+      // 2 moving dummy bots
+      createDummyBot(-3, 0, -20);
+      createDummyBot(3, 0, -25);
+    }
+  }
+
+  // --- Particle Effects (Sparks & Headshot Splash) ---
+  const particles = [];
+  const pGeo = new THREE.BoxGeometry(0.04, 0.04, 0.04);
+  const pMatHead = new THREE.MeshBasicMaterial({ color: 0xffd700 });
+  const pMatBody = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
+
+  function spawnSparks(pos, isHead = false) {
+    const count = isHead ? 18 : 8;
+    const mat = isHead ? pMatHead : pMatBody;
+    for (let i = 0; i < count; i++) {
+      const p = new THREE.Mesh(pGeo, mat);
+      p.position.copy(pos);
+      const vel = new THREE.Vector3(
+        (Math.random() - 0.5) * 8,
+        Math.random() * 6 + 1,
+        (Math.random() - 0.5) * 8
+      );
+      scene.add(p);
+      particles.push({ mesh: p, vel, life: 0.45 });
+    }
+  }
+
+  function updateParticles(dt) {
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life -= dt;
+      p.vel.y -= 18 * dt; // gravity
+      p.mesh.position.addScaledVector(p.vel, dt);
+      if (p.life <= 0) {
+        scene.remove(p.mesh);
+        particles.splice(i, 1);
+      }
+    }
+  }
+
+  // --- Shooting & Raycasting ---
+  const raycaster = new THREE.Raycaster();
+  const screenCenter = new THREE.Vector2(0, 0);
+
+  function fireWeapon() {
+    if (!isRoundActive || isPaused) return;
+
+    sound.playVandalShot();
+    shotsFired++;
+
+    // Weapon Recoil Animation
+    gunRecoilOffset = 0.08;
+    gunRecoilRot = 0.12;
+
+    // Muzzle flash
+    flashLight.intensity = 2.5;
+    setTimeout(() => { flashLight.intensity = 0; }, 40);
+
+    // Cast ray from center of camera
+    raycaster.setFromCamera(screenCenter, camera);
+    const hitCandidates = [];
+
+    targetGroup.traverse(child => {
+      if (child.isMesh) hitCandidates.push(child);
+    });
+
+    const intersects = raycaster.intersectObjects(hitCandidates, false);
+
+    if (intersects.length > 0) {
+      const hit = intersects[0];
+      const isHead = hit.object.userData.isHead || (hit.object.parent && hit.object.parent.userData.isHead);
+      const bot = hit.object.userData.parentBot;
+
+      shotsHit++;
+
+      // Measure reaction time
+      if (currentTargetSpawnTime > 0) {
+        const rt = Math.round(performance.now() - currentTargetSpawnTime);
+        reactionTimes.push(rt);
+      }
+
+      spawnSparks(hit.point, isHead);
+
+      if (isHead) {
+        headshots++;
+        killStreak++;
+        sound.playHeadshotDink();
+        sound.playKillChime(killStreak);
+        score += 150;
+
+        showKillBanner('🎯 HEADSHOT', `VANDAL ONE-TAP • ${Math.round(hit.distance)}M`);
+
+        // Eliminate target immediately
+        if (bot) {
+          targetGroup.remove(bot);
+          const idx = targets.indexOf(bot);
+          if (idx !== -1) targets.splice(idx, 1);
+        } else if (hit.object.userData.isOrb) {
+          targetGroup.remove(hit.object);
+          const idx = targets.indexOf(hit.object);
+          if (idx !== -1) targets.splice(idx, 1);
+        }
+
+        // Spawn next targets
+        if (activeDrill === 'range_speed' || activeDrill === 'range_free') {
+          setTimeout(spawnDrillTargets, 150);
+        } else if (activeDrill === 'gridshot') {
+          // Keep 4 orbs active
+          const x = (Math.random() - 0.5) * 12;
+          const y = 1.2 + Math.random() * 4.5;
+          createGridshotOrb(x, y, -30);
+        }
+      } else {
+        // Body Hit
+        sound.playBodyHit();
+        score += 50;
+        if (bot) {
+          bot.userData.hp -= 40;
+          if (bot.userData.hp <= 0) {
+            killStreak++;
+            sound.playKillChime(killStreak);
+            showKillBanner('ELIMINATED', `BODY SHOT • ${Math.round(hit.distance)}M`);
+            targetGroup.remove(bot);
+            const idx = targets.indexOf(bot);
+            if (idx !== -1) targets.splice(idx, 1);
+            setTimeout(spawnDrillTargets, 150);
+          }
+        }
+      }
+    } else {
+      killStreak = 0;
+    }
+
+    updateHUD();
+  }
+
+  function showKillBanner(title, sub) {
+    const banner = document.getElementById('kill-banner');
+    document.getElementById('killBadgeText').textContent = title;
+    document.getElementById('killSubText').textContent = sub;
+    banner.classList.add('show');
+    clearTimeout(banner._timer);
+    banner._timer = setTimeout(() => {
+      banner.classList.remove('show');
+    }, 1100);
+  }
+
+  function updateHUD() {
+    document.getElementById('hudScore').textContent = score;
+    const acc = shotsFired > 0 ? Math.round((shotsHit / shotsFired) * 100) : 100;
+    document.getElementById('hudAccuracy').textContent = `${acc}%`;
+    const hsPct = shotsHit > 0 ? Math.round((headshots / shotsHit) * 100) : 0;
+    document.getElementById('hudHeadshotPct').textContent = `${hsPct}%`;
+
+    if (reactionTimes.length > 0) {
+      const avg = Math.round(reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length);
+      document.getElementById('hudReaction').textContent = `${avg} ms`;
+    }
+  }
+
+  // --- Pointer Lock & Valorant Sensitivity Mouse Look ---
+  let isPointerLocked = false;
+
+  function lockPointer() {
+    sound.init();
+    canvas.requestPointerLock = canvas.requestPointerLock || canvas.mozRequestPointerLock;
+    canvas.requestPointerLock();
+  }
+
+  document.addEventListener('pointerlockchange', onPointerLockChange);
+  document.addEventListener('mozpointerlockchange', onPointerLockChange);
+
+  function onPointerLockChange() {
+    if (document.pointerLockElement === canvas || document.mozPointerLockElement === canvas) {
+      isPointerLocked = true;
+      document.getElementById('pointer-lock-overlay').classList.add('hidden');
+      document.getElementById('settings-modal').classList.remove('active');
+      isPaused = false;
+      if (!isRoundActive) startRound();
+    } else {
+      isPointerLocked = false;
+      document.getElementById('pointer-lock-overlay').classList.remove('hidden');
+    }
+  }
+
+  // Authentic Valorant Mouse Look Math (1 tick = sens * 0.07 degrees)
+  window.addEventListener('mousemove', (e) => {
+    if (!isPointerLocked || isPaused) return;
+
+    const dx = e.movementX || e.mozMovementX || 0;
+    const dy = e.movementY || e.mozMovementY || 0;
+
+    const valScale = (valorantSens * 0.07 * (Math.PI / 180));
+    yaw -= dx * valScale;
+    pitch -= dy * valScale;
+
+    // Clamp pitch between -89° and +89°
+    const maxPitch = 89 * (Math.PI / 180);
+    pitch = Math.max(-maxPitch, Math.min(maxPitch, pitch));
+  });
+
+  window.addEventListener('mousedown', (e) => {
+    if (e.button === 0) {
+      if (!isPointerLocked) {
+        lockPointer();
+      } else {
+        fireWeapon();
+      }
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape') {
+      if (document.getElementById('settings-modal').classList.contains('active')) {
+        closeSettings();
+        lockPointer();
+      } else {
+        openSettings();
+      }
+    } else if (e.code === 'KeyR') {
+      startRound();
+    } else if (e.code === 'Space') {
+      if (document.getElementById('round-summary').classList.contains('active')) {
+        document.getElementById('round-summary').classList.remove('active');
+        startRound();
+        lockPointer();
+      }
+    }
+  });
+
+  // --- Round Lifecycle ---
+  function startRound() {
+    score = 0;
+    shotsFired = 0;
+    shotsHit = 0;
+    headshots = 0;
+    killStreak = 0;
+    roundTimeLeft = 60.0;
+    reactionTimes = [];
+    isRoundActive = true;
+    roundStartTime = performance.now();
+
+    document.getElementById('round-summary').classList.remove('active');
+    updateHUD();
+    spawnDrillTargets();
+  }
+
+  function finishRound() {
+    isRoundActive = false;
+    document.exitPointerLock();
+
+    const acc = shotsFired > 0 ? Math.round((shotsHit / shotsFired) * 100) : 0;
+    const hsPct = shotsHit > 0 ? Math.round((headshots / shotsHit) * 100) : 0;
+    const avgRt = reactionTimes.length > 0 ? Math.round(reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length) : 0;
+
+    // Valorant Rank Placement
+    let rankName = 'IRON';
+    let rankEmblem = '🛡️';
+
+    if (score >= 4200 && acc >= 85) {
+      rankName = 'RADIANT'; rankEmblem = '👑';
+    } else if (score >= 3400 && acc >= 75) {
+      rankName = 'IMMORTAL'; rankEmblem = '🔥';
+    } else if (score >= 2800 && acc >= 70) {
+      rankName = 'ASCENDANT'; rankEmblem = '💎';
+    } else if (score >= 2200 && acc >= 60) {
+      rankName = 'DIAMOND'; rankEmblem = '💠';
+    } else if (score >= 1700) {
+      rankName = 'PLATINUM'; rankEmblem = '🥇';
+    } else if (score >= 1200) {
+      rankName = 'GOLD'; rankEmblem = '🥈';
+    } else if (score >= 700) {
+      rankName = 'SILVER'; rankEmblem = '🥉';
+    } else if (score >= 400) {
+      rankName = 'BRONZE'; rankEmblem = '🛡️';
+    }
+
+    document.getElementById('summaryRankName').textContent = rankName;
+    document.getElementById('summaryRankEmblem').textContent = rankEmblem;
+    document.getElementById('summaryScore').textContent = score;
+    document.getElementById('summaryAccuracy').textContent = `${acc}%`;
+    document.getElementById('summaryHeadshotPct').textContent = `${hsPct}%`;
+    document.getElementById('summaryReaction').textContent = `${avgRt} ms`;
+
+    document.getElementById('round-summary').classList.add('active');
+  }
+
+  // --- UI Event Handlers ---
+  document.getElementById('startAimBtn').addEventListener('click', lockPointer);
+  document.getElementById('summaryPlayAgainBtn').addEventListener('click', () => {
+    document.getElementById('round-summary').classList.remove('active');
+    startRound();
+    lockPointer();
+  });
+
+  const settingsModal = document.getElementById('settings-modal');
+  function openSettings() {
+    isPaused = true;
+    document.exitPointerLock();
+    settingsModal.classList.add('active');
+  }
+  function closeSettings() {
+    isPaused = false;
+    settingsModal.classList.remove('active');
+  }
+
+  document.getElementById('hudSettingsBtn').addEventListener('click', openSettings);
+  document.getElementById('closeSettingsBtn').addEventListener('click', closeSettings);
+  document.getElementById('modalResumeBtn').addEventListener('click', () => {
+    closeSettings();
+    lockPointer();
+  });
+  document.getElementById('modalRestartBtn').addEventListener('click', () => {
+    closeSettings();
+    startRound();
+    lockPointer();
+  });
+
+  // Sensitivity Sliders
+  const sensSlider = document.getElementById('sensSlider');
+  const sensNum = document.getElementById('sensNumber');
+
+  function updateSens(val) {
+    valorantSens = Math.max(0.01, Math.min(3.0, parseFloat(val) || 0.35));
+    sensSlider.value = valorantSens;
+    sensNum.value = valorantSens.toFixed(2);
+    localStorage.setItem('val_sens', valorantSens);
+  }
+  sensSlider.addEventListener('input', (e) => updateSens(e.target.value));
+  sensNum.addEventListener('change', (e) => updateSens(e.target.value));
+  updateSens(valorantSens);
+
+  // Drill & Difficulty Selectors
+  document.getElementById('modalDrillSelect').addEventListener('change', (e) => {
+    activeDrill = e.target.value;
+    const names = {
+      range_speed: 'Range Speed',
+      range_free: 'Range Elim 50',
+      gridshot: 'Gridshot',
+      strafe: 'Strafe Aim'
+    };
+    document.getElementById('hudDrillName').textContent = names[activeDrill] || 'Range';
+    startRound();
+  });
+
+  document.getElementById('modalDiffSelect').addEventListener('change', (e) => {
+    activeDifficulty = e.target.value;
+    startRound();
+  });
+
+  // Crosshair Selection
+  const crosshairEl = document.getElementById('crosshair-element');
+  document.getElementById('crosshairSelect').addEventListener('change', (e) => {
+    const val = e.target.value;
+    if (val === 'cyan_dot') {
+      crosshairEl.className = 'crosshair-dot';
+      crosshairEl.innerHTML = '';
+      crosshairEl.style.background = '#00f0ff';
+    } else if (val === 'yellow_dot') {
+      crosshairEl.className = 'crosshair-dot';
+      crosshairEl.innerHTML = '';
+      crosshairEl.style.background = '#ffd700';
+    } else if (val === 'green_cross') {
+      crosshairEl.className = 'crosshair-cross';
+      crosshairEl.innerHTML = `
+        <div class="line top" style="background:#00ff88;"></div>
+        <div class="line bottom" style="background:#00ff88;"></div>
+        <div class="line left" style="background:#00ff88;"></div>
+        <div class="line right" style="background:#00ff88;"></div>
+        <div class="center-dot" style="background:#00ff88;"></div>
+      `;
+    } else if (val === 'white_cross') {
+      crosshairEl.className = 'crosshair-cross';
+      crosshairEl.innerHTML = `
+        <div class="line top" style="background:#ffffff; height:5px;"></div>
+        <div class="line bottom" style="background:#ffffff; height:5px;"></div>
+        <div class="line left" style="background:#ffffff; width:5px;"></div>
+        <div class="line right" style="background:#ffffff; width:5px;"></div>
+      `;
+    }
+  });
+
+  document.getElementById('hudSwitchDodgeBtn').addEventListener('click', () => {
+    window.location.href = '/game';
+  });
+
+  // --- External API for Fyne Native Toolbar ---
+  window.setGameMode = function(mode) {
+    const modeMap = {
+      'Auto': 'medium', 'Iron': 'easy', 'Bronze': 'easy', 'Silver': 'medium',
+      'Gold': 'medium', 'Platinum': 'hard', 'Diamond': 'hard', 'Ascendant': 'hard',
+      'Immortal': 'hard', 'Radiant': 'hard'
+    };
+    if (modeMap[mode]) {
+      activeDifficulty = modeMap[mode];
+      document.getElementById('modalDiffSelect').value = activeDifficulty;
+    }
+    startRound();
+  };
+
+  window.setSensitivity = updateSens;
+
+  // --- Main Render / Animation Loop ---
+  let lastTime = performance.now();
+
+  function animate(now) {
+    requestAnimationFrame(animate);
+
+    if (document.hidden) {
+      lastTime = now;
+      return;
+    }
+
+    const dt = Math.min(0.1, (now - lastTime) / 1000);
+    lastTime = now;
+
+    // Apply Camera Rotation
+    camera.rotation.set(0, 0, 0);
+    camera.rotation.y = yaw;
+    camera.rotation.x = pitch;
+
+    // Gun Recoil Damping
+    gunRecoilOffset = THREE.MathUtils.lerp(gunRecoilOffset, 0, 18 * dt);
+    gunRecoilRot = THREE.MathUtils.lerp(gunRecoilRot, 0, 18 * dt);
+    gunGroup.position.set(0.24, -0.22, -0.55 + gunRecoilOffset);
+    gunGroup.rotation.set(gunRecoilRot, 0, 0);
+
+    // Update Particles
+    updateParticles(dt);
+
+    // Strafing Bots Movement
+    if (activeDrill === 'strafe') {
+      targets.forEach(bot => {
+        if (bot.userData.isBot) {
+          bot.position.x += bot.userData.strafeDir * 3.8 * dt;
+          if (Math.abs(bot.position.x - bot.userData.baseX) > 4.5) {
+            bot.userData.strafeDir *= -1;
+          }
+        }
+      });
+    }
+
+    // Round Timer
+    if (isRoundActive && !isPaused) {
+      roundTimeLeft -= dt;
+      if (roundTimeLeft <= 0) {
+        roundTimeLeft = 0;
+        document.getElementById('hudTimer').textContent = '0.0s';
+        finishRound();
+      } else {
+        document.getElementById('hudTimer').textContent = `${roundTimeLeft.toFixed(1)}s`;
+      }
+    }
+
+    renderer.render(scene, camera);
+  }
+
+  requestAnimationFrame(animate);
+
+  // Resize handler
+  window.addEventListener('resize', () => {
+    const aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = aspect;
+    camera.fov = getVerticalFov(103, aspect);
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  // Ready on load
+  startRound();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "2578af",
+    "url": "https://www.youtube.com/watch?v=lYoWuaw5nSk\u0026list=PLPFzKsPt50V8azAzY0Sg2go23AL9nuAAF",
+    "title": "Vance Joy - Riptide (Lyrics)",
+    "media_type": "audio",
+    "container": "mp3",
+    "quality": "96k",
+    "format": "audio_mp3_96k",
+    "format_label": "🎵 MP3 (96k)",
+    "output_dir": "C:\\Users\\MohamedAlghurbani\\Desktop\\ss",
+    "file_path": "C:\\Users\\MohamedAlghurbani\\Desktop\\ss\\Vance Joy - Riptide (Lyrics).mp3",
+    "file_size": "2.3 MB",
+    "status": "completed",
+    "progress": 100,
+    "speed": "2.96MiB/s",
+    "eta": "00:00",
+    "total_size": "5.16MiB",
+    "log_snippet": "Deleting original file C:\\Users\\MohamedAlghurbani\\Desktop\\ss\\Vance Joy - Riptide (Lyrics).mp4 (pass -k to keep)",
+    "created_at": "2026-10-18T15:39:14.9977662+03:00",
+    "completed_at": "2026-10-18T15:39:25.8611269+03:00"
+  },
+  {
+    "id": "181270",
+    "url": "https://www.youtube.com/watch?v=S-h8z0zgX_U",
+    "title": "TAO � Japanese Ambient Music on the Path of the Samurai ()",
+    "media_type": "audio",
+    "container": "m4a",
+    "quality": "best",
+    "format": "audio_m4a_best",
+    "format_label": "🎵 M4A (Best / VBR 0)",
+    "output_dir": "C:\\Users\\MohamedAlghurbani\\Desktop\\ss",
+    "file_path": "C:\\Users\\MohamedAlghurbani\\Desktop\\ss\\TAO � Japanese Ambient Music on the Path of the Samurai ().m4a",
+    "status": "completed",
+    "progress": 100,
+    "speed": "1.54MiB/s",
+    "eta": "00:00",
+    "total_size": "167.75MiB",
+    "log_snippet": "Deleting original file C:\\Users\\MohamedAlghurbani\\Desktop\\ss\\TAO � Japanese Ambient Music on the Path of the Samurai ().mp4 (pass -k to keep)",
+    "created_at": "2026-10-17T16:11:11.0684506+03:00",
+    "completed_at": "2026-10-17T16:12:27.560539+03:00"
+  }
+]

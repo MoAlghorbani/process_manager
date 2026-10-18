@@ -1,0 +1,11 @@
+{
+  "mouse_enabled": true,
+  "mouse_interval_sec": 5,
+  "mouse_move_mode": "orbit",
+  "key_enabled": false,
+  "key_interval_sec": 1,
+  "key_choice": "shift",
+  "idle_guard_enabled": false,
+  "idle_threshold_sec": 15,
+  "keep_awake_enabled": true
+}

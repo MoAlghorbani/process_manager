@@ -1,0 +1,91 @@
+{
+  "Complain server": {
+    "name": "Complain server",
+    "group": "complain",
+    "command": "go run . serve --http=0.0.0.0:8090",
+    "cwd": "E:\\complain system\\server",
+    "port": null,
+    "auto_restart": true,
+    "saved_status": "stopped"
+  },
+  "Design system docs": {
+    "name": "Design system docs",
+    "group": "Design system",
+    "command": "npm run dev",
+    "cwd": "D:\\yeds-react\\apps\\docs",
+    "port": null,
+    "auto_restart": true,
+    "saved_status": "stopped"
+  },
+  "classify": {
+    "name": "classify",
+    "group": "AI SDKs",
+    "command": "python server.py",
+    "cwd": "e:\\ocr1\\fake_ai_sdks\\classify",
+    "port": 8890,
+    "auto_restart": true,
+    "venv": ".venv",
+    "saved_status": "stopped",
+    "shortcut": "Ctrl+Alt+1"
+  },
+  "complain client": {
+    "name": "complain client",
+    "group": "complain",
+    "command": "npm run dev",
+    "cwd": "E:\\complain system\\client",
+    "port": null,
+    "auto_restart": true,
+    "saved_status": "stopped"
+  },
+  "ocr": {
+    "name": "ocr",
+    "group": "OCR Services",
+    "command": "go run .\\cmd\\server\\",
+    "cwd": "E:\\ocr-fc\\server",
+    "port": 8082,
+    "auto_restart": true,
+    "saved_status": "running",
+    "shortcut": "Ctrl+Alt+2"
+  },
+  "ocr client": {
+    "name": "ocr client",
+    "group": "OCR Services",
+    "command": "npm run dev",
+    "cwd": "E:\\ocr-fc\\client",
+    "port": 5173,
+    "auto_restart": true,
+    "saved_status": "running",
+    "shortcut": "Ctrl+Alt+3"
+  },
+  "ocr migrate": {
+    "name": "ocr migrate",
+    "group": "OCR Services",
+    "command": "go run .\\cmd\\migrate\\",
+    "cwd": "E:\\ocr-fc\\server",
+    "port": null,
+    "auto_restart": false,
+    "saved_status": "stopped",
+    "shortcut": "Ctrl+Alt+4"
+  },
+  "ocr_proxy": {
+    "name": "ocr_proxy",
+    "group": "AI SDKs",
+    "command": "python server.py",
+    "cwd": "e:\\ocr1\\fake_ai_sdks\\ocr_proxy",
+    "port": 8892,
+    "auto_restart": true,
+    "saved_status": "stopped",
+    "shortcut": "Ctrl+Alt+5"
+  },
+  "paddle": {
+    "name": "paddle",
+    "group": "AI SDKs",
+    "command": "python server.py",
+    "cwd": "e:\\ocr1\\fake_ai_sdks\\paddle",
+    "port": 8891,
+    "auto_restart": true,
+    "venv": ".venv",
+    "saved_status": "stopped",
+    "shortcut": "Ctrl+Alt+6"
+  }
+}
