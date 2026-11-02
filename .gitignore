@@ -1,5 +1,13 @@
-pm.exe
-pm.exe.running
-pm.exe~
+# Runtime & logs
 logs/
 *.log
+
+# Binaries & archives
+*.exe
+*.exe.old
+*.old
+*.rar
+!pm_rs.exe
+
+# Rust project repository (junction to E:\process_manager_rs)
+rust/

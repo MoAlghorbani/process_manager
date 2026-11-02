@@ -1,10 +1,11 @@
 {
+  "shortcut": "Ctrl+Alt+J",
   "mouse_enabled": true,
-  "mouse_interval_sec": 5,
-  "mouse_move_mode": "orbit",
-  "key_enabled": false,
-  "key_interval_sec": 1,
-  "key_choice": "shift",
+  "mouse_interval_sec": 1,
+  "mouse_move_mode": "gentle",
+  "key_enabled": true,
+  "key_interval_sec": 30,
+  "key_choice": "f15",
   "idle_guard_enabled": false,
   "idle_threshold_sec": 15,
   "keep_awake_enabled": true

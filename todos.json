@@ -1,39 +1,39 @@
 [
   {
-    "id": "4169f4",
-    "title": "option for processing docs with no templates",
+    "id": "f84e4e",
+    "title": "test project information , and integration",
     "project": "OCR Services",
     "status": "todo",
     "completed": false,
     "priority": "normal",
-    "created_at": "2026-10-17T17:24:12.3888034+03:00"
-  },
-  {
-    "id": "3429a2",
-    "title": "complete with new template matching",
-    "project": "OCR Services",
-    "status": "todo",
-    "completed": false,
-    "priority": "normal",
-    "created_at": "2026-10-17T17:23:32.186285+03:00"
+    "notify_at": null,
+    "notified": null,
+    "created_at": "2026-10-18T14:27:15.049855Z",
+    "completed_at": null
   },
   {
     "id": "f651cf",
     "title": "update design system package",
     "project": "complain",
-    "status": "todo",
-    "completed": false,
+    "status": "done",
+    "completed": true,
     "priority": "normal",
-    "created_at": "2026-10-17T11:31:25.6407394+03:00"
+    "notify_at": null,
+    "notified": null,
+    "created_at": "2026-10-17T08:31:25.640739400Z",
+    "completed_at": "2026-10-27T11:49:35.899623500Z"
   },
   {
     "id": "ddbdb5",
     "title": "ask monther , does it recoginse template for some pdf?",
     "project": "OCR Services",
-    "status": "todo",
-    "completed": false,
+    "status": "done",
+    "completed": true,
     "priority": "normal",
-    "created_at": "2026-10-12T17:41:51.0226689+03:00"
+    "notify_at": null,
+    "notified": null,
+    "created_at": "2026-10-12T14:41:51.022668900Z",
+    "completed_at": "2026-10-27T11:49:41.201263600Z"
   },
   {
     "id": "0ea5db",
@@ -42,6 +42,33 @@
     "status": "todo",
     "completed": false,
     "priority": "normal",
-    "created_at": "2026-10-12T17:40:48.6894156+03:00"
+    "notify_at": null,
+    "notified": null,
+    "created_at": "2026-10-12T14:40:48.689415600Z",
+    "completed_at": null
+  },
+  {
+    "id": "3429a2",
+    "title": "complete with new template matching",
+    "project": "OCR Services",
+    "status": "done",
+    "completed": true,
+    "priority": "normal",
+    "notify_at": null,
+    "notified": null,
+    "created_at": "2026-10-17T14:23:32.186285Z",
+    "completed_at": "2026-10-18T14:26:44.049804300Z"
+  },
+  {
+    "id": "4169f4",
+    "title": "option for processing docs with no templates",
+    "project": "OCR Services",
+    "status": "done",
+    "completed": true,
+    "priority": "normal",
+    "notify_at": null,
+    "notified": null,
+    "created_at": "2026-10-17T14:24:12.388803400Z",
+    "completed_at": "2026-10-18T14:26:39.383935500Z"
   }
 ]
