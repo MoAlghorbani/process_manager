@@ -1,4 +1,28 @@
 {
+  "complain client": {
+    "name": "complain client",
+    "group": "complain",
+    "command": "npm run dev",
+    "cwd": "E:\\complain system\\client",
+    "port": null,
+    "auto_restart": true,
+    "venv": null,
+    "env": null,
+    "saved_status": "running",
+    "shortcut": "Alt+c+2"
+  },
+  "ocr client": {
+    "name": "ocr client",
+    "group": "OCR Services",
+    "command": "npm run dev",
+    "cwd": "E:\\ocr-fc\\client",
+    "port": 5173,
+    "auto_restart": true,
+    "venv": null,
+    "env": null,
+    "saved_status": "running",
+    "shortcut": "Alt+x+2"
+  },
   "classify": {
     "name": "classify",
     "group": "AI SDKs",
@@ -11,41 +35,17 @@
     "saved_status": "stopped",
     "shortcut": null
   },
-  "Complain server": {
-    "name": "Complain server",
-    "group": "complain",
-    "command": "go run . serve --http=0.0.0.0:8090",
-    "cwd": "E:\\complain system\\server",
-    "port": null,
+  "ocr_proxy": {
+    "name": "ocr_proxy",
+    "group": "AI SDKs",
+    "command": "python server.py",
+    "cwd": "e:\\ocr1\\fake_ai_sdks\\ocr_proxy",
+    "port": 8892,
     "auto_restart": true,
     "venv": null,
     "env": null,
     "saved_status": "stopped",
-    "shortcut": "Alt+c+1"
-  },
-  "Design system docs": {
-    "name": "Design system docs",
-    "group": "Design system",
-    "command": "npm run dev --host",
-    "cwd": "D:\\yeds-react\\apps\\docs",
-    "port": null,
-    "auto_restart": true,
-    "venv": null,
-    "env": null,
-    "saved_status": "stopped",
-    "shortcut": null
-  },
-  "ocr client": {
-    "name": "ocr client",
-    "group": "OCR Services",
-    "command": "npm run dev",
-    "cwd": "E:\\ocr-fc\\client",
-    "port": 5173,
-    "auto_restart": true,
-    "venv": null,
-    "env": null,
-    "saved_status": "stopped",
-    "shortcut": "Alt+x+2"
+    "shortcut": "Ctrl+Alt+5"
   },
   "paddle": {
     "name": "paddle",
@@ -68,7 +68,7 @@
     "auto_restart": false,
     "venv": null,
     "env": null,
-    "saved_status": "stopped",
+    "saved_status": "crashed",
     "shortcut": "Ctrl+Alt+4"
   },
   "ocr": {
@@ -80,31 +80,31 @@
     "auto_restart": true,
     "venv": null,
     "env": null,
-    "saved_status": "stopped",
+    "saved_status": "running",
     "shortcut": "Alt+x+1"
   },
-  "ocr_proxy": {
-    "name": "ocr_proxy",
-    "group": "AI SDKs",
-    "command": "python server.py",
-    "cwd": "e:\\ocr1\\fake_ai_sdks\\ocr_proxy",
-    "port": 8892,
-    "auto_restart": true,
-    "venv": null,
-    "env": null,
-    "saved_status": "stopped",
-    "shortcut": "Ctrl+Alt+5"
-  },
-  "complain client": {
-    "name": "complain client",
-    "group": "complain",
-    "command": "npm run dev",
-    "cwd": "E:\\complain system\\client",
+  "Design system docs": {
+    "name": "Design system docs",
+    "group": "Design system",
+    "command": "npm run dev --host",
+    "cwd": "D:\\yeds-react\\apps\\docs",
     "port": null,
     "auto_restart": true,
     "venv": null,
     "env": null,
     "saved_status": "stopped",
-    "shortcut": "Alt+c+2"
+    "shortcut": null
+  },
+  "Complain server": {
+    "name": "Complain server",
+    "group": "complain",
+    "command": "go run . serve --http=0.0.0.0:8090",
+    "cwd": "E:\\complain system\\server",
+    "port": null,
+    "auto_restart": true,
+    "venv": null,
+    "env": null,
+    "saved_status": "stopped",
+    "shortcut": "Alt+c+1"
   }
 }
