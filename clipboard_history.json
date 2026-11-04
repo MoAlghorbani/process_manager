@@ -1,5 +1,565 @@
 [
   {
+    "id": "1f84d92b",
+    "content": "E:\\ocr-fc\\عهد\r\n",
+    "timestamp": "2026-11-04T07:39:11.795151800Z",
+    "pinned": false,
+    "length": 15
+  },
+  {
+    "id": "78bd8af8",
+    "content": "<Popover.Root>\r\n                <Popover.Trigger>\r\n                    <Input value={combinedDateTime?.toString()} />\r\n                </Popover.Trigger>\r\n                <Popover.Content style={{ display: \"flex\", gap: \"8px\", flexDirection: \"column\" }}>\r\n                    <Calendar style={{ border: 'none', padding: 0 }} value={date} onChange={setDate}>\r\n                        <Calendar.Header>\r\n                            <Calendar.Previous />\r\n                            <Calendar.YearMonths />\r\n                            <Calendar.Next />\r\n                        </Calendar.Header>\r\n                        <Calendar.Content />\r\n                        <Calendar.Footer>\r\n                        </Calendar.Footer>\r\n                    </Calendar>\r\n                    <Divider style={{ minHeight: \"auto\", height: 'auto' }} orientation=\"horizontal\" />\r\n                    <Timer style={{ border: 'none', padding: 0, width: \"200px\", marginInline: 'auto' }} value={time} onChange={setTime}>\r\n                        <Timer.Header>\r\n                        </Timer.Header>\r\n                        <Timer.Content />\r\n                        <Timer.Footer >\r\n                            <Timer.Period>\r\n                                <Timer.AmButton>AM</Timer.AmButton>\r\n                                <Timer.PmButton>PM</Timer.PmButton>\r\n                            </Timer.Period>\r\n                        </Timer.Footer>\r\n                    </Timer>\r\n                </Popover.Content>\r\n            </Popover.Root>",
+    "timestamp": "2026-11-04T07:18:58.476443700Z",
+    "pinned": false,
+    "length": 1530
+  },
+  {
+    "id": "5fa21961",
+    "content": "http://pages.sofa.io/design-system/yeds-components/?path=/story/components-popover--date-time-picker-with-popover&globals=theme:light",
+    "timestamp": "2026-11-04T06:54:03.127100100Z",
+    "pinned": false,
+    "length": 133
+  },
+  {
+    "id": "fcceb454",
+    "content": "https://llm.sofa.ye/",
+    "timestamp": "2026-11-04T06:49:48.374767Z",
+    "pinned": false,
+    "length": 20
+  },
+  {
+    "id": "ea928f28",
+    "content": "http://localhost:5174/",
+    "timestamp": "2026-11-04T06:33:11.975352900Z",
+    "pinned": false,
+    "length": 22
+  },
+  {
+    "id": "dd835bc0",
+    "content": "https://llm.sofa.ye/",
+    "timestamp": "2026-11-04T06:23:28.410029600Z",
+    "pinned": false,
+    "length": 20
+  },
+  {
+    "id": "3d88371c",
+    "content": "https://www.youtube.com/watch?v=VNGNs3cNniA",
+    "timestamp": "2026-11-04T06:04:49.725623900Z",
+    "pinned": false,
+    "length": 43
+  },
+  {
+    "id": "1dbc7398",
+    "content": "Ab@2025!$#",
+    "timestamp": "2026-11-04T06:04:00.873269200Z",
+    "pinned": false,
+    "length": 10
+  },
+  {
+    "id": "55ce1c12",
+    "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+    "timestamp": "2026-11-04T05:55:03.286658900Z",
+    "pinned": false,
+    "length": 64
+  },
+  {
+    "id": "dcdfd475",
+    "content": "workspace.sofa.ye",
+    "timestamp": "2026-11-04T05:41:22.790157900Z",
+    "pinned": false,
+    "length": 17
+  },
+  {
+    "id": "94511989",
+    "content": "192.168.20.249",
+    "timestamp": "2026-11-04T05:41:09.957304300Z",
+    "pinned": false,
+    "length": 14
+  },
+  {
+    "id": "3f8fd2c1",
+    "content": "https://sofa-erp.sofa.ye/",
+    "timestamp": "2026-11-04T05:40:59.937730200Z",
+    "pinned": false,
+    "length": 25
+  },
+  {
+    "id": "c0dd7e1b",
+    "content": "delete from call_recordings;\r\ndelete from call_detail;\r\ndelete from ucm_cdr_recordings;",
+    "timestamp": "2026-11-03T17:07:43.668925900Z",
+    "pinned": false,
+    "length": 87
+  },
+  {
+    "id": "9cf227cc",
+    "content": "delete from ucm_cdr_recordings;",
+    "timestamp": "2026-11-03T17:07:38.452727200Z",
+    "pinned": false,
+    "length": 31
+  },
+  {
+    "id": "b1efc4d",
+    "content": "grandstream UCM6308",
+    "timestamp": "2026-11-03T16:58:31.496946200Z",
+    "pinned": false,
+    "length": 19
+  },
+  {
+    "id": "4101dc0b",
+    "content": "directUCMCDRListenAddress",
+    "timestamp": "2026-11-03T16:51:39.069848800Z",
+    "pinned": false,
+    "length": 25
+  },
+  {
+    "id": "66e27c31",
+    "content": "ucm_cdr_recordings",
+    "timestamp": "2026-11-03T16:22:40.390052700Z",
+    "pinned": false,
+    "length": 18
+  },
+  {
+    "id": "10560be9",
+    "content": "delete from call_recordings\r\ndelete from call_detail\r\ndelete from ucm_cdr_recordings",
+    "timestamp": "2026-11-03T16:16:51.892579900Z",
+    "pinned": false,
+    "length": 84
+  },
+  {
+    "id": "d16f4637",
+    "content": "delete from call_recordings\r\ndelete from call_detail\r\ndelete from ",
+    "timestamp": "2026-11-03T16:16:50.285031900Z",
+    "pinned": false,
+    "length": 66
+  },
+  {
+    "id": "491ef504",
+    "content": "ucm_cdr_recordings",
+    "timestamp": "2026-11-03T16:16:42.259821600Z",
+    "pinned": false,
+    "length": 18
+  },
+  {
+    "id": "e21f393d",
+    "content": "delete from call_recordings\r\ndelete from call_detail\r\ndelete from ",
+    "timestamp": "2026-11-03T16:16:37.849373700Z",
+    "pinned": false,
+    "length": 66
+  },
+  {
+    "id": "95bf7b18",
+    "content": "call_recordings",
+    "timestamp": "2026-11-03T16:16:13.796405200Z",
+    "pinned": false,
+    "length": 15
+  },
+  {
+    "id": "99cda09a",
+    "content": "delete from call_detail",
+    "timestamp": "2026-11-03T16:16:08.189493600Z",
+    "pinned": false,
+    "length": 23
+  },
+  {
+    "id": "1a24adda",
+    "content": "https://192.168.20.184:8089/",
+    "timestamp": "2026-11-03T16:13:11.398937200Z",
+    "pinned": false,
+    "length": 28
+  },
+  {
+    "id": "50244413",
+    "content": "192.168.20.184",
+    "timestamp": "2026-11-03T16:10:30.923013200Z",
+    "pinned": false,
+    "length": 14
+  },
+  {
+    "id": "e7010157",
+    "content": "https://192.168.0.160:8089/",
+    "timestamp": "2026-11-03T16:06:20.411467400Z",
+    "pinned": false,
+    "length": 27
+  },
+  {
+    "id": "83202e33",
+    "content": "admin12345",
+    "timestamp": "2026-11-03T16:04:28.894834800Z",
+    "pinned": false,
+    "length": 10
+  },
+  {
+    "id": "bd356eff",
+    "content": "http://localhost:9001/login",
+    "timestamp": "2026-11-03T16:03:06.643821500Z",
+    "pinned": false,
+    "length": 27
+  },
+  {
+    "id": "dbeb277a",
+    "content": "http://localhost:5174/call-details",
+    "timestamp": "2026-11-03T16:01:29.572512200Z",
+    "pinned": false,
+    "length": 34
+  },
+  {
+    "id": "7bf25362",
+    "content": "http://localhost:5174/admin/audit",
+    "timestamp": "2026-11-03T16:01:17.133218700Z",
+    "pinned": false,
+    "length": 33
+  },
+  {
+    "id": "a1763756",
+    "content": "ucm_cdr_recordings",
+    "timestamp": "2026-11-03T15:59:31.995673500Z",
+    "pinned": false,
+    "length": 18
+  },
+  {
+    "id": "48e13537",
+    "content": "call_detail",
+    "timestamp": "2026-11-03T15:59:01.900572300Z",
+    "pinned": false,
+    "length": 11
+  },
+  {
+    "id": "4dc84d0e",
+    "content": "https://192.168.0.160:8089/",
+    "timestamp": "2026-11-03T15:06:36.977646200Z",
+    "pinned": false,
+    "length": 27
+  },
+  {
+    "id": "a64e7b32",
+    "content": "http://localhost:5174/applicants",
+    "timestamp": "2026-11-03T15:05:45.232286700Z",
+    "pinned": false,
+    "length": 32
+  },
+  {
+    "id": "80e560de",
+    "content": "http://localhost:5174/call-details",
+    "timestamp": "2026-11-03T15:05:01.567113100Z",
+    "pinned": false,
+    "length": 34
+  },
+  {
+    "id": "71b1efbc",
+    "content": "user2",
+    "timestamp": "2026-11-03T14:59:21.316261400Z",
+    "pinned": false,
+    "length": 5
+  },
+  {
+    "id": "2ae4f412",
+    "content": "https://192.168.0.160:8089/",
+    "timestamp": "2026-11-03T14:53:59.553644Z",
+    "pinned": false,
+    "length": 27
+  },
+  {
+    "id": "992d5661",
+    "content": "192.168.0.160",
+    "timestamp": "2026-11-03T14:49:20.617165100Z",
+    "pinned": false,
+    "length": 13
+  },
+  {
+    "id": "8a110ca0",
+    "content": "https://192.168.0.160:8089/login",
+    "timestamp": "2026-11-03T14:49:10.983152900Z",
+    "pinned": false,
+    "length": 32
+  },
+  {
+    "id": "5c5627ca",
+    "content": "Legacy ",
+    "timestamp": "2026-11-03T14:37:44.189241100Z",
+    "pinned": false,
+    "length": 7
+  },
+  {
+    "id": "f6178823",
+    "content": "8443",
+    "timestamp": "2026-11-03T14:37:02.919483200Z",
+    "pinned": false,
+    "length": 4
+  },
+  {
+    "id": "e8b62da3",
+    "content": "cdrapi",
+    "timestamp": "2026-11-03T14:36:39.282670900Z",
+    "pinned": false,
+    "length": 6
+  },
+  {
+    "id": "86bd6b77",
+    "content": "192.168.0.160:8089",
+    "timestamp": "2026-11-03T14:35:29.957214500Z",
+    "pinned": false,
+    "length": 18
+  },
+  {
+    "id": "ac173089",
+    "content": "https://192.168.0.160:8089",
+    "timestamp": "2026-11-03T14:35:23.928491500Z",
+    "pinned": false,
+    "length": 26
+  },
+  {
+    "id": "e7567e7a",
+    "content": "https://192.168.0.160:8089/",
+    "timestamp": "2026-11-03T14:33:34.468934100Z",
+    "pinned": false,
+    "length": 27
+  },
+  {
+    "id": "dc32faa7",
+    "content": "http://localhost:5174/admin/ivr",
+    "timestamp": "2026-11-03T14:30:46.169467Z",
+    "pinned": false,
+    "length": 31
+  },
+  {
+    "id": "ecfd1dd5",
+    "content": "192.168.0.1",
+    "timestamp": "2026-11-03T14:21:02.632279600Z",
+    "pinned": false,
+    "length": 11
+  },
+  {
+    "id": "a9aa9d9a",
+    "content": "192.168.0.160",
+    "timestamp": "2026-11-03T14:20:57.822394Z",
+    "pinned": false,
+    "length": 13
+  },
+  {
+    "id": "e79d5b60",
+    "content": "D2zx6f6G",
+    "timestamp": "2026-11-03T14:20:28.176330900Z",
+    "pinned": false,
+    "length": 8
+  },
+  {
+    "id": "70d910e",
+    "content": "http://192.168.0.160:8089/",
+    "timestamp": "2026-11-03T14:20:16.558214600Z",
+    "pinned": false,
+    "length": 26
+  },
+  {
+    "id": "f510e314",
+    "content": "192.168.0.1",
+    "timestamp": "2026-11-03T14:04:31.010750900Z",
+    "pinned": false,
+    "length": 11
+  },
+  {
+    "id": "499836e4",
+    "content": "192.168.0.160",
+    "timestamp": "2026-11-03T14:04:24.198657400Z",
+    "pinned": false,
+    "length": 13
+  },
+  {
+    "id": "4093e316",
+    "content": "http://192.168.0.160:8089/",
+    "timestamp": "2026-11-03T14:01:44.308567700Z",
+    "pinned": false,
+    "length": 26
+  },
+  {
+    "id": "9e81cd18",
+    "content": "https://192.168.20.184:8089/",
+    "timestamp": "2026-11-03T13:51:50.569346500Z",
+    "pinned": false,
+    "length": 28
+  },
+  {
+    "id": "ed1daace",
+    "content": "D2zx6f6G",
+    "timestamp": "2026-11-03T13:47:27.161649800Z",
+    "pinned": false,
+    "length": 8
+  },
+  {
+    "id": "5164c889",
+    "content": "UCM6308",
+    "timestamp": "2026-11-03T13:41:35.726479700Z",
+    "pinned": false,
+    "length": 7
+  },
+  {
+    "id": "db987caf",
+    "content": "http://localhost:5174/dashboard",
+    "timestamp": "2026-11-03T13:35:52.161123500Z",
+    "pinned": false,
+    "length": 31
+  },
+  {
+    "id": "3327fa70",
+    "content": "E:\\ocr-fc\\عهد",
+    "timestamp": "2026-11-03T09:55:20.889081800Z",
+    "pinned": false,
+    "length": 13
+  },
+  {
+    "id": "d37c2871",
+    "content": "عهد",
+    "timestamp": "2026-11-03T09:55:13.678446300Z",
+    "pinned": false,
+    "length": 3
+  },
+  {
+    "id": "17915222",
+    "content": "model.canManage && data.method && <Tag color=\"info\" shape=\"square\" variant=\"subtle\">\r\n          {t(`blacklist.methods.${data.method}`)}</Tag>",
+    "timestamp": "2026-11-03T08:40:17.036239700Z",
+    "pinned": false,
+    "length": 141
+  },
+  {
+    "id": "934a1eb5",
+    "content": "<Tag color={model.canManage && data.enabled ? 'success' : 'warning'} shape=\"square\" variant=\"subtle\">\r\n          {t(blacklistModeLabel(model.canManage, data.enabled, data.approvalRequired))}</Tag>",
+    "timestamp": "2026-11-03T08:40:12.226538700Z",
+    "pinned": false,
+    "length": 196
+  },
+  {
+    "id": "ce420a74",
+    "content": "blacklist-workspace__states",
+    "timestamp": "2026-11-03T08:39:44.179506100Z",
+    "pinned": false,
+    "length": 27
+  },
+  {
+    "id": "9697cd44",
+    "content": "إنشاء IVR",
+    "timestamp": "2026-11-03T08:39:03.297287300Z",
+    "pinned": false,
+    "length": 9
+  },
+  {
+    "id": "bca535be",
+    "content": "IVR updated and UCM changes applied.",
+    "timestamp": "2026-11-03T08:13:38.272731500Z",
+    "pinned": false,
+    "length": 36
+  },
+  {
+    "id": "fcf3d821",
+    "content": "تم إنشاء جلسة مشرف UCM.",
+    "timestamp": "2026-11-03T08:04:19.288389600Z",
+    "pinned": false,
+    "length": 23
+  },
+  {
+    "id": "7e206614",
+    "content": "UCM",
+    "timestamp": "2026-11-03T08:04:18.084398300Z",
+    "pinned": false,
+    "length": 3
+  },
+  {
+    "id": "b02dd48",
+    "content": "https://www.youtube.com/watch?v=TiYFme-3RCI",
+    "timestamp": "2026-11-03T08:01:51.131005Z",
+    "pinned": false,
+    "length": 43
+  },
+  {
+    "id": "da027a0e",
+    "content": "      \"external_user_info\": {\r\n        \"user_id\": \"rx9mqnsg7pkz8k0\",\r\n        \"user_name\": \"محمد الغرباني\"\r\n      },",
+    "timestamp": "2026-11-03T07:26:27.435870900Z",
+    "pinned": false,
+    "length": 116
+  },
+  {
+    "id": "50261f00",
+    "content": "http://192.168.20.181:7410/api/v1/docs/",
+    "timestamp": "2026-11-03T07:18:42.959582200Z",
+    "pinned": false,
+    "length": 39
+  },
+  {
+    "id": "a435c698",
+    "content": "{ \"service_id\": \"64e46d1b-aea7-4bc8-98ca-5c67e80f5e23\", \"version_id\": \"d68e8ee2-fa55-4f46-a369-ba49038b4f45\", \"filters\": { }, \"ordering\": [ ], \"page\": 1, \"page_size\": 30 }",
+    "timestamp": "2026-11-03T07:15:54.796343100Z",
+    "pinned": false,
+    "length": 171
+  },
+  {
+    "id": "6e72fa7e",
+    "content": "http://192.168.20.181:7410/api/v1/docs/",
+    "timestamp": "2026-11-03T07:15:00.289139600Z",
+    "pinned": false,
+    "length": 39
+  },
+  {
+    "id": "8792fa28",
+    "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+    "timestamp": "2026-11-03T07:07:53.097095200Z",
+    "pinned": false,
+    "length": 20
+  },
+  {
+    "id": "3cc53ef3",
+    "content": "http://localhost:5173/",
+    "timestamp": "2026-11-03T07:07:41.065287100Z",
+    "pinned": false,
+    "length": 22
+  },
+  {
+    "id": "a81bfb50",
+    "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+    "timestamp": "2026-11-03T07:07:33.041134900Z",
+    "pinned": false,
+    "length": 64
+  },
+  {
+    "id": "480cae00",
+    "content": "https://192.168.20.203:5180/",
+    "timestamp": "2026-11-03T07:07:29.028211400Z",
+    "pinned": false,
+    "length": 28
+  },
+  {
+    "id": "eaaa4c5b",
+    "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+    "timestamp": "2026-11-03T07:04:53.778966900Z",
+    "pinned": false,
+    "length": 64
+  },
+  {
+    "id": "e0d52ea1",
+    "content": "https://192.168.20.203:5180/",
+    "timestamp": "2026-11-03T07:04:23.314063600Z",
+    "pinned": false,
+    "length": 28
+  },
+  {
+    "id": "48a0ba5d",
+    "content": "http://localhost:5174/tickets/8ypczmashivp0yf",
+    "timestamp": "2026-11-03T07:01:48.587430800Z",
+    "pinned": false,
+    "length": 45
+  },
+  {
+    "id": "74d4cdba",
+    "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
+    "timestamp": "2026-11-03T06:55:42.876042500Z",
+    "pinned": false,
+    "length": 64
+  },
+  {
+    "id": "41cc9a4e",
+    "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf aymen\\عهد",
+    "timestamp": "2026-11-03T06:53:58.976449200Z",
+    "pinned": false,
+    "length": 48
+  },
+  {
     "id": "4e7190c5",
     "content": "go run . serve --http=0.0.0.0:8090",
     "timestamp": "2026-11-03T06:22:09.643679400Z",
@@ -1538,495 +2098,5 @@
     "timestamp": "2026-10-28T12:59:23.925754500Z",
     "pinned": false,
     "length": 476
-  },
-  {
-    "id": "c0138ea",
-    "content": "Alt+c+1",
-    "timestamp": "2026-10-28T12:55:05.745941900Z",
-    "pinned": false,
-    "length": 7
-  },
-  {
-    "id": "f65cd19",
-    "content": ".\\loadtest\\scripts\\Run-PBXCallTest.ps1 `\r\n  -Queue `\r\n  -Agents 30 `\r\n  -Calls 250 `\r\n  -Stages '30,100,150,200,250' `\r\n  -HoldSeconds 30 `\r\n  -FinalHoldSeconds 60 `\r\n  -CallerTransport udp `\r\n  -CallerCodec pcmu `\r\n  -ExistingOnly `\r\n  -NodeModules 'E:\\complain system\\client\\node_modules' `\r\n  -ServerProcessId <PID> `\r\n  -DiagnosticsUrl 'http://127.0.0.1:6060' `\r\n  -ConfirmPBXTest",
-    "timestamp": "2026-10-28T12:52:37.101904100Z",
-    "pinned": false,
-    "length": 384
-  },
-  {
-    "id": "1c11941a",
-    "content": "\r\nbash: -CallerTransport: command not foun",
-    "timestamp": "2026-10-28T12:52:25.478963700Z",
-    "pinned": false,
-    "length": 42
-  },
-  {
-    "id": "c679d64e",
-    "content": ".\\loadtest\\scripts\\Run-PBXCallTest.ps1 `\r\n  -Queue `\r\n  -Agents 30 `\r\n  -Calls 250 `\r\n  -Stages '30,100,150,200,250' `\r\n  -HoldSeconds 30 `\r\n  -FinalHoldSeconds 60 `\r\n  -CallerTransport udp `\r\n  -CallerCodec pcmu `\r\n  -ExistingOnly `\r\n  -NodeModules 'E:\\complain system\\client\\node_modules' `\r\n  -ServerProcessId <PID> `\r\n  -DiagnosticsUrl 'http://127.0.0.1:6060' `\r\n  -ConfirmPBXTest",
-    "timestamp": "2026-10-28T12:52:07.427206500Z",
-    "pinned": false,
-    "length": 384
-  },
-  {
-    "id": "6beaddc9",
-    "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf aymen\\watania",
-    "timestamp": "2026-10-28T12:43:50.887634600Z",
-    "pinned": false,
-    "length": 52
-  },
-  {
-    "id": "13f520d0",
-    "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file mini\\watania\r\n",
-    "timestamp": "2026-10-28T12:40:56.780842100Z",
-    "pinned": false,
-    "length": 58
-  },
-  {
-    "id": "55e00d04",
-    "content": ".settings-page-form",
-    "timestamp": "2026-10-28T12:39:01.238036100Z",
-    "pinned": false,
-    "length": 19
-  },
-  {
-    "id": "9565ef78",
-    "content": "loadtest\r\n",
-    "timestamp": "2026-10-28T12:35:38.972536200Z",
-    "pinned": false,
-    "length": 10
-  },
-  {
-    "id": "99a1e6a",
-    "content": "64e4f1a9c43ef7e83d5d844792c98eb125b199e2",
-    "timestamp": "2026-10-28T12:33:51.815016400Z",
-    "pinned": false,
-    "length": 40
-  },
-  {
-    "id": "32e71f6",
-    "content": "http://localhost:5174/applicants",
-    "timestamp": "2026-10-28T12:30:36.803950100Z",
-    "pinned": false,
-    "length": 32
-  },
-  {
-    "id": "ab5d1137",
-    "content": "https://192.168.20.181/api/v1/docs/",
-    "timestamp": "2026-10-28T12:30:26.377737Z",
-    "pinned": false,
-    "length": 35
-  },
-  {
-    "id": "d77416b2",
-    "content": "01011079750",
-    "timestamp": "2026-10-28T12:18:23.400038500Z",
-    "pinned": false,
-    "length": 11
-  },
-  {
-    "id": "fb35e40d",
-    "content": "Ta@2025!$#",
-    "timestamp": "2026-10-28T12:18:18.984303700Z",
-    "pinned": false,
-    "length": 10
-  },
-  {
-    "id": "6f60555b",
-    "content": "https://192.168.20.181:6060/",
-    "timestamp": "2026-10-28T12:17:52.528956Z",
-    "pinned": false,
-    "length": 28
-  },
-  {
-    "id": "53f6e57b",
-    "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
-    "timestamp": "2026-10-28T12:15:08.205577500Z",
-    "pinned": false,
-    "length": 64
-  },
-  {
-    "id": "ad9b5f6",
-    "content": "https://192.168.20.181:6060/operations/applications",
-    "timestamp": "2026-10-28T12:02:18.397469700Z",
-    "pinned": false,
-    "length": 51
-  },
-  {
-    "id": "9fef2915",
-    "content": "UCM_EXTENSION_AUTO_RECORD",
-    "timestamp": "2026-10-28T11:40:57.453832300Z",
-    "pinned": false,
-    "length": 25
-  },
-  {
-    "id": "c8252472",
-    "content": "\nthe ucm is running in \nhttps://192.168.20.184:8089/login\nwith these credintals \nadmin2\nsamQAZ123#",
-    "timestamp": "2026-10-28T09:39:10.106243400Z",
-    "pinned": false,
-    "length": 98
-  },
-  {
-    "id": "8070ee95",
-    "content": "https://192.168.20.184:8089/login",
-    "timestamp": "2026-10-28T09:37:51.359521300Z",
-    "pinned": false,
-    "length": 33
-  },
-  {
-    "id": "8397e16d",
-    "content": "saturated",
-    "timestamp": "2026-10-28T09:23:17.577639100Z",
-    "pinned": false,
-    "length": 9
-  },
-  {
-    "id": "80233a99",
-    "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
-    "timestamp": "2026-10-28T09:22:27.835556600Z",
-    "pinned": false,
-    "length": 20
-  },
-  {
-    "id": "dcb66da1",
-    "content": "SIPp",
-    "timestamp": "2026-10-28T09:21:07.182892800Z",
-    "pinned": false,
-    "length": 4
-  },
-  {
-    "id": "6dcffeda",
-    "content": " Rain Liquidity",
-    "timestamp": "2026-10-28T09:19:45.374300Z",
-    "pinned": false,
-    "length": 15
-  },
-  {
-    "id": "2a00025f",
-    "content": "https://192.168.20.181:6060/",
-    "timestamp": "2026-10-28T08:57:49.559537Z",
-    "pinned": false,
-    "length": 28
-  },
-  {
-    "id": "9b8b8f04",
-    "content": "Pilot",
-    "timestamp": "2026-10-28T08:39:19.742089100Z",
-    "pinned": false,
-    "length": 5
-  },
-  {
-    "id": "273dad0c",
-    "content": "backup",
-    "timestamp": "2026-10-28T08:04:37.928221200Z",
-    "pinned": false,
-    "length": 6
-  },
-  {
-    "id": "e80a47c6",
-    "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
-    "timestamp": "2026-10-28T08:00:39.051991300Z",
-    "pinned": false,
-    "length": 64
-  },
-  {
-    "id": "199ec06a",
-    "content": "https://workspace.sofa.ye/",
-    "timestamp": "2026-10-28T07:46:41.237565300Z",
-    "pinned": false,
-    "length": 26
-  },
-  {
-    "id": "d5773044",
-    "content": "Ab@2025!$#",
-    "timestamp": "2026-10-28T07:46:21.216752700Z",
-    "pinned": false,
-    "length": 10
-  },
-  {
-    "id": "2acd6cad",
-    "content": "Test-NetConnection  172.16.140.129 -Port 80",
-    "timestamp": "2026-10-28T07:31:02.353760500Z",
-    "pinned": false,
-    "length": 43
-  },
-  {
-    "id": "c47447d0",
-    "content": "172.16.140.129",
-    "timestamp": "2026-10-28T07:30:31.069179400Z",
-    "pinned": false,
-    "length": 14
-  },
-  {
-    "id": "4f4dd192",
-    "content": "MohamedAlghurbani",
-    "timestamp": "2026-10-28T07:30:04.996614700Z",
-    "pinned": false,
-    "length": 17
-  },
-  {
-    "id": "8de7bd6a",
-    "content": "Test-NetConnection -ComputerName 172.16.130.64 -Port 80",
-    "timestamp": "2026-10-28T07:29:54.169535Z",
-    "pinned": false,
-    "length": 55
-  },
-  {
-    "id": "c8a69953",
-    "content": "http://172.16.140.129/",
-    "timestamp": "2026-10-28T07:28:21.527437Z",
-    "pinned": false,
-    "length": 22
-  },
-  {
-    "id": "6296b0ce",
-    "content": "172.16.140.129",
-    "timestamp": "2026-10-28T07:26:58.499521900Z",
-    "pinned": false,
-    "length": 14
-  },
-  {
-    "id": "4f6eb931",
-    "content": "Test-NetConnection 172.16.140.129 -Port 123",
-    "timestamp": "2026-10-27T15:12:34.249632400Z",
-    "pinned": false,
-    "length": 43
-  },
-  {
-    "id": "16a5f443",
-    "content": "172.16.140.129",
-    "timestamp": "2026-10-27T15:12:32.647588200Z",
-    "pinned": false,
-    "length": 14
-  },
-  {
-    "id": "872e7050",
-    "content": "Test-NetConnection 192.168.1.100 -Port 123",
-    "timestamp": "2026-10-27T15:11:56.974726Z",
-    "pinned": false,
-    "length": 42
-  },
-  {
-    "id": "712db9d9",
-    "content": "172.16.140.129",
-    "timestamp": "2026-10-27T15:05:30.988757700Z",
-    "pinned": false,
-    "length": 14
-  },
-  {
-    "id": "cc14db28",
-    "content": "Test-NetConnection 192.168.1.100 -Port 123",
-    "timestamp": "2026-10-27T15:05:25.372774100Z",
-    "pinned": false,
-    "length": 42
-  },
-  {
-    "id": "67536ddd",
-    "content": "172.16.140.129",
-    "timestamp": "2026-10-27T15:03:07.374599800Z",
-    "pinned": false,
-    "length": 14
-  },
-  {
-    "id": "827f345c",
-    "content": "Test-NetConnection 192.168.1.100 -Port 123",
-    "timestamp": "2026-10-27T15:02:55.738952100Z",
-    "pinned": false,
-    "length": 42
-  },
-  {
-    "id": "d8c8337f",
-    "content": "https://huggingface.co/SalahALHaismawi/Nuqta-Arabic-OCR-4B",
-    "timestamp": "2026-10-27T14:34:31.113910900Z",
-    "pinned": false,
-    "length": 58
-  },
-  {
-    "id": "d94c6687",
-    "content": "i want each template to be able to have a name",
-    "timestamp": "2026-10-27T14:31:46.774643900Z",
-    "pinned": false,
-    "length": 46
-  },
-  {
-    "id": "4208e8c2",
-    "content": "https://claude.ai/magic-link?client=desktop_app#bdb92ae0478256ad878a9d18106f21d9:bW9oYW1tYWRlZmF0aGxAZ21haWwuY29t",
-    "timestamp": "2026-10-27T14:31:25.137370300Z",
-    "pinned": false,
-    "length": 113
-  },
-  {
-    "id": "7da89f55",
-    "content": "https://complaint-system.sofa.ye/admin/settings",
-    "timestamp": "2026-10-27T14:21:19.372990Z",
-    "pinned": false,
-    "length": 47
-  },
-  {
-    "id": "e29ba1bc",
-    "content": "complaint-system.sofa.ye",
-    "timestamp": "2026-10-27T14:20:49.692476Z",
-    "pinned": false,
-    "length": 24
-  },
-  {
-    "id": "6761b124",
-    "content": "https://complaint-system.sofa.ye/",
-    "timestamp": "2026-10-27T14:20:47.287656100Z",
-    "pinned": false,
-    "length": 33
-  },
-  {
-    "id": "2a64ab12",
-    "content": "Ctrl+Alt+1",
-    "timestamp": "2026-10-27T14:08:15.668724300Z",
-    "pinned": false,
-    "length": 10
-  },
-  {
-    "id": "fb2c5102",
-    "content": "findings",
-    "timestamp": "2026-10-27T13:59:38.560570400Z",
-    "pinned": false,
-    "length": 8
-  },
-  {
-    "id": "1002a38c",
-    "content": "https://workspace.sofa.ye/",
-    "timestamp": "2026-10-27T13:49:06.092862500Z",
-    "pinned": false,
-    "length": 26
-  },
-  {
-    "id": "f5877f0f",
-    "content": "74044",
-    "timestamp": "2026-10-27T13:39:00.601633800Z",
-    "pinned": false,
-    "length": 5
-  },
-  {
-    "id": "1ecc7396",
-    "content": "taskkill /PID 12345 /F\n\n\n-",
-    "timestamp": "2026-10-27T13:38:53.776243100Z",
-    "pinned": false,
-    "length": 26
-  },
-  {
-    "id": "90d71700",
-    "content": "74044",
-    "timestamp": "2026-10-27T13:38:22.057164500Z",
-    "pinned": false,
-    "length": 5
-  },
-  {
-    "id": "3817a6c5",
-    "content": "netstat -ano | findstr :8019",
-    "timestamp": "2026-10-27T13:38:06.425166400Z",
-    "pinned": false,
-    "length": 28
-  },
-  {
-    "id": "a6c5cfde",
-    "content": "microsoft access",
-    "timestamp": "2026-10-27T13:09:05.086207200Z",
-    "pinned": false,
-    "length": 16
-  },
-  {
-    "id": "39b7a24d",
-    "content": "✓ src/features/softphone/tests/incoming-caller-summary-map.test.tsx (2 tests) 252ms\r\n ✓ src/features/softphone/tests/sip-microphone.test.ts (5 tests) 6ms\r\n ✓ src/features/softphone/tests/audio-level-meter-runtime.test.tsx (5 tests) 80ms\r\n ✓ src/features/dashboard/tests/dashboard-content-runtime.test.tsx (2 tests) 77ms\r\n ✓ src/features/ivr/tests/ivr-table-runtime.test.tsx (2 tests) 355ms\r\n   ✓ offers create, edit, delete, and refresh actions  328ms\r\n ✓ src/features/softphone/tests/softphone-tabs-runtime.test.tsx (1 test) 273ms\r\n ✓ src/features/softphone/tests/incoming-person-picker.test.tsx (1 test) 384ms\r\n   ✓ opens new-person fields in a separate closeable drawer  381ms\r\n ✓ src/features/ivr/tests/ivr-form-tabs-runtime.test.tsx (1 test) 319ms\r\n   ✓ places every IVR section in an RTL-aware tab  316ms\r\n ✓ src/features/softphone/tests/ticket-completion-reminder-modal.test.tsx (1 test) 328ms\r\n     ✓ lists the batch tickets that need completion and closes explicitly  326ms\r\n ✓ src/features/softphone/tests/incoming-application-details.test.tsx (1 test) 289ms\r\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯\r\n FAIL  src/features/settings/tests/settings-actions-stacking.test.ts > keeps settings actions above the drawer scrim and below its panel\r\nAssertionError: expected '{\\n  position: fixed;\\n  bottom: 0;\\n…' to match /z-index:\\s*calc\\(var\\(--yeds-z-index-…/\r\n- Expected:\r\n/z-index:\\s*calc\\(var\\(--yeds-z-index-overlay,\\s*1200\\)\\s*\\+\\s*1\\)/\r\n+ Received:\r\n\"{\r\n  position: fixed;\r\n  bottom: 0;\r\n  /* Keep Save/Cancel usable through a call-assignment drawer: above its\r\n     scrim, but below the drawer panel and the live softphone. */\r\n  z-index: 1;\r\n  display: flex;\r\n  justify-content: flex-start;\r\n  gap: 12px;\r\n  background: var(--yeds-color-background-white);\r\n  padding: 20px max(clamp(18px, 4vw, 56px));\r\n  width: calc(100% - 280px);\r\n  inset-inline-end: 0;\r\n\"\r\n ❯ src/features/settings/tests/settings-actions-stacking.test.ts:16:17\r\n     14|   expect(block).toMatch(/position:\\s*fixed/)\r\n     15|   expect(block).toMatch(/background:\\s*var\\(--yeds-color-background-wh…\r\n     16|   expect(block).toMatch(/z-index:\\s*calc\\(var\\(--yeds-z-index-overlay,…\r\n       |                 ^\r\n     17|\r\n     18|   const overlayZ = Number(/--yeds-z-index-overlay:(\\d+)/.exec(yedsCss)…\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯\r\n FAIL  src/features/softphone/tests/call-ticket-drawer-fields.test.ts > drawer fields share one rule at rest across every call drawer\r\nAssertionError: no drawer-scoped rule found for .call-ticket-edit input: expected undefined to be defined\r\n ❯ ruleFor src/features/softphone/tests/call-ticket-drawer-fields.test.ts:34:84\r\n     32|     return scopes.some((scope) => selector.includes(scope))\r\n     33|   })\r\n     34|   expect(match, `no drawer-scoped rule found for .call-ticket-edit inp…\r\n       |                                                                                    ^\r\n     35|   return match as Block\r\n     36| }\r\n ❯ src/features/softphone/tests/call-ticket-drawer-fields.test.ts:40:26\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯\r\n FAIL  src/features/softphone/tests/call-ticket-drawer-fields.test.ts > drawer fields share one rule on hover across every call drawer\r\nAssertionError: no drawer-scoped rule found for .call-ticket-edit input:hover: expected undefined to be defined\r\n ❯ ruleFor src/features/softphone/tests/call-ticket-drawer-fields.test.ts:34:84\r\n     32|     return scopes.some((scope) => selector.includes(scope))\r\n     33|   })\r\n     34|   expect(match, `no drawer-scoped rule found for .call-ticket-edit inp…\r\n       |                                                                                    ^\r\n     35|   return match as Block\r\n     36| }\r\n ❯ src/features/softphone/tests/call-ticket-drawer-fields.test.ts:40:26\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯\r\n FAIL  src/features/softphone/tests/call-ticket-drawer-fields.test.ts > drawer fields share one rule on focus across every call drawer\r\nAssertionError: no drawer-scoped rule found for .call-ticket-edit input:focus: expected undefined to be defined\r\n ❯ ruleFor src/features/softphone/tests/call-ticket-drawer-fields.test.ts:34:84\r\n     32|     return scopes.some((scope) => selector.includes(scope))\r\n     33|   })\r\n     34|   expect(match, `no drawer-scoped rule found for .call-ticket-edit inp…\r\n       |                                                                                    ^\r\n     35|   return match as Block\r\n     36| }\r\n ❯ src/features/softphone/tests/call-ticket-drawer-fields.test.ts:40:26\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/8]⎯\r\n FAIL  src/features/softphone/tests/call-ticket-drawer-fields.test.ts > the shared focus ring wins over the flat inset ring used outside drawers\r\nAssertionError: no drawer-scoped rule found for .call-ticket-edit input:focus: expected undefined to be defined\r\n ❯ ruleFor src/features/softphone/tests/call-ticket-drawer-fields.test.ts:34:84\r\n     32|     return scopes.some((scope) => selector.includes(scope))\r\n     33|   })\r\n     34|   expect(match, `no drawer-scoped rule found for .call-ticket-edit inp…\r\n       |                                                                                    ^\r\n     35|   return match as Block\r\n     36| }\r\n ❯ src/features/softphone/tests/call-ticket-drawer-fields.test.ts:45:20\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/8]⎯\r\n FAIL  src/features/softphone/tests/call-ticket-drawer-fields.test.ts > hover is a real change from the resting surface\r\nAssertionError: no drawer-scoped rule found for .call-ticket-edit input: expected undefined to be defined\r\n ❯ ruleFor src/features/softphone/tests/call-ticket-drawer-fields.test.ts:34:84\r\n     32|     return scopes.some((scope) => selector.includes(scope))\r\n     33|   })\r\n     34|   expect(match, `no drawer-scoped rule found for .call-ticket-edit inp…\r\n       |                                                                                    ^\r\n     35|   return match as Block\r\n     36| }\r\n ❯ src/features/softphone/tests/call-ticket-drawer-fields.test.ts:53:10\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/8]⎯\r\n FAIL  src/features/tickets/tests/ticket-timeline-item-filters-runtime.test.tsx > ticket timeline item and filters > renders actor and subject metadata and expands meaningful field changes\r\nTestingLibraryElementError: Unable to find an element with the text: tickets.details.timeline.callReference. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\r\nIgnored nodes: comments, script, style\r\n<body>\r\n  <div>\r\n    <article\r\n      class=\"ticket-timeline-item\"\r\n      data-kind=\"person\"\r\n    >\r\n      <div\r\n        aria-hidden=\"true\"\r\n        class=\"ticket-timeline-marker\"\r\n      >\r\n        <span>\r\n          icon:\r\n          call.person_linked\r\n        </span>\r\n      </div>\r\n      <div\r\n        class=\"ticket-timeline-card\"\r\n      >\r\n        <div\r\n          class=\"ticket-timeline-event-heading\"\r\n        >\r\n          <div>\r\n            <h3>\r\n              tickets.details.timeline.events.call.person_linked\r\n            </h3>\r\n            <time\r\n              datetime=\"2026-08-01T10:00:00Z\"\r\n            >\r\n              10:00\r\n            </time>\r\n          </div>\r\n          <span>\r\n            tickets.details.timeline.kinds.person\r\n          </span>\r\n        </div>\r\n        <div\r\n          class=\"ticket-timeline-event-meta\"\r\n        >\r\n          <div\r\n            class=\"ticket-timeline-actor\"\r\n          >\r\n            <span>\r\n              tickets.details.timeline.systemActor\r\n            </span>\r\n            <small>\r\n              automation\r\n            </small>\r\n          </div>\r\n        </div>\r\n        <div\r\n          class=\"ticket-timeline-changes\"\r\n        >\r\n          <button\r\n            aria-controls=\"_r_0_\"\r\n            aria-expanded=\"false\"\r\n            class=\"\"\r\n            type=\"button\"\r\n          >\r\n            <span>\r\n              tickets.details.timeline.showChanges\r\n            </span>\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </article>\r\n  </div>\r\n</body>\r\n ❯ Object.getElementError node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/config.js:37:19\r\n ❯ node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\r\n ❯ node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\r\n ❯ node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\r\n ❯ src/features/tickets/tests/ticket-timeline-item-filters-runtime.test.tsx:35:19\r\n     33|     render(<TicketTimelineItem event={event as never} language=\"en\" />)\r\n     34|     expect(screen.getByText('tickets.details.timeline.systemActor')).t…\r\n     35|     expect(screen.getByText('tickets.details.timeline.callReference'))…\r\n       |                   ^\r\n     36|     expect(screen.getByText('tickets.details.timeline.kinds.person')).…\r\n     37|     const toggle = screen.getByRole('button', { name: 'tickets.details…\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/8]⎯\r\n FAIL  src/features/tickets/tests/ticket-timeline-item-filters-runtime.test.tsx > ticket timeline item and filters > prefers person metadata and application subject references\r\nTestingLibraryElementError: Unable to find an element with the text: Ada. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\r\nIgnored nodes: comments, script, style\r\n<body>\r\n  <div>\r\n    <article\r\n      class=\"ticket-timeline-item\"\r\n      data-kind=\"person\"\r\n    >\r\n      <div\r\n        aria-hidden=\"true\"\r\n        class=\"ticket-timeline-marker\"\r\n      >\r\n        <span>\r\n          icon:\r\n          call.person_linked\r\n        </span>\r\n      </div>\r\n      <div\r\n        class=\"ticket-timeline-card\"\r\n      >\r\n        <div\r\n          class=\"ticket-timeline-event-heading\"\r\n        >\r\n          <div>\r\n            <h3>\r\n              tickets.details.timeline.events.call.person_linked\r\n            </h3>\r\n            <time\r\n              datetime=\"2026-08-01T10:00:00Z\"\r\n            >\r\n              10:00\r\n            </time>\r\n          </div>\r\n          <span>\r\n            tickets.details.timeline.kinds.person\r\n          </span>\r\n        </div>\r\n        <div\r\n          class=\"ticket-timeline-event-meta\"\r\n        >\r\n          <div\r\n            class=\"ticket-timeline-actor\"\r\n          >\r\n            <span>\r\n              tickets.details.timeline.systemActor\r\n            </span>\r\n            <small>\r\n              automation\r\n            </small>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </article>\r\n  </div>\r\n</body>\r\n ❯ Object.getElementError node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/config.js:37:19\r\n ❯ node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\r\n ❯ node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\r\n ❯ node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\r\n ❯ src/features/tickets/tests/ticket-timeline-item-filters-runtime.test.tsx:48:19\r\n     46|   it('prefers person metadata and application subject references', () …\r\n     47|     const view = render(<TicketTimelineItem event={{ ...event, metadat…\r\n     48|     expect(screen.getByText('Ada')).toBeInTheDocument()\r\n       |                   ^\r\n     49|     view.rerender(<TicketTimelineItem event={{ ...event, metadata: {},…\r\n     50|       changes: { fields: {} } } as never} language=\"en\" />)\r\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/8]⎯\r\n Test Files  3 failed | 326 passed (329)\r\n      Tests  8 failed | 958 passed | 5 skipped (971)\r\n   Start at  12:51:57\r\n   Duration  38.36s (transform 39.54s, setup 0ms, import 261.92s, tests 75.24s, environment 356.36s)\r\n ELIFECYCLE  Command failed with exit code 1.\r\nmake: *** [Makefile:36: ci-test] Error 1\r\nCleaning up project directory and file based variables\r\n00:01\r\nERROR: Job failed: exit code 2",
-    "timestamp": "2026-10-27T13:00:08.677636600Z",
-    "pinned": false,
-    "length": 12074
-  },
-  {
-    "id": "aca1d16e",
-    "content": "http://172.16.140.129/",
-    "timestamp": "2026-10-27T12:56:15.876543500Z",
-    "pinned": false,
-    "length": 22
-  },
-  {
-    "id": "a1c2d7ee",
-    "content": "    git push --set-upstream origin enhance-verification-flexicapture",
-    "timestamp": "2026-10-27T12:46:41.501240200Z",
-    "pinned": false,
-    "length": 68
-  },
-  {
-    "id": "1b3ba58c",
-    "content": "NTP",
-    "timestamp": "2026-10-27T12:43:56.795186Z",
-    "pinned": false,
-    "length": 3
-  },
-  {
-    "id": "38d12ca8",
-    "content": "http://localhost:5174/admin/categories",
-    "timestamp": "2026-10-27T12:40:24.787002600Z",
-    "pinned": false,
-    "length": 38
-  },
-  {
-    "id": "9fb7dfb9",
-    "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file mini\\watania\r\n",
-    "timestamp": "2026-10-27T12:15:54.437842100Z",
-    "pinned": false,
-    "length": 58
-  },
-  {
-    "id": "5014fdfa",
-    "content": "https://192.168.20.184:8089/system-settings/timeSettings",
-    "timestamp": "2026-10-27T12:10:43.413143900Z",
-    "pinned": false,
-    "length": 56
-  },
-  {
-    "id": "ba5522c6",
-    "content": "Synchronize PBX and server clocks using NTP.\nVerify new calls synchronize correctly.",
-    "timestamp": "2026-10-27T12:07:56.635849800Z",
-    "pinned": false,
-    "length": 84
-  },
-  {
-    "id": "a9175720",
-    "content": "C:\\Users\\MohamedAlghurbani\\Desktop\\pdf file mini\\watania\r\n",
-    "timestamp": "2026-10-27T12:05:19.092767100Z",
-    "pinned": false,
-    "length": 58
-  },
-  {
-    "id": "dab20c5",
-    "content": "FLEXCAPTURE_API_KEY=r0dOgQVaTNPHMnYH21SQxW-c8inYz_5cqKtx7InzwLI",
-    "timestamp": "2026-10-27T12:02:38.739339400Z",
-    "pinned": false,
-    "length": 63
-  },
-  {
-    "id": "55fe9140",
-    "content": "r0dOgQVaTNPHMnYH21SQxW-c8inYz_5cqKtx7InzwLI",
-    "timestamp": "2026-10-27T12:01:30.995449100Z",
-    "pinned": false,
-    "length": 43
-  },
-  {
-    "id": "353dca08",
-    "content": "Bridge: save it as an environment variable for your Windows user. The bridge reads it at startup.\r\n[Environment]::SetEnvironmentVariable('FC_API_KEY', '<that value>', 'User')",
-    "timestamp": "2026-10-27T11:47:24.881275300Z",
-    "pinned": false,
-    "length": 174
-  },
-  {
-    "id": "b2106bdb",
-    "content": "FC_API_KEY",
-    "timestamp": "2026-10-27T11:45:59.916728900Z",
-    "pinned": false,
-    "length": 10
-  },
-  {
-    "id": "35b47ad3",
-    "content": "FLEXCAPTURE_API_KEY",
-    "timestamp": "2026-10-27T11:45:31.864781500Z",
-    "pinned": false,
-    "length": 19
   }
 ]

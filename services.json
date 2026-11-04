@@ -1,16 +1,4 @@
 {
-  "complain client": {
-    "name": "complain client",
-    "group": "complain",
-    "command": "npm run dev",
-    "cwd": "E:\\complain system\\client",
-    "port": null,
-    "auto_restart": true,
-    "venv": null,
-    "env": null,
-    "saved_status": "running",
-    "shortcut": "Alt+c+2"
-  },
   "ocr client": {
     "name": "ocr client",
     "group": "OCR Services",
@@ -47,17 +35,17 @@
     "saved_status": "stopped",
     "shortcut": "Ctrl+Alt+5"
   },
-  "paddle": {
-    "name": "paddle",
-    "group": "AI SDKs",
-    "command": "python server.py",
-    "cwd": "e:\\ocr1\\fake_ai_sdks\\paddle",
-    "port": 8891,
-    "auto_restart": true,
-    "venv": ".venv",
+  "Complain server": {
+    "name": "Complain server",
+    "group": "complain",
+    "command": "go run . serve --http=0.0.0.0:8090",
+    "cwd": "E:\\complain system\\server",
+    "port": null,
+    "auto_restart": false,
+    "venv": null,
     "env": null,
-    "saved_status": "stopped",
-    "shortcut": "Ctrl+Alt+6"
+    "saved_status": "running",
+    "shortcut": "Alt+c+1"
   },
   "ocr migrate": {
     "name": "ocr migrate",
@@ -68,7 +56,7 @@
     "auto_restart": false,
     "venv": null,
     "env": null,
-    "saved_status": "crashed",
+    "saved_status": "stopped",
     "shortcut": "Ctrl+Alt+4"
   },
   "ocr": {
@@ -83,6 +71,30 @@
     "saved_status": "running",
     "shortcut": "Alt+x+1"
   },
+  "complain client": {
+    "name": "complain client",
+    "group": "complain",
+    "command": "npm run dev",
+    "cwd": "E:\\complain system\\client",
+    "port": null,
+    "auto_restart": true,
+    "venv": null,
+    "env": null,
+    "saved_status": "stopped",
+    "shortcut": "Alt+c+2"
+  },
+  "paddle": {
+    "name": "paddle",
+    "group": "AI SDKs",
+    "command": "python server.py",
+    "cwd": "e:\\ocr1\\fake_ai_sdks\\paddle",
+    "port": 8891,
+    "auto_restart": true,
+    "venv": ".venv",
+    "env": null,
+    "saved_status": "stopped",
+    "shortcut": "Ctrl+Alt+6"
+  },
   "Design system docs": {
     "name": "Design system docs",
     "group": "Design system",
@@ -92,19 +104,7 @@
     "auto_restart": true,
     "venv": null,
     "env": null,
-    "saved_status": "stopped",
+    "saved_status": "running",
     "shortcut": null
-  },
-  "Complain server": {
-    "name": "Complain server",
-    "group": "complain",
-    "command": "go run . serve --http=0.0.0.0:8090",
-    "cwd": "E:\\complain system\\server",
-    "port": null,
-    "auto_restart": true,
-    "venv": null,
-    "env": null,
-    "saved_status": "stopped",
-    "shortcut": "Alt+c+1"
   }
 }
