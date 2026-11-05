@@ -1,5 +1,124 @@
 [
   {
+    "id": "948fb7c7",
+    "content": "Ab@2025!$#",
+    "timestamp": "2026-11-05T06:45:53.941494300Z",
+    "pinned": false,
+    "length": 10
+  },
+  {
+    "id": "ae09ab49",
+    "content": "https://sofa-erp.sofa.ye/web/login?redirect=%2Fbunyan%3F",
+    "timestamp": "2026-11-04T09:07:36.294254900Z",
+    "pinned": false,
+    "length": 56
+  },
+  {
+    "id": "d5514ee3",
+    "content": "TicketTimelineSidebar",
+    "timestamp": "2026-11-04T09:00:27.988769400Z",
+    "pinned": false,
+    "length": 21
+  },
+  {
+    "id": "10bc1623",
+    "content": "collapsed",
+    "timestamp": "2026-11-04T09:00:23.980549800Z",
+    "pinned": false,
+    "length": 9
+  },
+  {
+    "id": "8d07e52e",
+    "content": "ticket-details-timeline-sidebar",
+    "timestamp": "2026-11-04T08:59:55.902429700Z",
+    "pinned": false,
+    "length": 31
+  },
+  {
+    "id": "c336ee82",
+    "content": "The platform still accepts only plain digits, so patterns like 5XX or comma-separated lists are rejected even though the tooltip describes them. Say if you want me to add pattern support on the server and in the form.",
+    "timestamp": "2026-11-04T08:52:17.079857800Z",
+    "pinned": false,
+    "length": 217
+  },
+  {
+    "id": "d0da19eb",
+    "content": "https://www.youtube.com/watch?v=Y044_kkayzg",
+    "timestamp": "2026-11-04T08:41:44.011762500Z",
+    "pinned": false,
+    "length": 43
+  },
+  {
+    "id": "fb5cf1a8",
+    "content": "adding blacklist ",
+    "timestamp": "2026-11-04T08:22:59.287735100Z",
+    "pinned": false,
+    "length": 17
+  },
+  {
+    "id": "ce41f576",
+    "content": "grandstream UCM6308",
+    "timestamp": "2026-11-04T08:22:54.482512200Z",
+    "pinned": false,
+    "length": 19
+  },
+  {
+    "id": "11ef09f0",
+    "content": "adding blacklist ",
+    "timestamp": "2026-11-04T08:22:43.271360900Z",
+    "pinned": false,
+    "length": 17
+  },
+  {
+    "id": "6ba1dfe0",
+    "content": "ffmpeg -i input.mp4 -c:v copy -af \"volume=2.0\" -c:a aac -b:a 192k output.mp4",
+    "timestamp": "2026-11-04T08:12:30.282831Z",
+    "pinned": false,
+    "length": 76
+  },
+  {
+    "id": "500b5279",
+    "content": "http://localhost:5173/projects/023961a7-946b-40ac-8bd4-71dd08b6826d/workspace",
+    "timestamp": "2026-11-04T07:55:58.532086800Z",
+    "pinned": false,
+    "length": 77
+  },
+  {
+    "id": "3778419f",
+    "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
+    "timestamp": "2026-11-04T07:55:04.081705500Z",
+    "pinned": false,
+    "length": 20
+  },
+  {
+    "id": "c05622b4",
+    "content": "http://localhost:5173/projects/023961a7-946b-40ac-8bd4-71dd08b6826d/workspace",
+    "timestamp": "2026-11-04T07:54:40.024529200Z",
+    "pinned": false,
+    "length": 77
+  },
+  {
+    "id": "45a9dbe0",
+    "content": "E:\\",
+    "timestamp": "2026-11-04T07:49:13.686424600Z",
+    "pinned": false,
+    "length": 3
+  },
+  {
+    "id": "a0681c2f",
+    "content": "E:\\ocr-fc\\عهد\r\n",
+    "timestamp": "2026-11-04T07:47:14.755620Z",
+    "pinned": false,
+    "length": 15
+  },
+  {
+    "id": "5f49c369",
+    "content": "D:\\",
+    "timestamp": "2026-11-04T07:46:15.893076600Z",
+    "pinned": false,
+    "length": 3
+  },
+  {
     "id": "1f84d92b",
     "content": "E:\\ocr-fc\\عهد\r\n",
     "timestamp": "2026-11-04T07:39:11.795151800Z",
@@ -1979,124 +2098,5 @@
     "timestamp": "2026-10-29T07:42:29.336349500Z",
     "pinned": false,
     "length": 43
-  },
-  {
-    "id": "d8b3d439",
-    "content": "The code fixes: a cheap call-status lookup for the tickets list, an indexed link between calls and tickets, combined lookups for application queries, the database setting turned on, and cached audit settings.",
-    "timestamp": "2026-10-29T07:33:44.365399500Z",
-    "pinned": false,
-    "length": 208
-  },
-  {
-    "id": "8e24697c",
-    "content": "AUDIO_SERVICE_API_KEY ",
-    "timestamp": "2026-10-29T07:17:14.080985500Z",
-    "pinned": false,
-    "length": 22
-  },
-  {
-    "id": "27f438a2",
-    "content": "mohammedalgharbani",
-    "timestamp": "2026-10-29T07:15:49.839551400Z",
-    "pinned": false,
-    "length": 18
-  },
-  {
-    "id": "986f9c1b",
-    "content": "New Document Ai API.md",
-    "timestamp": "2026-10-28T14:18:20.155379100Z",
-    "pinned": false,
-    "length": 22
-  },
-  {
-    "id": "a2eb805a",
-    "content": "after filtering , is gaving the result also from the application ",
-    "timestamp": "2026-10-28T14:14:53.990751800Z",
-    "pinned": false,
-    "length": 65
-  },
-  {
-    "id": "9e3d3f44",
-    "content": "After filtering",
-    "timestamp": "2026-10-28T14:10:22.323707600Z",
-    "pinned": false,
-    "length": 15
-  },
-  {
-    "id": "6c6d9186",
-    "content": "نتائج صنعاء",
-    "timestamp": "2026-10-28T13:55:49.948128900Z",
-    "pinned": false,
-    "length": 11
-  },
-  {
-    "id": "4fb03e6a",
-    "content": "https://survey.identity-yemen.info/web#action=253&active_id=3&cids=1&menu_id=180",
-    "timestamp": "2026-10-28T13:55:05.833697700Z",
-    "pinned": false,
-    "length": 80
-  },
-  {
-    "id": "37fcdb3c",
-    "content": "X97ycdKRopSg_GjA_wVxZeBPSvQ89TltmfGzz5xb41fGlJIpr99aVPg5E6V7v1SA",
-    "timestamp": "2026-10-28T13:42:12.280148Z",
-    "pinned": false,
-    "length": 64
-  },
-  {
-    "id": "92af091",
-    "content": "Ocr!9vK2_Qm7@Tz4-Lp8",
-    "timestamp": "2026-10-28T13:42:03.061170300Z",
-    "pinned": false,
-    "length": 20
-  },
-  {
-    "id": "cf8df7ab",
-    "content": "http://localhost:5173/",
-    "timestamp": "2026-10-28T13:41:48.224201500Z",
-    "pinned": false,
-    "length": 22
-  },
-  {
-    "id": "b30aeba7",
-    "content": "https://192.168.20.203:5180/",
-    "timestamp": "2026-10-28T13:33:49.461147500Z",
-    "pinned": false,
-    "length": 28
-  },
-  {
-    "id": "571481e5",
-    "content": "بيانات المشروع",
-    "timestamp": "2026-10-28T13:31:47.272386400Z",
-    "pinned": false,
-    "length": 14
-  },
-  {
-    "id": "3bfd3edc",
-    "content": "التصنيف العام",
-    "timestamp": "2026-10-28T13:23:03.421918Z",
-    "pinned": false,
-    "length": 13
-  },
-  {
-    "id": "8430a6d4",
-    "content": " .\\loadtest\\scripts\\Run-PBXCallTest.ps1 `\r\n>>   -Queue `\r\n>>   -Agents 30 `\r\n>>   -Calls 250 `\r\n>>   -Stages '30,100,150,200,250' `\r\n>>   -HoldSeconds 30 `\r\n>>   -FinalHoldSeconds 60 `\r\n>>   -CallerTransport udp `\r\n>>   -CallerCodec pcmu `\r\n>>   -ExistingOnly `\r\n>>   -NodeModules 'E:\\VPN\\VPN\\dashboard\\node_modules' `\r\n>>   -SpeechFixture 'E:\\complain system\\server\\loadtest\\fixtures\\speech.wav' `\r\n>>   -ServerProcessId 66892 `\r\n>>   -DiagnosticsUrl 'http://127.0.0.1:6060' `\r\n>>   -ConfirmPBXTest",
-    "timestamp": "2026-10-28T13:01:32.639067Z",
-    "pinned": false,
-    "length": 499
-  },
-  {
-    "id": "eb000be",
-    "content": "cd \"E:\\complain system\\server\"\r\n\r\n.\\loadtest\\scripts\\Run-PBXCallTest.ps1 `\r\n  -Queue `\r\n  -Agents 30 `\r\n  -Calls 250 `\r\n  -Stages '30,100,150,200,250' `\r\n  -HoldSeconds 30 `\r\n  -FinalHoldSeconds 60 `\r\n  -CallerTransport udp `\r\n  -CallerCodec pcmu `\r\n  -ExistingOnly `\r\n  -NodeModules 'E:\\VPN\\VPN\\dashboard\\node_modules' `\r\n  -SpeechFixture 'E:\\complain system\\server\\loadtest\\fixtures\\speech.wav' `\r\n  -ServerProcessId <PID> `\r\n  -DiagnosticsUrl 'http://127.0.0.1:6060' `\r\n  -ConfirmPBXTest",
-    "timestamp": "2026-10-28T12:59:29.938682200Z",
-    "pinned": false,
-    "length": 490
-  },
-  {
-    "id": "abe3e685",
-    "content": "cd \"E:\\complain system\\server\"\r\n\r\n.\\loadtest\\scripts\\Run-PBXCallTest.ps1 `\r\n  -Queue `\r\n  -Agents 10 `\r\n  -Calls 20 `\r\n  -Stages '10,20' `\r\n  -HoldSeconds 20 `\r\n  -FinalHoldSeconds 30 `\r\n  -CallerTransport udp `\r\n  -CallerCodec pcmu `\r\n  -ExistingOnly `\r\n  -NodeModules 'E:\\VPN\\VPN\\dashboard\\node_modules' `\r\n  -SpeechFixture 'E:\\complain system\\server\\loadtest\\fixtures\\speech.wav' `\r\n  -ServerProcessId <PID> `\r\n  -DiagnosticsUrl 'http://127.0.0.1:6060' `\r\n  -ConfirmPBXTest",
-    "timestamp": "2026-10-28T12:59:23.925754500Z",
-    "pinned": false,
-    "length": 476
   }
 ]

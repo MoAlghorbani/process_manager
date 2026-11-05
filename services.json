@@ -1,15 +1,15 @@
 {
-  "ocr client": {
-    "name": "ocr client",
-    "group": "OCR Services",
-    "command": "npm run dev",
-    "cwd": "E:\\ocr-fc\\client",
-    "port": 5173,
+  "ocr_proxy": {
+    "name": "ocr_proxy",
+    "group": "AI SDKs",
+    "command": "python server.py",
+    "cwd": "e:\\ocr1\\fake_ai_sdks\\ocr_proxy",
+    "port": 8892,
     "auto_restart": true,
     "venv": null,
     "env": null,
-    "saved_status": "running",
-    "shortcut": "Alt+x+2"
+    "saved_status": "stopped",
+    "shortcut": "Ctrl+Alt+5"
   },
   "classify": {
     "name": "classify",
@@ -23,17 +23,17 @@
     "saved_status": "stopped",
     "shortcut": null
   },
-  "ocr_proxy": {
-    "name": "ocr_proxy",
-    "group": "AI SDKs",
-    "command": "python server.py",
-    "cwd": "e:\\ocr1\\fake_ai_sdks\\ocr_proxy",
-    "port": 8892,
+  "complain client": {
+    "name": "complain client",
+    "group": "complain",
+    "command": "npm run dev",
+    "cwd": "E:\\complain system\\client",
+    "port": null,
     "auto_restart": true,
     "venv": null,
     "env": null,
-    "saved_status": "stopped",
-    "shortcut": "Ctrl+Alt+5"
+    "saved_status": "running",
+    "shortcut": "Alt+c+2"
   },
   "Complain server": {
     "name": "Complain server",
@@ -44,7 +44,7 @@
     "auto_restart": false,
     "venv": null,
     "env": null,
-    "saved_status": "running",
+    "saved_status": "stopped",
     "shortcut": "Alt+c+1"
   },
   "ocr migrate": {
@@ -59,30 +59,6 @@
     "saved_status": "stopped",
     "shortcut": "Ctrl+Alt+4"
   },
-  "ocr": {
-    "name": "ocr",
-    "group": "OCR Services",
-    "command": "go run .\\cmd\\server\\",
-    "cwd": "E:\\ocr-fc\\server",
-    "port": 8082,
-    "auto_restart": true,
-    "venv": null,
-    "env": null,
-    "saved_status": "running",
-    "shortcut": "Alt+x+1"
-  },
-  "complain client": {
-    "name": "complain client",
-    "group": "complain",
-    "command": "npm run dev",
-    "cwd": "E:\\complain system\\client",
-    "port": null,
-    "auto_restart": true,
-    "venv": null,
-    "env": null,
-    "saved_status": "stopped",
-    "shortcut": "Alt+c+2"
-  },
   "paddle": {
     "name": "paddle",
     "group": "AI SDKs",
@@ -95,6 +71,18 @@
     "saved_status": "stopped",
     "shortcut": "Ctrl+Alt+6"
   },
+  "ocr client": {
+    "name": "ocr client",
+    "group": "OCR Services",
+    "command": "npm run dev",
+    "cwd": "E:\\ocr-fc\\client",
+    "port": 5173,
+    "auto_restart": true,
+    "venv": null,
+    "env": null,
+    "saved_status": "running",
+    "shortcut": "Alt+x+2"
+  },
   "Design system docs": {
     "name": "Design system docs",
     "group": "Design system",
@@ -104,7 +92,19 @@
     "auto_restart": true,
     "venv": null,
     "env": null,
-    "saved_status": "running",
+    "saved_status": "stopped",
     "shortcut": null
+  },
+  "ocr": {
+    "name": "ocr",
+    "group": "OCR Services",
+    "command": "go run .\\cmd\\server\\",
+    "cwd": "E:\\ocr-fc\\server",
+    "port": 8082,
+    "auto_restart": false,
+    "venv": null,
+    "env": null,
+    "saved_status": "crashed",
+    "shortcut": "Alt+x+1"
   }
 }
